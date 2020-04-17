@@ -11,10 +11,10 @@ body {
 
 .memory-game {
     display: grid;
-    grid-template-columns: repeat(2, 1fr);
+    grid-template-columns: repeat(3, 1fr);
     align-items: center;
     justify-items: center;
-    width: 220px;
+    width: 320px;
     margin: 3rem auto;
     grid-gap: 5px;
 }
