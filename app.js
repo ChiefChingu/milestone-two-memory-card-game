@@ -36,7 +36,7 @@ function checkTurn() {
         allowedTurns--;
        
             //evaluate cards and check for match
-            if(cardValueTurnOne.textContent === cardValueTurnTwo.textContent) {
+            if(cardValueTurnOne.dataset.cardvalue === cardValueTurnTwo.dataset.cardvalue) {
                 
                 //If match, leave cards as is (visible, not clickable) and reset allowedTurns
                 setTimeout(() => {
@@ -50,7 +50,6 @@ function checkTurn() {
                 }, 800);
 
                 matchesMade++;
-                console.log(matchesMade);
 
             } else {
                 
