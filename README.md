@@ -25,7 +25,7 @@ High score board: show all time statistics.
 ## Technologies Used
 
 ## Testing
-For a detailed overview: see [TEST.md](#).
+For a detailed overview: see [TEST.md](test.md).
 
 ## Deployment
 
