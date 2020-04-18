@@ -8,7 +8,6 @@ let level = 1;
 let cards = Array.from(document.getElementsByClassName('card'));
 let totalMatches = Math.floor(cards.length/2);
 
-
 //add event listener to all cards
 cards.forEach(card => {
     card.addEventListener('click', checkTurn);
@@ -51,6 +50,8 @@ function checkTurn() {
                 }, 800);
 
                 matchesMade++;
+                numberOfMoves++;
+                document.getElementById("moves").innerHTML = numberOfMoves;
 
             } else {
                 
@@ -65,10 +66,14 @@ function checkTurn() {
 
                 cardValueTurnOne.classList.add('clickable');
                 cardValueTurnTwo.classList.add('clickable');
-                
+                numberOfMoves++;
+                console.log(numberOfMoves);
+                document.getElementById("moves").innerHTML = numberOfMoves;
             }
         }
     }
+
+
 
 //Shuffle cards randomly
 function shuffle(){
@@ -82,7 +87,8 @@ function shuffle(){
     }
 }
 
-
+//put number of moves in counter
+document.getElementById("moves").innerHTML = numberOfMoves;
 
 /* Code for button shuffle - maybe when using layover
 <button id="card">shuffle</button>

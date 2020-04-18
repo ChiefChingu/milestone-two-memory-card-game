@@ -23,15 +23,14 @@ body {
 
 @media screen and (min-width: 700px) {
  
-  .memory-game {
-    width: 600px;
-    grid-template-columns: repeat(4, 1fr);
-  }
+    .memory-game {
+        width: 600px;
+        grid-template-columns: repeat(4, 1fr);
+    }
 
-  .front-face {
-    object-fit: none;
-}
-
+    .front-face {
+        object-fit: none;
+    }
 }
 
 .card {
@@ -57,23 +56,22 @@ body {
 }
 
 .back-face {
-    
     background-color:  #00A95A;
     background-image: url("assets/images/waves.svg");
     background-position: center;
     background-size: cover;
-
 }
 
 .visible {
     transform: rotateX(180deg);
 }
 
-.match {
+
+/* .match {
     position: absolute;
     background-color: ;
     color: white;
     backface-visibility: hidden;
     transform: rotateX(180deg);
-}
+} */
 
