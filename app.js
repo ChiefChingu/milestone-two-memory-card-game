@@ -2,11 +2,34 @@ let allowedTurns = 2;
 let cardValueTurnOne, cardValueTurnTwo;
 let numberOfMoves = 0;
 let matchesMade = 0;
-let level = 1;
 
-//collect all cards into an array and determine # of matches
-let cards = Array.from(document.getElementsByClassName('card'));
+let allCards = Array.from(document.getElementsByClassName('card'));
+var slicedCards = allCards.slice(0, -4);
+
+
+//determine screen size and set number of cards
+var x = window.matchMedia("(max-width: 700px)")
+  myFunction(x) // Call listener function at run time
+  x.addListener(myFunction) // Attach listener function on state changes
+function myFunction(x) {
+    if (x.matches) { // If media query matches then set number of cards to 8
+      gameCards = slicedCards;
+      console.log("sliced cards");
+
+    } else {
+      gameCards = allCards;
+      console.log("no cards sliced");
+    }
+  }
+
+cards = gameCards;
+console.log(cards)
+
+//determine # of matches
 let totalMatches = Math.floor(cards.length/2);
+console.log(totalMatches);
+
+
 
 //add event listener to all cards
 cards.forEach(card => {
@@ -23,6 +46,7 @@ function checkTurn() {
         this.classList.add('visible');
         cardValueTurnOne = this;
         allowedTurns--;
+        // cardValueTurnOne.children[1].className = 'show-match';
 
     } else
 
@@ -37,21 +61,23 @@ function checkTurn() {
        
             //evaluate cards and check for match
             if(cardValueTurnOne.dataset.cardvalue === cardValueTurnTwo.dataset.cardvalue) {
-                
+                    matchesMade++;
+                    numberOfMoves++;
+                    updateCounter();
                 //If match, leave cards as is (visible, not clickable) and reset allowedTurns
                 setTimeout(() => {
+                    cardValueTurnOne.children[1].className = 'show-match';
+                    cardValueTurnTwo.children[1].className = 'show-match';
+                    
                     allowedTurns = 2;
+                    // document.getElementById("moves").innerHTML = numberOfMoves;
                     //check if game is finished
                     if(matchesMade === totalMatches) {
 
                         alert('GG');
                         //trigger game over screen
                     }
-                }, 800);
-
-                matchesMade++;
-                numberOfMoves++;
-                document.getElementById("moves").innerHTML = numberOfMoves;
+                }, 800);               
 
             } else {
                 
@@ -61,18 +87,25 @@ function checkTurn() {
                     cardValueTurnTwo.classList.remove('visible');
                     cardValueTurnOne.classList.remove('visible');
                     allowedTurns = 2;
+                    // document.getElementById("moves").innerHTML = numberOfMoves;
+                    updateCounter();
 
                 }, 1500);
 
                 cardValueTurnOne.classList.add('clickable');
                 cardValueTurnTwo.classList.add('clickable');
                 numberOfMoves++;
-                console.log(numberOfMoves);
-                document.getElementById("moves").innerHTML = numberOfMoves;
+                
             }
         }
     }
 
+//update moves counter
+function updateCounter() {
+
+    document.getElementById("moves").innerHTML = numberOfMoves;
+
+}
 
 
 //Shuffle cards randomly

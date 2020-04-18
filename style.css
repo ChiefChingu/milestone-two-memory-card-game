@@ -42,6 +42,16 @@ body {
     transition: transform .5s;
 }
 
+.desktop {
+    display: none;
+}
+
+@media screen and (min-width: 700px) {
+    .desktop {
+        display: initial;
+    }
+}
+
 .front-face, .back-face {
     position: absolute;
     width: 100%;
@@ -66,12 +76,21 @@ body {
     transform: rotateX(180deg);
 }
 
+.counter {
+    grid-column: 1 / -1;
+    grid-row: 1;
+}
+.match {
+    
+    display: none;
+}
 
-/* .match {
+.show-match {
+    display: initial;
     position: absolute;
     background-color: ;
     color: white;
     backface-visibility: hidden;
     transform: rotateX(180deg);
-} */
+}
 
