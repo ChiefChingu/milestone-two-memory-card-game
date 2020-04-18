@@ -3,16 +3,52 @@ let cardValueTurnOne, cardValueTurnTwo;
 let numberOfMoves = 0;
 let matchesMade = 0;
 let level = 1;
+let cardPlusSignOne, cardPlusSignTwo;
 
 //collect all cards into an array and determine # of matches
 let cards = Array.from(document.getElementsByClassName('card'));
 let totalMatches = Math.floor(cards.length/2);
 
+let contextButton = Array.from(document.getElementsByClassName('toggle'));
 
 //add event listener to all cards
 cards.forEach(card => {
     card.addEventListener('click', checkTurn);
 })
+
+contextButton.forEach(toggle => {
+    toggle.addEventListener('click', test);
+})
+ 
+// function test() {
+//     console.log(this);
+//     var button = document.querySelector('.toggle');
+//     console.log(button)
+// }
+
+function test() {
+    console.log(this);
+    
+    var button = document.querySelector(this).previousSibling.nextElementSibling;
+    var overlay = document.querySelector(this.className);
+    
+console.log(button);
+console.log(overlay);
+
+    // if(overlay.className === 'glass down') {
+    //     console.log(overlay.className);
+    //     overlay.className = 'glass up';
+    //     console.log(overlay.className);
+    // }
+
+    // if (overlay.className === 'glass down') {
+    //   overlay.className = 'glass up';
+    //   button.innerText = '-';
+    // } else {
+    //   overlay.className = 'glass down';
+    //   button.innerText = '+';
+    // }
+  }
 
 //turn card logic
 function checkTurn() {
@@ -24,6 +60,8 @@ function checkTurn() {
         this.classList.add('visible');
         cardValueTurnOne = this;
         allowedTurns--;
+        // cardPlusSignOne = $(this).find('button');
+        // console.log(cardPlusSignOne);
 
     } else
 
@@ -81,6 +119,9 @@ function shuffle(){
 
     }
 }
+
+//special effects
+
 
 
 

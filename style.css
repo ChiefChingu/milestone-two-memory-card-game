@@ -6,26 +6,39 @@
 
 body {
     height: 100vh;
-    background-color: lightgray;
+    /* background-color: #00A95A; */
 }    
 
 .memory-game {
     display: grid;
-    grid-template-columns: repeat(3, 1fr);
+    grid-template-columns: repeat(2, 1fr);
     align-items: center;
     justify-items: center;
-    width: 320px;
+    width: 90%;
+    max-width: 450px;
     margin: 3rem auto;
     grid-gap: 5px;
     perspective: 800px;
 }
 
+@media screen and (min-width: 700px) {
+ 
+  .memory-game {
+    width: 600px;
+    grid-template-columns: repeat(4, 1fr);
+  }
+
+  .front-face {
+    object-fit: none;
+}
+
+}
+
 .card {
     position: relative;
     width: 100%;
-    height: 100px;
+    height: 150px;
     border-radius: 5px;
-    background-color: aqua;
     transform-style: preserve-3d;
     transition: transform .5s;
 }
@@ -40,11 +53,12 @@ body {
 
 .front-face {
     transform: rotateX(180deg);
+    object-fit: cover;
 }
 
 .back-face {
     
-    background-color: orangered;
+    background-color:  #00A95A;
     background-image: url("assets/images/waves.svg");
     background-position: center;
     background-size: cover;
@@ -54,3 +68,12 @@ body {
 .visible {
     transform: rotateX(180deg);
 }
+
+.match {
+    position: absolute;
+    background-color: ;
+    color: white;
+    backface-visibility: hidden;
+    transform: rotateX(180deg);
+}
+
