@@ -3,27 +3,28 @@ let cardValueTurnOne, cardValueTurnTwo;
 let numberOfMoves = 0;
 let matchesMade = 0;
 
-let allCards = Array.from(document.getElementsByClassName('card'));
-var slicedCards = allCards.slice(0, -4);
+let allCards = Array.from(document.getElementsByClassName('card')); //put all card classes into an array
+var mobileScreenCards = allCards.slice(0, -4); //adjust number of cards for mobile screens
 
-
-//determine screen size and set number of cards
+//determine screen size and set number of cards accordingly
 var x = window.matchMedia("(max-width: 700px)")
-  myFunction(x) // Call listener function at run time
-  x.addListener(myFunction) // Attach listener function on state changes
+myFunction(x) // Call listener function at run time
+x.addListener(myFunction) // Attach listener function on state changes
+
 function myFunction(x) {
-    if (x.matches) { // If media query matches then set number of cards to 8
-      gameCards = slicedCards;
-      console.log("sliced cards");
+
+    if (x.matches) { // If media query matches, use mobile screen cards
+      
+      gameCards = mobileScreenCards;
 
     } else {
-      gameCards = allCards;
-      console.log("no cards sliced");
+
+      gameCards = allCards; // If not mobile screen, use all cards available
+
     }
   }
 
 cards = gameCards;
-console.log(cards)
 
 //determine # of matches
 let totalMatches = Math.floor(cards.length/2);
@@ -61,23 +62,26 @@ function checkTurn() {
        
             //evaluate cards and check for match
             if(cardValueTurnOne.dataset.cardvalue === cardValueTurnTwo.dataset.cardvalue) {
+
                     matchesMade++;
                     numberOfMoves++;
                     updateCounter();
+
                 //If match, leave cards as is (visible, not clickable) and reset allowedTurns
+
                 setTimeout(() => {
+
                     cardValueTurnOne.children[1].className = 'show-match';
                     cardValueTurnTwo.children[1].className = 'show-match';
                     
                     allowedTurns = 2;
-                    // document.getElementById("moves").innerHTML = numberOfMoves;
-                    //check if game is finished
-                    if(matchesMade === totalMatches) {
-
-                        alert('GG');
-                        //trigger game over screen
-                    }
-                }, 800);               
+ 
+                }, 800);
+                
+                //If all matches made: end of game
+                setTimeout(()=> {
+                    checkGameFinished();
+                }, 2000);             
 
             } else {
                 
@@ -87,7 +91,6 @@ function checkTurn() {
                     cardValueTurnTwo.classList.remove('visible');
                     cardValueTurnOne.classList.remove('visible');
                     allowedTurns = 2;
-                    // document.getElementById("moves").innerHTML = numberOfMoves;
                     updateCounter();
 
                 }, 1500);
@@ -99,6 +102,15 @@ function checkTurn() {
             }
         }
     }
+
+//check end game
+function checkGameFinished() {
+    if(matchesMade === totalMatches) {
+        alert('GG');
+        window.location.reload();
+        //trigger game over screen
+    }
+}
 
 //update moves counter
 function updateCounter() {
@@ -120,12 +132,8 @@ function shuffle(){
     }
 }
 
-//put number of moves in counter
-document.getElementById("moves").innerHTML = numberOfMoves;
-
 /* Code for button shuffle - maybe when using layover
 <button id="card">shuffle</button>
-
 document.getElementById("card").addEventListener("click", (function () {
     var parent = $(".memory-game");
     var divs = parent.children();
