@@ -47,7 +47,15 @@ function checkTurn() {
         this.classList.add('visible');
         cardValueTurnOne = this;
         allowedTurns--;
-        // cardValueTurnOne.children[1].className = 'show-match';
+        
+        //Check if card is the question card (pair of cards has question and answer), show question
+        if(cardValueTurnOne.dataset.type === 'q') {
+
+            setTimeout(() => {
+                cardValueTurnOne.children[1].className = 'show-context';
+            }, 900);
+            
+        }
 
     } else
 
@@ -66,15 +74,14 @@ function checkTurn() {
                     matchesMade++;
                     numberOfMoves++;
                     updateCounter();
+                    allowedTurns = 2;
 
                 //If match, leave cards as is (visible, not clickable) and reset allowedTurns
 
                 setTimeout(() => {
 
-                    cardValueTurnOne.children[1].className = 'show-match';
-                    cardValueTurnTwo.children[1].className = 'show-match';
-                    
-                    allowedTurns = 2;
+                    cardValueTurnOne.children[1].className = 'show-context';                  
+                    cardValueTurnTwo.children[1].className = 'show-context';
  
                 }, 800);
                 
@@ -92,6 +99,7 @@ function checkTurn() {
                     cardValueTurnOne.classList.remove('visible');
                     allowedTurns = 2;
                     updateCounter();
+                    cardValueTurnOne.children[1].className = 'context';
 
                 }, 1500);
 
