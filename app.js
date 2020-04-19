@@ -114,9 +114,9 @@ function checkTurn() {
 //check end game
 function checkGameFinished() {
     if(matchesMade === totalMatches) {
-        alert('GG');
-        window.location.reload();
-        //trigger game over screen
+
+        window.location.href = "game-over.html";
+
     }
 }
 

@@ -10,6 +10,15 @@ body {
     /* background-color: #00A95A; */
 }    
 
+.wrapper {
+    display: grid;
+    border: none;
+    border-radius: 4px;
+    background-color: whitesmoke;
+    /* height: 95vh; */
+    margin: 1rem;
+}
+
 .memory-game {
     display: grid;
     grid-template-columns: repeat(2, 1fr);
@@ -21,8 +30,6 @@ body {
     grid-gap: 5px;
     perspective: 800px;
 }
-
-
 
 .card {
     position: relative;
@@ -107,4 +114,20 @@ body {
     font-weight: 900;
     text-align: center;
     padding: 0.5rem 0;
+}
+
+.btn {
+    background-color: #ff8d1a;
+    color: white;
+    font-size: 16px;
+    font-weight: 700;
+    text-decoration: none;
+    margin: 2rem auto;
+    border: none;
+    border-radius: 4px;
+    display: block;
+    padding: 0.75rem 1.5rem;
+    width: 220px;
+    text-align: center;
+    text-transform: uppercase;
 }
