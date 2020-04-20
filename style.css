@@ -48,17 +48,24 @@ h3 {
 }
 
 .wrapper {
-    display: grid;
-    border: none;
-    border-radius: 4px;
-    /* background-color: whitesmoke; */
-    margin: 1rem;
+    margin: 1rem auto;
     padding: 1rem;
 }
 
-.home-page {
+.wrapper-bottom-link {
+    margin: 0;
+    text-align: center;
+}
+
+.home-page-img {
     width: 100%;
     margin: 2rem auto;
+    box-shadow: 0 10px 1rem rgba(0,0,0,.16);
+}
+
+.game-over-img {
+    margin: 2rem auto;
+    width: 300px;
     box-shadow: 0 10px 1rem rgba(0,0,0,.16);
 }
 
@@ -95,11 +102,16 @@ h3 {
 
 @media screen and (min-width: 700px) {
  
+    .wrapper {
+        width: 700px;
+    }
+
     .desktop {
         display: initial;
     }
+
     .memory-game {
-        max-width: 70%;
+        max-width: 50%;
         grid-template-columns: repeat(4, 1fr);
     }
 
@@ -109,6 +121,7 @@ h3 {
 
     .card {
         height: 250px;
+        width: 250px;
     }
 
 }
@@ -128,7 +141,8 @@ h3 {
 }
 
 .back-face {
-    background-color:  #00A95A;
+    /* background-color:  #00A95A; */
+    background-color:  #2a97ce;
     background-image: url("assets/images/waves.svg");
     background-position: center;
     background-size: cover;
@@ -162,7 +176,7 @@ h3 {
     font-size: 16px;
     font-weight: 700;
     text-decoration: none;
-    margin: 2rem auto;
+    margin: 2rem auto 1rem auto;
     border: none;
     border-radius: 4px;
     display: block;

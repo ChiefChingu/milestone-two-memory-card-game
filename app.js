@@ -89,7 +89,7 @@ function checkTurn() {
                 //If all matches made: end of game
                 setTimeout(()=> {
                     checkGameFinished();
-                }, 2000);             
+                }, 2500);             
 
             } else {
                 
