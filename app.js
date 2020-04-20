@@ -2,6 +2,7 @@ let allowedTurns = 2;
 let cardValueTurnOne, cardValueTurnTwo;
 let numberOfMoves = 0;
 let matchesMade = 0;
+let endScore;
 
 let allCards = Array.from(document.getElementsByClassName('card')); //put all card classes into an array
 var mobileScreenCards = allCards.slice(0, -4); //adjust number of cards for mobile screens
@@ -114,9 +115,8 @@ function checkTurn() {
 //check end game
 function checkGameFinished() {
     if(matchesMade === totalMatches) {
-
+        
         window.location.href = "game-over.html";
-
     }
 }
 

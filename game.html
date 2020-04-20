@@ -10,17 +10,19 @@
     
     <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.4.1/jquery.min.js"></script>
 </head>
-<body onload="shuffle()">    
+<body onload="shuffle()">
+    <header class="game-header">
+        <h3>Number of moves made<br> <span id="moves">0 </span></h3>
+    </header>    
     <div class="memory-game">
-        <div class="counter"><h2>Number of moves made: <span id="moves"></span></h2></div>
         <div data-cardvalue="1" data-type="a" class="card clickable">
             <img class="front-face" src="assets/images/1-james-a.png" alt="">
-            <div class="context">Here you go, buddy.</div>
+            <div class="context">Sure.</div>
             <div class="back-face"></div>
         </div>
         <div data-cardvalue="1" data-type="q" class="card clickable">
             <img class="front-face" src="assets/images/1-james-q.png" alt="">
-            <div class="context">Can you erase the guy in the back?</div>
+            <div class="context">Can take the lamp out?</div>
             <div class="back-face"></div>
         </div>
         <div data-cardvalue="2" data-type="a" class="card clickable">
@@ -73,6 +75,9 @@
             <div class="context">Can you make the waterfall bigger or closer?</div>
             <div class="back-face"></div>
         </div>
+    </div>
+    <div class="wrapper">
+        <a href="index.html">home</a>
     </div>
     <script src="app.js"></script>
 </body>
