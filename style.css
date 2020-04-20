@@ -17,6 +17,7 @@ header {
     background-size: cover;
     color: white;
     height: 15vh;
+    width: 100%;
     padding-top: 3rem;
     }
 
@@ -58,7 +59,7 @@ h3 {
 }
 
 .home-page-img {
-    width: 100%;
+    width: 65%;
     margin: 2rem auto;
     box-shadow: 0 10px 1rem rgba(0,0,0,.16);
 }
@@ -66,6 +67,7 @@ h3 {
 .game-over-img {
     margin: 2rem auto;
     width: 300px;
+    border-radius: 5px;
     box-shadow: 0 10px 1rem rgba(0,0,0,.16);
 }
 
@@ -100,7 +102,7 @@ h3 {
     display: none;
 }
 
-@media screen and (min-width: 700px) {
+@media screen and (min-width: 700px) { /* nog een query toevoegen voor tablet */
  
     .wrapper {
         width: 700px;
@@ -111,7 +113,7 @@ h3 {
     }
 
     .memory-game {
-        max-width: 50%;
+        max-width: 1000px;
         grid-template-columns: repeat(4, 1fr);
     }
 
@@ -121,7 +123,7 @@ h3 {
 
     .card {
         height: 250px;
-        width: 250px;
+        width: 100%;
     }
 
 }
