@@ -18,7 +18,8 @@ header {
     color: white;
     height: 15vh;
     width: 100%;
-    padding-top: 3rem;
+    display: grid;
+    align-items: center;
     }
 
 .game-header {
@@ -62,6 +63,7 @@ h3 {
     width: 65%;
     margin: 2rem auto;
     box-shadow: 0 10px 1rem rgba(0,0,0,.16);
+    border-radius: 5px;
 }
 
 .game-over-img {
@@ -102,7 +104,7 @@ h3 {
     display: none;
 }
 
-@media screen and (min-width: 700px) { /* nog een query toevoegen voor tablet */
+@media screen and (min-width: 700px) { /* nog een query toevoegen voor tablet? */
  
     .wrapper {
         width: 700px;
@@ -112,9 +114,39 @@ h3 {
         display: initial;
     }
 
+    header {
+        height: 15vh;
+    }
+
+    h1 {
+        font-size: 3rem;
+    }
+
+    .game-header {
+        height: 15vh;
+        display: grid;
+        align-items: center;
+    }
+
+    h3 {
+        font-size: 1.5rem;
+    }
+
+    #moves {
+        font-size: 5rem;
+    }
+
     .memory-game {
         max-width: 1000px;
         grid-template-columns: repeat(4, 1fr);
+        margin-top: 17rem;
+        margin-bottom: 2rem;
+    }
+
+    .show-context {
+        height: 23%;
+        display: grid;
+        align-items: center;
     }
 
     .front-face {

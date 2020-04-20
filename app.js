@@ -74,7 +74,7 @@ function checkTurn() {
 
                     matchesMade++;
                     numberOfMoves++;
-                    updateCounter();
+                    
                     allowedTurns = 2;
 
                 //If match, leave cards as is (visible, not clickable) and reset allowedTurns
@@ -83,6 +83,7 @@ function checkTurn() {
 
                     cardValueTurnOne.children[1].className = 'show-context';                  
                     cardValueTurnTwo.children[1].className = 'show-context';
+                    updateCounter();
  
                 }, 800);
                 
