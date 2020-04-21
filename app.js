@@ -48,15 +48,17 @@ function checkTurn() {
         this.classList.add('visible');
         cardValueTurnOne = this;
         allowedTurns--;
+        checkIfQuestion();
         
+        //moved this to function
         //Check if card is the question card (pair of cards has question and answer), show question
-        if(cardValueTurnOne.dataset.type === 'q') {
+        // if(cardValueTurnOne.dataset.type === 'q') {
 
-            setTimeout(() => {
-                cardValueTurnOne.children[1].className = 'show-context';
-            }, 900);
+        //     setTimeout(() => {
+        //         cardValueTurnOne.children[1].className = 'show-context';
+        //     }, 900);
             
-        }
+        // }
 
     } else
 
@@ -68,6 +70,7 @@ function checkTurn() {
         this.classList.add('visible');
         cardValueTurnTwo = this;
         allowedTurns--;
+        
        
             //evaluate cards and check for match
             if(cardValueTurnOne.dataset.cardvalue === cardValueTurnTwo.dataset.cardvalue) {
@@ -150,3 +153,12 @@ document.getElementById("card").addEventListener("click", (function () {
         parent.append(divs.splice(Math.floor(Math.random() * divs.length), 1)[0]);
     }
 }) ); */
+
+function checkIfQuestion() {
+    if(cardValueTurnOne.dataset.type === 'q') {
+
+        setTimeout(() => {
+            cardValueTurnOne.children[1].className = 'show-context';
+        }, 900);
+    }
+}
