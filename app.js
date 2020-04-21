@@ -8,9 +8,9 @@ let allCards = Array.from(document.getElementsByClassName('card')); //put all ca
 var mobileScreenCards = allCards.slice(0, -4); //adjust number of cards for mobile screens
 
 //determine screen size and set number of cards accordingly
-var x = window.matchMedia("(max-width: 700px)")
-myFunction(x) // Call listener function at run time
-x.addListener(myFunction) // Attach listener function on state changes
+var x = window.matchMedia("(max-width: 700px)");
+myFunction(x); // Call listener function at run time
+x.addListener(myFunction); // Attach listener function on state changes
 
 function myFunction(x) {
 

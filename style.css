@@ -5,9 +5,7 @@
 }
 
 body {
-    height: 100vh;
     font-family: 'Lato', sans-serif;
-   
 }    
 
 header, .game-header {
@@ -47,13 +45,21 @@ h3 {
 }
 
 .wrapper {
-    margin: 1rem auto;
+    margin: 1rem auto 0 auto;
     padding: 1rem;
 }
 
 .wrapper-bottom-link {
     margin: 0;
     text-align: center;
+}
+
+ul li{
+    display: inline-block;
+}
+
+li {
+    padding: 0 1rem 1rem 1rem;  
 }
 
 .home-page-img {
@@ -76,6 +82,13 @@ h3 {
     text-align: center;
 }
 
+.explanation.left {
+    padding-top: 1rem;
+    font-size: 1.3rem;
+    line-height: 1.9rem;
+    text-align: left;
+}
+
 .memory-game {
     display: grid;
     grid-template-columns: repeat(2, 1fr);
@@ -86,7 +99,7 @@ h3 {
     margin: 7rem auto 1rem auto;
     grid-gap: 10px;
     perspective: 800px;
-   }
+}
 
 .card {
     position: relative;
@@ -100,8 +113,6 @@ h3 {
 .desktop {
     display: none;
 }
-
-
 
 .front-face, .back-face {
     position: absolute;
@@ -217,5 +228,4 @@ a {
         height: 250px;
         width: 100%;
     }
-
 }
