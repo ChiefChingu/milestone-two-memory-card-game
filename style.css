@@ -124,26 +124,26 @@ li {
 /* match animation */
 .animation {
     transform: rotateX(180deg);
-    animation: mymove 4s;
+    animation: tilt .4s;
     
 }
 
-@keyframes mymove {
+@keyframes tilt {
   
     0% {
       transform: rotate(-1deg);
     }
     
     33% {
-      transform: rotate(180deg);
+      transform: rotate(0deg);
     }
     
     66% {
-      transform: rotate(358deg);
+      transform: rotate(-1deg);
     }
 
     100% {
-        transform: rotate(-1deg);
+        transform: rotate(0deg);
     }
 }
 
@@ -251,21 +251,21 @@ a:hover {
     .game-header {
         display: grid;
         align-items: center;
-        padding: 2rem 0 1.5rem 0;
+        padding: 1rem 0 1rem 0;
     }
 
     h3 {
-        font-size: 1.5rem;
+        font-size: 1rem;
     }
 
     #moves {
-        font-size: 5rem;
+        font-size: 3rem;
     }
 
     .memory-game {
         max-width: 1000px;
         grid-template-columns: repeat(4, 1fr);
-        margin-top: 17rem;
+        margin-top: 11rem;
         margin-bottom: 2rem;
     }
 
@@ -278,7 +278,28 @@ a:hover {
     }
 
     .card {
-        height: 250px;
+        height: 230px;
         width: 100%;
+    }
+}
+
+@media screen and (min-width: 2000px) {
+    .game-header {
+        display: grid;
+        align-items: center;
+        padding: 2rem 0 1.5rem 0;
+    }
+
+    h3 {
+        font-size: 1.5rem;
+    }
+
+    #moves {
+        font-size: 5rem;
+    }
+
+    .memory-game {
+        margin-top: 17rem;
+        margin-bottom: 2rem;
     }
 }

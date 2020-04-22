@@ -30,15 +30,32 @@ As a user I want to:
 ### Existing features
 #### Home
 - Explanatory image: explain what a user can expect by showing an example image.
-- Call to action: stimulate the user to take action.
+- Call to action: stimulate the user to take action. In this case start the game.
 - Navigation: minimal navigation to the about and contact page.
 
 #### Game page
-- Game tiles: clickable
+- Game tiles: clickable, turn on click.
+- Card context: pairs do not have identical images, so a context is provided in a text label that appears after 1 second.
+- Game logic: in case there is a match, the cards animate and remain visible.
+- Moves counter: after each move (two cards turned) the counter updates.
+- Quit option: if user wants to quit, there is a link back to the homepage.
+- Navigation: minimal navigation to about and contact page and of course back to homepage.
+- Confirmation when game is finished: user goes to the game over page.
+
+#### Game over page
+- Congratulations header.
+- Explanation of images: where to find the originals.
+- Call to action: stimulate the user to take action. In this case restart the game.
+- Navigation: minimal navigation to about and contact page and of course back to homepage.
+
+#### About and contact page
+- Explanation of website.
+- Contact option.
 
 ### Features left to implement
-Introduce levels: start with two cards. 
-High score board: show all time statistics.
+- Introduce levels: start with two cards at level 1. Then 3 cards at level 4, etc.
+- Personal high score: keep track of your games and try to beat your scores.
+- High score board: show all time statistics.
 
 ## Technologies Used
 

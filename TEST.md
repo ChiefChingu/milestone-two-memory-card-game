@@ -1,7 +1,7 @@
 # Testing
 Back to the [README]((https://github.com/ChiefChingu/milestone-two-memory-card-game/blob/master/README.md).
 
-I tested the project with the validators for css and markup. 
+First I tested the project with the validators for css and markup. Then I manually tested all user stories and features (if relevant). All results are displayed below. The last section goes into more detail of the issues I encountered.
 
 ## W3C CSS Validation Service
 No errors or warnings to show: [style.css].(#).
@@ -13,10 +13,21 @@ No errors or warnings to show:
 [game-over.html].(https://validator.w3.org/nu/?doc=https%3A%2F%2Fchiefchingu.github.io%2Fmilestone-two-memory-card-game%2Fgame-over.html).
 [contact.html].(https://validator.w3.org/nu/?doc=https%3A%2F%2Fchiefchingu.github.io%2Fmilestone-two-memory-card-game%2Fcontact.html).
 
+## User stories
+Each user story is tested thoroughly. All steps are taken in the main browsers at 3 different viewports: mobile (including tablet) and desktop.
 
 
+## Features
 
----------------------------
+
+## Issues and solutions
+### Determine viewport and adjust number of cards.
+I tried to limit the number of cards on mobile for better UX (no scroll). First used ```display:none``` for the cards I wanted to hide. This worked, but it did not update the total number of possible matches. This was still based on all cards in the array. So, you could not win since the last matches were now from cards that are not displayed.
+
+I then tried to do it from within JS. I found how to do a media query in javascript  If mobile, then I sliced the array and removed the last two cards. This works. Now I just need to remove the last two cards, marked ```.desktop``` from the html flow. This is done with the normal media query in CSS.
+https://www.w3schools.com/howto/howto_js_media_queries.asp
+
+### Flip cards and matching logic
 At first I created the variable allowedTurns to control that only two cards can be clicked and turned. This worked, but it did not prevent users from clicking the same card twice. When doing this, the allowedTurns did increment, resulting in one card turned and not being able to click a second one. 
 
 That is why I added a second check: a class: clickable. At the start of the game all cards have this class. When a card is clicked and turned, this class is removed. So, you can no longer click one card twice. Then, when the cards are evaluated for a match the class clickable can be added again (if there was no match).
@@ -83,6 +94,23 @@ function checkTurn() {
     }
 ```
 
+### Add context information on turned card
+Tried to add click on each card to add some context. But the same toggle function is shared across cards, so it did not work. I tried to get the right context by creating a new variable: ``` cardPlusSignOne = $(this).find('button'); ``` I now can target the specific button on the right card, but cannot tie the function to it.
+
+Then I thought that it is perhaps better to create an array of all buttons and add an event listener to it. So, the button click is for the right card. This worked and I could ```console.log(this)``` for card-specific button test text: I tested it with four different button texts. So, it logs:
+
+click 1 first card: ```<button class='toggle'>+</button>```
+click 2 first card: ```<button class='toggle'>++</button>```
+click 3 first card: ```<button class='toggle'>+++</button>```
+click 4 first card: ```<button class='toggle'>++++</button>```
+
+But, when I want to manipulate the CSS of that specific card I run into problems. The first card works as intended, however, the cards after that first one give troubles: the CSS of the first click (first card turned) is still targeted when I invoke the function to change the CSS. For now, I let go this idea.
+
+I then decided to show text on the flipped card when there is a match. Still, the problem remained of targeting the right cards while using classes. It crossed my mind to use IDs but then I would probably have to write a rule for each ID to target them, which did not feel right. So, I decided to research navigating the ```this``` keyword in more detail. I finally retrieved the right class of each individual card by using a very simple syntax: ```this.children[1]``` and then could manipulate the class.
+
+Being able to target the right individual card I wondered why I could not use this to get the slider working. I tried the slider again, but ran into the same issue, so left it behind for good.
+
+### Add animation on match
 When there is a match of cards I want to show this visually by nudging the matched pair. For some reason the cards first show the back-face, nudge and then show the front-face again. I tried targeting different elements of the card: 
 ```cardValueTurnOne.firstElementChild.children[1].classList.add('animation');``` results in adding the animation to the front-face. The picture disappears for the duration of the animation and then appears again.
 
