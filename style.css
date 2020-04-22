@@ -32,7 +32,7 @@ header {
     }
 
 #moves {
-    font-size: 2rem;
+    font-size: 1.5rem;
 }
 
 h1 {
@@ -42,6 +42,17 @@ h1 {
 h3 {
     text-align: center;
     padding-top: 1rem;
+    font-size: 1rem;
+}
+
+.quitter {
+    font-size: .9rem;
+    color: white;
+}
+
+.quitter:hover {
+    color: rgb(245, 84, 183);
+    font-weight: 900;
 }
 
 .wrapper {
@@ -107,7 +118,33 @@ li {
     height: 150px;
     border-radius: 5px;
     transform-style: preserve-3d;
-    transition: transform .5s;   
+    transition: transform .5s;
+}
+
+/* match animation */
+.animation {
+    transform: rotateX(180deg);
+    animation: mymove 1s;
+    
+}
+
+@keyframes mymove {
+  
+    0% {
+      transform: rotate(-1deg);
+    }
+    
+    33% {
+      transform: rotate(1deg);
+    }
+    
+    66% {
+      transform: rotate(-1deg);
+    }
+
+    100% {
+        transform: rotate(0deg);
+    }
 }
 
 .desktop {
@@ -129,11 +166,14 @@ li {
 }
 
 .back-face {
-    /* background-color:  #00A95A; */
     background-color:  #2a97ce;
     background-image: url("assets/images/waves.svg");
     background-position: center;
     background-size: cover;
+}
+
+.back-face-hidden {
+    color: white;
 }
 
 .visible {
@@ -157,7 +197,10 @@ li {
     text-align: center;
     display: grid;
     align-items: center;
+    padding: 0 0.2rem;
     height: 30%;
+    border-bottom-left-radius: 5px;
+    border-bottom-right-radius: 5px;
 }
 
 .btn {
@@ -176,12 +219,22 @@ li {
     text-transform: uppercase;
 }
 
+.btn:hover {
+    background-color: #7d51a1;
+    color: white;
+}
+
 a {
     color: #ff8d1a;
     text-align: center;
 }
 
-@media screen and (min-width: 1025px) { /* nog een query toevoegen voor tablet? */
+a:hover {
+    color: #7d51a1;
+    font-weight: 900;
+}
+
+@media screen and (min-width: 1025px) {
  
     .wrapper {
         width: 700px;
@@ -198,7 +251,7 @@ a {
     .game-header {
         display: grid;
         align-items: center;
-        padding: 2rem 0;
+        padding: 2rem 0 1.5rem 0;
     }
 
     h3 {

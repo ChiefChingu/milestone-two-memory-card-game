@@ -1,26 +1,44 @@
 ## Introduction
-This is the second milestone project of the fullstack software development course of Code Institute. I selected the memory card game assignment. My take on this game is to create a simple, engaging game that progresses in difficulty. Because it starts very simple, it is very intuitive and does not need instructions.
+This is the second milestone project of the fullstack software development course of Code Institute. I selected the memory card game assignment: flip cards and find the matching pairs. My take on this game is to create a game with matching pairs that are not identical, but related...
+
+You can play the game [here].(https://chiefchingu.github.io/milestone-two-memory-card-game/)
 
 ## UX
-This project was designed with the mobile user in mind. The [wireframes](#) reflect this: mobile first and desktop second. Also, the code is written from the mobile perspective: the mobile viewport is the baseline. Media queries are used to add tablet and desktop viewports.
+This project is designed with the mobile user in mind. The [wireframes](#) reflect this: mobile first and desktop second. Also, the code is written from the mobile perspective: the mobile viewport is the baseline. Media queries are used to handle the desktop viewport.
+
+I decided to create a very minimalistic design to ensure that all the focus goes to the game itself. This means a very minimal navigation at the bottom of each page, a combined contact and about page and of course the game page.
 
 ### User Stories
 As a user I want to:
 
 1. See an inviting game that makes me curious and want to play!
-2. Understand what to do.
-3. See my progress.
-
-For kids in the Netherlands:
-4. Understand the instructions in Dutch.
+2. Understand what to do to start the game.
+3. Click any card as first card and card should turn.
+4. Click any card as second card and card should turn.
+5. Get extra help about what matches to look for.
+6. See if there is a match when two cards are turned.
+7. See the cards flip back when there is no match.
+8. See cards not flip back when there is a match.
+9. See the number of turns I made so far.
+10. Get confirmation when the game is finished.
+11. Quit the game whenever I want.
+12. Get more information about the cards that are used.
+13. Contact the maker of the game in case I have questions, suggestions or compliments.
+14. Have fun!
 
 ## Features
 ### Existing features
-To do: describe the game elements like number of moves, lvl progress, etc.
+#### Home
+- Explanatory image: explain what a user can expect by showing an example image.
+- Call to action: stimulate the user to take action.
+- Navigation: minimal navigation to the about and contact page.
+
+#### Game page
+- Game tiles: clickable
 
 ### Features left to implement
+Introduce levels: start with two cards. 
 High score board: show all time statistics.
-
 
 ## Technologies Used
 

@@ -31,8 +31,6 @@ cards = gameCards;
 let totalMatches = Math.floor(cards.length/2);
 console.log(totalMatches);
 
-
-
 //add event listener to all cards
 cards.forEach(card => {
     card.addEventListener('click', checkTurn);
@@ -49,6 +47,7 @@ function checkTurn() {
         cardValueTurnOne = this;
         allowedTurns--;
         checkIfQuestion();
+        console.log(cardValueTurnOne.firstElementChild.children[1].className);
         
         //moved this to function
         //Check if card is the question card (pair of cards has question and answer), show question
@@ -71,28 +70,35 @@ function checkTurn() {
         cardValueTurnTwo = this;
         allowedTurns--;
         
-       
             //evaluate cards and check for match
+            //If match, leave cards as is (visible, not clickable) and reset allowedTurns
             if(cardValueTurnOne.dataset.cardvalue === cardValueTurnTwo.dataset.cardvalue) {
 
                     matchesMade++;
                     numberOfMoves++;
-                    
                     allowedTurns = 2;
-
-                //If match, leave cards as is (visible, not clickable) and reset allowedTurns
-
+                    animateCards();
+        
                 setTimeout(() => {
-
-                    cardValueTurnOne.children[1].className = 'show-context';                  
-                    cardValueTurnTwo.children[1].className = 'show-context';
+                    // cardValueTurnOne.children[1].className = 'show-context';                  
+                    // cardValueTurnTwo.children[1].className = 'show-context';
                     updateCounter();
+                    
  
                 }, 800);
+
+                setTimeout(()=>{
+                    
+                    cardValueTurnOne.children[1].className = 'show-context';                  
+                    cardValueTurnTwo.children[1].className = 'show-context';
+                }, 900)
+
+
                 
-                //If all matches made: end of game
                 setTimeout(()=> {
+
                     checkGameFinished();
+
                 }, 2500);             
 
             } else {
@@ -116,6 +122,19 @@ function checkTurn() {
         }
     }
 
+//animate cards on match
+function animateCards() {
+
+    cardValueTurnOne.lastElementChild.className = '.back-face-hidden';
+    cardValueTurnTwo.lastElementChild.className = '.back-face-hidden';
+    cardValueTurnOne.classList.add('animation');
+    cardValueTurnTwo.classList.add('animation');
+    cardValueTurnOne.firstElementChild.children[1].classList.add('animation');
+    cardValueTurnTwo.firstElementChild.children[1].classList.add('animation');
+    
+}
+
+
 //check end game
 function checkGameFinished() {
     if(matchesMade === totalMatches) {
@@ -131,7 +150,6 @@ function updateCounter() {
 
 }
 
-
 //Shuffle cards randomly
 function shuffle(){
 
@@ -143,16 +161,6 @@ function shuffle(){
 
     }
 }
-
-/* Code for button shuffle - maybe when using layover
-<button id="card">shuffle</button>
-document.getElementById("card").addEventListener("click", (function () {
-    var parent = $(".memory-game");
-    var divs = parent.children();
-    while (divs.length) {
-        parent.append(divs.splice(Math.floor(Math.random() * divs.length), 1)[0]);
-    }
-}) ); */
 
 function checkIfQuestion() {
     if(cardValueTurnOne.dataset.type === 'q') {

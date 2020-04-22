@@ -1,5 +1,22 @@
-Back to [README.md](https://github.com/ChiefChingu/milestone-two-memory-card-game/blob/master/README.md)
+# Testing
+Back to the [README]((https://github.com/ChiefChingu/milestone-two-memory-card-game/blob/master/README.md).
 
+I tested the project with the validators for css and markup. 
+
+## W3C CSS Validation Service
+No errors or warnings to show: [style.css].(#).
+
+## W3C Markup Validation Service
+No errors or warnings to show:
+[index.html].(https://validator.w3.org/nu/?doc=https%3A%2F%2Fchiefchingu.github.io%2Fmilestone-two-memory-card-game%2F).
+[game.html].(https://validator.w3.org/nu/?doc=https%3A%2F%2Fchiefchingu.github.io%2Fmilestone-two-memory-card-game%2Fgame.html).
+[game-over.html].(https://validator.w3.org/nu/?doc=https%3A%2F%2Fchiefchingu.github.io%2Fmilestone-two-memory-card-game%2Fgame-over.html).
+[contact.html].(https://validator.w3.org/nu/?doc=https%3A%2F%2Fchiefchingu.github.io%2Fmilestone-two-memory-card-game%2Fcontact.html).
+
+
+
+
+---------------------------
 At first I created the variable allowedTurns to control that only two cards can be clicked and turned. This worked, but it did not prevent users from clicking the same card twice. When doing this, the allowedTurns did increment, resulting in one card turned and not being able to click a second one. 
 
 That is why I added a second check: a class: clickable. At the start of the game all cards have this class. When a card is clicked and turned, this class is removed. So, you can no longer click one card twice. Then, when the cards are evaluated for a match the class clickable can be added again (if there was no match).
@@ -66,7 +83,21 @@ function checkTurn() {
     }
 ```
 
+When there is a match of cards I want to show this visually by nudging the matched pair. For some reason the cards first show the back-face, nudge and then show the front-face again. I tried targeting different elements of the card: 
+```cardValueTurnOne.firstElementChild.children[1].classList.add('animation');``` results in adding the animation to the front-face. The picture disappears for the duration of the animation and then appears again.
 
+I tried removing the back-face, but then I end up with a white space. When I added the animation to both the parent (div class card) and the front-face the animation worked! However, putting the back-face back, caused the same problems as before. But, now I could at least see the animation work as intended.
 
+Next step is to disable the back-face on a match before the animation happens. End result:
+```function animateCards() {
+
+    cardValueTurnOne.lastElementChild.className = '.back-face-hidden';
+    cardValueTurnTwo.lastElementChild.className = '.back-face-hidden';
+    cardValueTurnOne.classList.add('animation');
+    cardValueTurnTwo.classList.add('animation');
+    cardValueTurnOne.firstElementChild.children[1].classList.add('animation');
+    cardValueTurnTwo.firstElementChild.children[1].classList.add('animation');
+    
+}```
 
 

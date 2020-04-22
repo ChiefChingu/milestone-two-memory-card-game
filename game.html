@@ -13,10 +13,11 @@
 <body onload="shuffle()">
     <header class="game-header">
         <h3>Number of moves made<br> <span id="moves">0 </span></h3>
+        <a href="game-over.html" class="quitter">stop game</a>
     </header>
     <div class="memory-game">
         <div data-cardvalue="1" data-type="a" class="card clickable">
-            <picture>
+            <picture class="domtest">
                 <source srcset="assets/images/1-james-a-desktop.jpg" media="(min-width: 600px)">
                 <img class="front-face" src="assets/images/1-james-a-mobile.jpg" alt="">
             </picture>
