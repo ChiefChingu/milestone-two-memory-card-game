@@ -1,17 +1,17 @@
 # Testing
-Back to the [README]((https://github.com/ChiefChingu/milestone-two-memory-card-game/blob/master/README.md).
+Back to the [README](https://github.com/ChiefChingu/milestone-two-memory-card-game/blob/master/README.md).
 
 First I tested the project with the validators for css and markup. Then I manually tested all user stories and features (if relevant). All results are displayed below. The last section goes into more detail of the issues I encountered.
 
 ## W3C CSS Validation Service
-No errors or warnings to show: [style.css].(#).
+No errors or warnings to show: [style.css](#).
 
 ## W3C Markup Validation Service
 No errors or warnings to show:
-[index.html].(https://validator.w3.org/nu/?doc=https%3A%2F%2Fchiefchingu.github.io%2Fmilestone-two-memory-card-game%2F).
-[game.html].(https://validator.w3.org/nu/?doc=https%3A%2F%2Fchiefchingu.github.io%2Fmilestone-two-memory-card-game%2Fgame.html).
-[game-over.html].(https://validator.w3.org/nu/?doc=https%3A%2F%2Fchiefchingu.github.io%2Fmilestone-two-memory-card-game%2Fgame-over.html).
-[contact.html].(https://validator.w3.org/nu/?doc=https%3A%2F%2Fchiefchingu.github.io%2Fmilestone-two-memory-card-game%2Fcontact.html).
+[index.html](https://validator.w3.org/nu/?doc=https%3A%2F%2Fchiefchingu.github.io%2Fmilestone-two-memory-card-game%2F).
+[game.html](https://validator.w3.org/nu/?doc=https%3A%2F%2Fchiefchingu.github.io%2Fmilestone-two-memory-card-game%2Fgame.html).
+[game-over.html](https://validator.w3.org/nu/?doc=https%3A%2F%2Fchiefchingu.github.io%2Fmilestone-two-memory-card-game%2Fgame-over.html).
+[contact.html](https://validator.w3.org/nu/?doc=https%3A%2F%2Fchiefchingu.github.io%2Fmilestone-two-memory-card-game%2Fcontact.html).
 
 ## User stories
 Each user story is tested thoroughly. All steps are taken in the main browsers at 3 different viewports: mobile (including tablet) and desktop.
@@ -53,7 +53,7 @@ function evaluateCards() {
     console.log('check match');
 ```
 
-This worked perfect: you can not click the same card twice. Big caveat though: this setup made it very difficult to evaluate if there was a match. So, I decided to separate turn one and turn two. No problems here when there was a match: the right classes were applied already (clickable removed visible added). I only needed to reset the allowedTurns. In case there was no match, I ran into problems again. I could target the last card turned and add classes. However, I could no longer target the first card that was turned. 
+This worked perfect: you cannot click the same card twice. Big caveat though: this setup made it very difficult to evaluate if there was a match. So, I decided to separate turn one and turn two. No problems here when there was a match: the right classes were applied already (clickable removed visible added). I only needed to reset the allowedTurns. In case there was no match, I ran into problems again. I could target the last card turned and add classes. However, I could no longer target the first card that was turned. 
 ```javascript
 function checkTurn() {
 
@@ -99,16 +99,16 @@ Tried to add click on each card to add some context. But the same toggle functio
 
 Then I thought that it is perhaps better to create an array of all buttons and add an event listener to it. So, the button click is for the right card. This worked and I could ```console.log(this)``` for card-specific button test text: I tested it with four different button texts. So, it logs:
 
-click 1 first card: ```<button class='toggle'>+</button>```
-click 2 first card: ```<button class='toggle'>++</button>```
-click 3 first card: ```<button class='toggle'>+++</button>```
-click 4 first card: ```<button class='toggle'>++++</button>```
+- click 1 first card: ```<button class='toggle'>+</button>```
+- click 2 first card: ```<button class='toggle'>++</button>```
+- click 3 first card: ```<button class='toggle'>+++</button>```
+- click 4 first card: ```<button class='toggle'>++++</button>```
 
 But, when I want to manipulate the CSS of that specific card I run into problems. The first card works as intended, however, the cards after that first one give troubles: the CSS of the first click (first card turned) is still targeted when I invoke the function to change the CSS. For now, I let go this idea.
 
 I then decided to show text on the flipped card when there is a match. Still, the problem remained of targeting the right cards while using classes. It crossed my mind to use IDs but then I would probably have to write a rule for each ID to target them, which did not feel right. So, I decided to research navigating the ```this``` keyword in more detail. I finally retrieved the right class of each individual card by using a very simple syntax: ```this.children[1]``` and then could manipulate the class.
 
-Being able to target the right individual card I wondered why I could not use this to get the slider working. I tried the slider again, but ran into the same issue, so left it behind for good.
+Being able to target the right individual card I wondered why I could not use this to get the slider working. I tried the slider again, but ran into the same issue, so left it behind for good. I now slide in the context without a button click.
 
 ### Add animation on match
 When there is a match of cards I want to show this visually by nudging the matched pair. For some reason the cards first show the back-face, nudge and then show the front-face again. I tried targeting different elements of the card: 
@@ -117,7 +117,8 @@ When there is a match of cards I want to show this visually by nudging the match
 I tried removing the back-face, but then I end up with a white space. When I added the animation to both the parent (div class card) and the front-face the animation worked! However, putting the back-face back, caused the same problems as before. But, now I could at least see the animation work as intended.
 
 Next step is to disable the back-face on a match before the animation happens. End result:
-```function animateCards() {
+```javascript
+function animateCards() {
 
     cardValueTurnOne.lastElementChild.className = '.back-face-hidden';
     cardValueTurnTwo.lastElementChild.className = '.back-face-hidden';
@@ -126,6 +127,7 @@ Next step is to disable the back-face on a match before the animation happens. E
     cardValueTurnOne.firstElementChild.children[1].classList.add('animation');
     cardValueTurnTwo.firstElementChild.children[1].classList.add('animation');
     
-}```
+}
+```
 
 
