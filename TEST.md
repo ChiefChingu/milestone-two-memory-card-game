@@ -16,33 +16,66 @@ No errors or warnings to show:
 ## User stories
 Each user story is tested thoroughly. All steps are taken in the main browsers at 3 different viewports: mobile (including tablet) and desktop.
 
-#### See an inviting game that makes me curious and want to play!
+### See an inviting game that makes me curious and want to play!
 - Homepage shows a catchy oneliner that triggers curiousity: try not to laugh.
 - Explanatory image shows a funny scene, enticing the user to get to know more.
 
-#### Understand what to do to start the game.
+### Understand what to do to start the game.
 - Call to action is very colorful and has much contrast: user is challenged to click.
 - Game page is without clutter with just cards and a moves counter: users will automatically click a card.
 
-#### Behind the scenes:
+##### Behind the scenes:
 - All cards are collected in an array and get an event listener. Upon click the visible class is applied, which flips the card and shows the front-face.
 - When a mobile device (screen size under 700px): the array is spliced and the last 4 cards are removed. All remaining cards are put in the game array.
+- The total number of matches is calculated and stored in ```totalMatches``` to determine when the game finishes.
 - Upon loading the page, the game array is shuffled.
 
-#### Click any card as first card and card should turn.
+### Click any card as first card and card should turn.
 - Cards turn as intended, front-face of the card is displayed.
 
 ##### Behind the scene
+- Variable ```allowedTurns``` is set to 2. Each click decreases this value by 1.
 - Upon click the visible class is applied, which flips the card and shows the front-face.
 - Upon click the class clickable is removed, so the same card cannot be clicked twice when turned.
 
-#### Click any card as second card and card should turn.
-- Cards turn as intended, front-face of the card is displayed.
-
-#### Get extra help about what matches to look for.
+### Get extra help about what matches to look for.
 - Matching pairs consist of a question and answer card. In case the question card is turned: the question is displayed on the card.
+- The question is only displayed on the first flipped card (if on the second card, the card will flip back when no match and then there is not enough time to read the text.)
 
-See if there is a match when two cards are turned.
+##### Behind the scene
+- Data attributes are used to distinguish question and answer cards.
+- Questions get ```data-type = q```.
+- When ```allowedTurns``` is 2 it means this is the first card. Then the next statement is triggered.
+- If ```data-type = q``` then the ```class = context``` is made visible, which shows the question on the card. This is done via function ```checkIfQuestion```.
+
+### Click any card as second card and card should turn.
+- Cards turn as intended, front-face of the card is displayed.
+- First card that is turned cannot be clicked again.
+- Second card that is turned cannot be clicked again.
+
+##### Behind the scene
+- When ```allowedTurns``` is 1 it means one more card can be clicked.
+- Upon click the visible class is applied, which flips the card and shows the front-face.
+- Upon click the class clickable is removed, so the same card cannot be clicked twice when turned.
+- Because ```allowedTurns``` is 1 it means this is the second card. The matching logic is triggered.
+
+### See if there is a match when two cards are turned.
+- When there is a match, the cards tilt slightly to indicate a match.
+- The context of both cards is displayed: the question and the answer.
+- Both cards cannot be clicked again.
+- New cards can be clicked and turned.
+
+##### Behind the scene
+- All cards have a data attribute for match making: ```data-cardvalue```.
+- All matching pairs have an identical ```data-cardvalue```.
+- If these values match a function ```animateCards``` for the tilt animation is triggered.
+- Also, both the question and answer context are made visible.
+- A variable to track the number of matches ```matchesMade``` is incremented by 1.
+- A variable to track the number of moves ```numberOfMoves``` is incremented by 1 via a function ```updateCounter```.
+- The ```allowedTurns``` is reset to 2.
+
+
+
 
 See the cards flip back when there is no match.
 
@@ -51,6 +84,7 @@ See cards not flip back when there is a match.
 See the number of turns I made so far.
 
 Get confirmation when the game is finished.
+```checkGameFinished```
 
 Quit the game whenever I want.
 
