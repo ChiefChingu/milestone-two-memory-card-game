@@ -25,15 +25,16 @@ Each user story is tested thoroughly. All steps are taken in the main browsers a
 - Game page is without clutter with just cards and a moves counter: users will automatically click a card.
 
 ##### Behind the scenes:
-- All cards are collected in an array and get an event listener. Upon click the visible class is applied, which flips the card and shows the front-face.
-- When a mobile device (screen size under 700px): the array is spliced and the last 4 cards are removed. All remaining cards are put in the game array.
+- All cards are collected in an array and get an event listener. A function is called upon click to flip the card.
+- When user is on a mobile device (screen size under 700px): the array is spliced and the last 4 cards are removed. All remaining cards are put in the game array.
+- When user is on a laptop/desktp: the initial array is put in the game array.
 - The total number of matches is calculated and stored in ```totalMatches``` to determine when the game finishes.
-- Upon loading the page, the game array is shuffled.
+- Upon loading the page, the game array is shuffled via the function ```shuffle```.
 
 ### Click any card as first card and card should turn.
 - Cards turn as intended, front-face of the card is displayed.
 
-##### Behind the scene
+##### Behind the scenes:
 - Variable ```allowedTurns``` is set to 2. Each click decreases this value by 1.
 - Upon click the visible class is applied, which flips the card and shows the front-face.
 - Upon click the class clickable is removed, so the same card cannot be clicked twice when turned.
@@ -42,7 +43,7 @@ Each user story is tested thoroughly. All steps are taken in the main browsers a
 - Matching pairs consist of a question and answer card. In case the question card is turned: the question is displayed on the card.
 - The question is only displayed on the first flipped card (if on the second card, the card will flip back when no match and then there is not enough time to read the text.)
 
-##### Behind the scene
+##### Behind the scenes:
 - Data attributes are used to distinguish question and answer cards.
 - Questions get ```data-type = q```.
 - When ```allowedTurns``` is 2 it means this is the first card. Then the next statement is triggered.
@@ -53,47 +54,78 @@ Each user story is tested thoroughly. All steps are taken in the main browsers a
 - First card that is turned cannot be clicked again.
 - Second card that is turned cannot be clicked again.
 
-##### Behind the scene
+##### Behind the scenes:
 - When ```allowedTurns``` is 1 it means one more card can be clicked.
 - Upon click the visible class is applied, which flips the card and shows the front-face.
 - Upon click the class clickable is removed, so the same card cannot be clicked twice when turned.
 - Because ```allowedTurns``` is 1 it means this is the second card. The matching logic is triggered.
 
 ### See if there is a match when two cards are turned.
+- When two cards are turned, it has to be checked if there is a match.
+- If a match: animation that tilts the cards shortly.
+- If no match: cards flip back.
+
+##### Behind the scenes:
+- All cards have a data attribute for match making: ```data-cardvalue```.
+- All matching pairs have an identical ```data-cardvalue```.
+- If statement checks for a match.
+
+### See cards not flip back when there is a match.
 - When there is a match, the cards tilt slightly to indicate a match.
 - The context of both cards is displayed: the question and the answer.
+- The counter for number of moves updates with +1 move.
 - Both cards cannot be clicked again.
 - New cards can be clicked and turned.
 
-##### Behind the scene
-- All cards have a data attribute for match making: ```data-cardvalue```.
-- All matching pairs have an identical ```data-cardvalue```.
-- If these values match a function ```animateCards``` for the tilt animation is triggered.
+##### Behind the scenes:
+- If these ```data-cardvalue``` match, a function ```animateCards``` for the tilt animation is triggered.
 - Also, both the question and answer context are made visible.
 - A variable to track the number of matches ```matchesMade``` is incremented by 1.
 - A variable to track the number of moves ```numberOfMoves``` is incremented by 1 via a function ```updateCounter```.
 - The ```allowedTurns``` is reset to 2.
+- The clickable class remains removed.
+- The visible class remains added.
 
+### See the cards flip back when there is no match.
+- When no match, both cards flip back.
+- The counter for number of moves updates with +1 move.
+- New cards can be clicked.
 
+##### Behind the scenes:
+- When no match on ```data-cardvalue``` the cards flip back by removing the visible class.
+- Also, the context is removed from the question card.
+- To check if the game is finished with this match the function ```checkGameFinished``` is called. The ```matchesMade``` is compared to the ```totalMatches```.
+- The ```allowedTurns``` is reset to 2.
+- The cards become clickable again: class clickable is added.
+- Number of moves ```numberOfMoves``` is incremented by 1 via a function ```updateCounter```.
 
+### Get confirmation when the game is finished.
+- When all pair are found, user sees a game over page.
 
-See the cards flip back when there is no match.
+##### Behind the scenes:
+- ```checkGameFinished``` evaluates an if statement. If ```totalMatches = matchesMade``` the game over page is triggered. 
 
-See cards not flip back when there is a match.
+### See the number of turns I made so far.
+- In the header you can see the number of turns so far.
+- After two cards are turned: when there is a match of pairs, the counter updates.
+- After two cards are turned: when there is no match of pairs, the counter updates.
 
-See the number of turns I made so far.
+##### Behind the scenes:
+- ```updateCounter``` runs whenever two cards are turned.
 
-Get confirmation when the game is finished.
-```checkGameFinished```
+### Quit the game whenever I want.
+- User can click the stop game link whenever they want. The game over page is triggered.
+- User can navigate back to home or to the contact & about page.
 
-Quit the game whenever I want.
+### Get more information about the cards that are used.
+- The game over screen explains who created the images to give full credit.
+- A link to the owner's site shows all of his work. The link opens in a new tab.
 
-Get more information about the cards that are used.
+### Contact the maker of the game in case I have questions, suggestions or compliments.
+- The contact & about page invites visitors to contact me via the provided email address.
 
-Contact the maker of the game in case I have questions, suggestions or compliments.
-
-Have fun!
-
+### Have fun!
+- This one is difficult to test. The people who played the game so far, could not finish it without laughing!
 
 ## Features
 
