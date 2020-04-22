@@ -27,17 +27,17 @@ function myFunction(x) {
 
 cards = gameCards;
 
-//determine # of matches
+//determine # of matches to end game
 let totalMatches = Math.floor(cards.length/2);
-console.log(totalMatches);
+// console.log(totalMatches); to check the correct working of the media query and splice function.
 
 //add event listener to all cards
 cards.forEach(card => {
-    card.addEventListener('click', checkTurn);
+    card.addEventListener('click', turnLogic);
 })
 
 //turn card logic
-function checkTurn() {
+function turnLogic() {
     //check if card is first card
     if(allowedTurns == 2 && this.classList.contains('clickable')) {
 
@@ -47,7 +47,7 @@ function checkTurn() {
         cardValueTurnOne = this;
         allowedTurns--;
         checkIfQuestion();
-        console.log(cardValueTurnOne.firstElementChild.children[1].className);
+        console.log(cardValueTurnOne.firstElementChild.children[1].className); //check the targeting of the right class
         
         //moved this to function
         //Check if card is the question card (pair of cards has question and answer), show question
@@ -80,21 +80,18 @@ function checkTurn() {
                     animateCards();
         
                 setTimeout(() => {
-                    // cardValueTurnOne.children[1].className = 'show-context';                  
-                    // cardValueTurnTwo.children[1].className = 'show-context';
+                    
                     updateCounter();
                     
- 
                 }, 800);
 
                 setTimeout(()=>{
                     
                     cardValueTurnOne.children[1].className = 'show-context';                  
                     cardValueTurnTwo.children[1].className = 'show-context';
+
                 }, 900)
 
-
-                
                 setTimeout(()=> {
 
                     checkGameFinished();
