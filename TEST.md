@@ -129,5 +129,8 @@ function animateCards() {
     
 }
 ```
+### Messed up header when mobile users change orientation of their device
+I used vh to set the height of the header. This works as long as device is used in portrait orientation. Of course this no longer works correctly when you tilt your device: the viewport height will be much smaller, which resulted in shrinking headers and text overflow. Fixed this by setting the height to auto and applied padding to the elements inside it. However, the header is too high now. Fixed this by setting the media query to 800px (was 700px, so larger mobiles like iPhone X and Galaxy S10 triggered this viewport when in landscape: 740px long screens).
 
-
+### Scroll necessary when resolution is 1920 x 1080
+When starting the game on screens with 1920 x 1080 resolution, the game is not displayed correctly. You need to scroll, which is annoying when playing the game. Solved this by adding an extra media query for this screen size: adjusted padding, font-size and margins to get the game fully on screen.
