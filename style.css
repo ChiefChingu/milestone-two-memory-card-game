@@ -187,7 +187,6 @@ li {
 .show-context {
     position: absolute;
     width: 100%;
-    /* height: 30%; */
     background-color: grey;
     opacity: .7;
     color: white;
