@@ -8,13 +8,57 @@ No errors or warnings to show: [style.css](#).
 
 ## W3C Markup Validation Service
 No errors or warnings to show:
-[index.html](https://validator.w3.org/nu/?doc=https%3A%2F%2Fchiefchingu.github.io%2Fmilestone-two-memory-card-game%2F).
-[game.html](https://validator.w3.org/nu/?doc=https%3A%2F%2Fchiefchingu.github.io%2Fmilestone-two-memory-card-game%2Fgame.html).
-[game-over.html](https://validator.w3.org/nu/?doc=https%3A%2F%2Fchiefchingu.github.io%2Fmilestone-two-memory-card-game%2Fgame-over.html).
-[contact.html](https://validator.w3.org/nu/?doc=https%3A%2F%2Fchiefchingu.github.io%2Fmilestone-two-memory-card-game%2Fcontact.html).
+- [index.html](https://validator.w3.org/nu/?doc=https%3A%2F%2Fchiefchingu.github.io%2Fmilestone-two-memory-card-game%2F).
+- [game.html](https://validator.w3.org/nu/?doc=https%3A%2F%2Fchiefchingu.github.io%2Fmilestone-two-memory-card-game%2Fgame.html).
+- [game-over.html](https://validator.w3.org/nu/?doc=https%3A%2F%2Fchiefchingu.github.io%2Fmilestone-two-memory-card-game%2Fgame-over.html).
+- [contact.html](https://validator.w3.org/nu/?doc=https%3A%2F%2Fchiefchingu.github.io%2Fmilestone-two-memory-card-game%2Fcontact.html).
 
 ## User stories
 Each user story is tested thoroughly. All steps are taken in the main browsers at 3 different viewports: mobile (including tablet) and desktop.
+
+#### See an inviting game that makes me curious and want to play!
+- Homepage shows a catchy oneliner that triggers curiousity: try not to laugh.
+- Explanatory image shows a funny scene, enticing the user to get to know more.
+
+#### Understand what to do to start the game.
+- Call to action is very colorful and has much contrast: user is challenged to click.
+- Game page is without clutter with just cards and a moves counter: users will automatically click a card.
+
+#### Behind the scenes:
+- All cards are collected in an array and get an event listener. Upon click the visible class is applied, which flips the card and shows the front-face.
+- When a mobile device (screen size under 700px): the array is spliced and the last 4 cards are removed. All remaining cards are put in the game array.
+- Upon loading the page, the game array is shuffled.
+
+#### Click any card as first card and card should turn.
+- Cards turn as intended, front-face of the card is displayed.
+
+##### Behind the scene
+- Upon click the visible class is applied, which flips the card and shows the front-face.
+- Upon click the class clickable is removed, so the same card cannot be clicked twice when turned.
+
+#### Click any card as second card and card should turn.
+- Cards turn as intended, front-face of the card is displayed.
+
+#### Get extra help about what matches to look for.
+- Matching pairs consist of a question and answer card. In case the question card is turned: the question is displayed on the card.
+
+See if there is a match when two cards are turned.
+
+See the cards flip back when there is no match.
+
+See cards not flip back when there is a match.
+
+See the number of turns I made so far.
+
+Get confirmation when the game is finished.
+
+Quit the game whenever I want.
+
+Get more information about the cards that are used.
+
+Contact the maker of the game in case I have questions, suggestions or compliments.
+
+Have fun!
 
 
 ## Features
@@ -24,8 +68,7 @@ Each user story is tested thoroughly. All steps are taken in the main browsers a
 ### Determine viewport and adjust number of cards.
 I tried to limit the number of cards on mobile for better UX (no scroll). First used ```display:none``` for the cards I wanted to hide. This worked, but it did not update the total number of possible matches. This was still based on all cards in the array. So, you could not win since the last matches were now from cards that are not displayed.
 
-I then tried to do it from within JS. I found how to do a media query in javascript  If mobile, then I sliced the array and removed the last two cards. This works. Now I just need to remove the last two cards, marked ```.desktop``` from the html flow. This is done with the normal media query in CSS.
-https://www.w3schools.com/howto/howto_js_media_queries.asp
+I then tried to do it from within JS. I found how to do a media query in javascript via [W3Schools](https://www.w3schools.com/howto/howto_js_media_queries.asp). If a mobile device, then I sliced the array and removed the last two cards. This works. Now I just need to remove the last two cards, marked ```.desktop``` from the html flow. This is done with the normal media query in CSS.
 
 ### Flip cards and matching logic
 At first I created the variable allowedTurns to control that only two cards can be clicked and turned. This worked, but it did not prevent users from clicking the same card twice. When doing this, the allowedTurns did increment, resulting in one card turned and not being able to click a second one. 
