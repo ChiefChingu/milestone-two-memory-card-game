@@ -124,7 +124,7 @@ li {
 /* match animation */
 .animation {
     transform: rotateX(180deg);
-    animation: mymove 1s;
+    animation: mymove 4s;
     
 }
 
@@ -135,15 +135,15 @@ li {
     }
     
     33% {
-      transform: rotate(1deg);
+      transform: rotate(180deg);
     }
     
     66% {
-      transform: rotate(-1deg);
+      transform: rotate(358deg);
     }
 
     100% {
-        transform: rotate(0deg);
+        transform: rotate(-1deg);
     }
 }
 
