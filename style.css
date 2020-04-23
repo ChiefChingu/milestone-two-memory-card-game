@@ -235,12 +235,17 @@ a:hover {
 
 @media screen and (min-width: 1025px) {
     .explanation {
+        margin-top: 1rem;
         font-size: 1.5rem;
         line-height: 1.8rem;
     }
 
     .wrapper {
         width: 700px;
+    }
+
+    .wrapper-game-over {
+        width: 600px;
     }
 
     .desktop {
