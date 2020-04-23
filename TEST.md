@@ -146,7 +146,6 @@ The features are basically covered by the usre stories. Repeating them here seem
 ||explanation of images|OK|
 ||call to action|OK|
 ||navigation|OK|
-
 |Contact & about page|explanation of website|OK|
 ||contact option|OK|
 
