@@ -128,7 +128,26 @@ Each user story is tested thoroughly. All steps are taken in the main browsers a
 - This one is difficult to test. The people who played the game so far, could not finish it without laughing!
 
 ## Features
+The features are basically covered by the usre stories. Repeating them here seems superfluous, so a summary is given here.
 
+|Area | Feature | Test passed|Remarks
+|------| -------|:---------:|--------
+|Home|explanatory image|OK|
+||call to action|OK|
+||navigation|OK|
+|Game page|game tiles|OK|
+||Card context|OK|
+||game logic|OK|
+||moves counter|OK|
+||quit option|OK|
+||navigation|OK|
+||end game confirmation|OK|
+|Game over page|congratulations header|OK|
+||explanation of images|OK|
+||call to action|OK|
+||navigation|OK|
+|Contact & about page|explanation of website|OK|
+||contact option|OK|
 
 ## Issues and solutions
 ### Determine viewport and adjust number of cards.

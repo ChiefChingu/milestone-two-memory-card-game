@@ -1,7 +1,7 @@
 ## Introduction
 This is the second milestone project of the fullstack software development course of Code Institute. I selected the memory card game assignment: flip cards and find the matching pairs. My take on this game is to create a game with matching pairs that are not identical, but related...
 
-You can play the game [here].(https://chiefchingu.github.io/milestone-two-memory-card-game/)
+You can play the game [here](https://chiefchingu.github.io/milestone-two-memory-card-game/).
 
 ## UX
 This project is designed with the mobile user in mind. The [wireframes](#) reflect this: mobile first and desktop second. Also, the code is written from the mobile perspective: the mobile viewport is the baseline. Media queries are used to handle the desktop viewport.
