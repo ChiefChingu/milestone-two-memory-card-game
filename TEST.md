@@ -128,7 +128,7 @@ Each user story is tested thoroughly. All steps are taken in the main browsers a
 - This one is difficult to test. The people who played the game so far, could not finish it without laughing!
 
 ## Features
-The features are basically covered by the usre stories. Repeating them here seems superfluous, so a summary is given here.
+The features are basically covered by the user stories. Repeating them here seems superfluous, so a summary is given here.
 
 |Area | Feature | Test passed|Remarks
 |------| -------|:---------:|--------
@@ -158,7 +158,7 @@ I then tried to do it from within JS. I found how to do a media query in javascr
 ### Flip cards and matching logic
 At first I created the variable allowedTurns to control that only two cards can be clicked and turned. This worked, but it did not prevent users from clicking the same card twice. When doing this, the allowedTurns did increment, resulting in one card turned and not being able to click a second one. 
 
-That is why I added a second check: a class: clickable. At the start of the game all cards have this class. When a card is clicked and turned, this class is removed. So, you can no longer click one card twice. Then, when the cards are evaluated for a match the class clickable can be added again (if there was no match).
+That is why I added a second check, a class: clickable. At the start of the game all cards have this class. When a card is clicked and turned, this class is removed. So, you can no longer click one card twice. Then, when the cards are evaluated for a match the class clickable can be added again (if there was no match).
 
 ```javascript
 function selectCard() {
