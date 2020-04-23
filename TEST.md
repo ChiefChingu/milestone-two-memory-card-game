@@ -4,7 +4,7 @@ Back to the [README](https://github.com/ChiefChingu/milestone-two-memory-card-ga
 First I tested the project with the validators for css and markup. Then I manually tested all user stories and features (if relevant). All results are displayed below. The last section goes into more detail of the issues I encountered.
 
 ## W3C CSS Validation Service
-No errors or warnings to show: [style.css](#).
+No errors or warnings to show: [style.css](https://jigsaw.w3.org/css-validator/validator?uri=https%3A%2F%2Fchiefchingu.github.io%2Fmilestone-two-memory-card-game%2F&profile=css3svg&usermedium=all&warning=1&vextwarning=&lang=nl).
 
 ## W3C Markup Validation Service
 No errors or warnings to show:
@@ -25,7 +25,7 @@ Each user story is tested thoroughly. All steps are taken in the main browsers a
 - Game page is without clutter with just cards and a moves counter: users will automatically click a card.
 
 ##### Behind the scenes:
-- All cards are collected in an array and get an event listener. A function is called upon click to flip the card.
+- All cards are collected in an array and get an event listener. A function is called upon click to flip the card. (code line: )
 - When user is on a mobile device (screen size under 700px): the array is spliced and the last 4 cards are removed. All remaining cards are put in the game array.
 - When user is on a laptop/desktp: the initial array is put in the game array.
 - The total number of matches is calculated and stored in ```totalMatches``` to determine when the game finishes.

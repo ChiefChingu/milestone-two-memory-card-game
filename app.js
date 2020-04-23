@@ -29,7 +29,7 @@ cards = gameCards;
 
 //determine # of matches to end game
 let totalMatches = Math.floor(cards.length/2);
-// console.log(totalMatches); to check the correct working of the media query and splice function.
+// console.log(totalMatches); //to check the correct working of the media query and splice function.
 
 //add event listener to all cards
 cards.forEach(card => {
@@ -47,18 +47,8 @@ function turnLogic() {
         cardValueTurnOne = this;
         allowedTurns--;
         checkIfQuestion();
-        console.log(cardValueTurnOne.firstElementChild.children[1].className); //check the targeting of the right class
+        // console.log(cardValueTurnOne.firstElementChild.children[1].className); //check the targeting of the right class
         
-        //moved this to function
-        //Check if card is the question card (pair of cards has question and answer), show question
-        // if(cardValueTurnOne.dataset.type === 'q') {
-
-        //     setTimeout(() => {
-        //         cardValueTurnOne.children[1].className = 'show-context';
-        //     }, 900);
-            
-        // }
-
     } else
 
     //check if card is second card
@@ -134,9 +124,11 @@ function animateCards() {
 
 //check end game
 function checkGameFinished() {
+
     if(matchesMade === totalMatches) {
         
         window.location.href = "game-over.html";
+
     }
 }
 
@@ -160,10 +152,13 @@ function shuffle(){
 }
 
 function checkIfQuestion() {
+
     if(cardValueTurnOne.dataset.type === 'q') {
 
         setTimeout(() => {
+
             cardValueTurnOne.children[1].className = 'show-context';
+            
         }, 900);
     }
 }
