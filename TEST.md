@@ -16,11 +16,11 @@ No errors or warnings to show:
 ## User stories
 Each user story is tested thoroughly. All steps are taken in the main browsers at 3 different viewports: mobile (including tablet) and desktop.
 
-### See an inviting game that makes me curious and want to play!
+### 1. See an inviting game that makes me curious and want to play!
 - Homepage shows a catchy oneliner that triggers curiousity: try not to laugh.
 - Explanatory image shows a funny scene, enticing the user to get to know more.
 
-### Understand what to do to start the game.
+### 2. Understand what to do to start the game.
 - Call to action is very colorful and has much contrast: user is challenged to click.
 - Game page is without clutter with just cards and a moves counter: users will automatically click a card.
 
@@ -31,7 +31,7 @@ Each user story is tested thoroughly. All steps are taken in the main browsers a
 - The total number of matches is calculated and stored in ```totalMatches``` to determine when the game finishes.
 - Upon loading the page, the game array is shuffled via the function ```shuffle```.
 
-### Click any card as first card and card should turn.
+### 3. Click any card as first card and card should turn.
 - Cards turn as intended, front-face of the card is displayed.
 
 ##### Behind the scenes:
@@ -39,7 +39,7 @@ Each user story is tested thoroughly. All steps are taken in the main browsers a
 - Upon click the visible class is applied, which flips the card and shows the front-face.
 - Upon click the class clickable is removed, so the same card cannot be clicked twice when turned.
 
-### Get extra help about what matches to look for.
+### 4. Get extra help about what matches to look for.
 - Matching pairs consist of a question and answer card. In case the question card is turned: the question is displayed on the card.
 - The question is only displayed on the first flipped card (if on the second card, the card will flip back when no match and then there is not enough time to read the text.)
 
@@ -49,7 +49,7 @@ Each user story is tested thoroughly. All steps are taken in the main browsers a
 - When ```allowedTurns``` is 2 it means this is the first card. Then the next statement is triggered.
 - If ```data-type = q``` then the ```class = context``` is made visible, which shows the question on the card. This is done via function ```checkIfQuestion```.
 
-### Click any card as second card and card should turn.
+### 5. Click any card as second card and card should turn.
 - Cards turn as intended, front-face of the card is displayed.
 - First card that is turned cannot be clicked again.
 - Second card that is turned cannot be clicked again.
@@ -60,7 +60,7 @@ Each user story is tested thoroughly. All steps are taken in the main browsers a
 - Upon click the class clickable is removed, so the same card cannot be clicked twice when turned.
 - Because ```allowedTurns``` is 1 it means this is the second card. The matching logic is triggered.
 
-### See if there is a match when two cards are turned.
+### 6. See if there is a match when two cards are turned.
 - When two cards are turned, it has to be checked if there is a match.
 - If a match: animation that tilts the cards shortly.
 - If no match: cards flip back.
@@ -70,7 +70,7 @@ Each user story is tested thoroughly. All steps are taken in the main browsers a
 - All matching pairs have an identical ```data-cardvalue```.
 - If statement checks for a match.
 
-### See cards not flip back when there is a match.
+### 7. See cards not flip back when there is a match.
 - When there is a match, the cards tilt slightly to indicate a match.
 - The context of both cards is displayed: the question and the answer.
 - The counter for number of moves updates with +1 move.
@@ -86,7 +86,7 @@ Each user story is tested thoroughly. All steps are taken in the main browsers a
 - The clickable class remains removed.
 - The visible class remains added.
 
-### See the cards flip back when there is no match.
+### 8. See the cards flip back when there is no match.
 - When no match, both cards flip back.
 - The counter for number of moves updates with +1 move.
 - New cards can be clicked.
@@ -99,13 +99,13 @@ Each user story is tested thoroughly. All steps are taken in the main browsers a
 - The cards become clickable again: class clickable is added.
 - Number of moves ```numberOfMoves``` is incremented by 1 via a function ```updateCounter```.
 
-### Get confirmation when the game is finished.
+### 9. Get confirmation when the game is finished.
 - When all pair are found, user sees a game over page.
 
 ##### Behind the scenes:
 - ```checkGameFinished``` evaluates an if statement. If ```totalMatches = matchesMade``` the game over page is triggered. 
 
-### See the number of turns I made so far.
+### 10. See the number of turns I made so far.
 - In the header you can see the number of turns so far.
 - After two cards are turned: when there is a match of pairs, the counter updates.
 - After two cards are turned: when there is no match of pairs, the counter updates.
@@ -113,18 +113,18 @@ Each user story is tested thoroughly. All steps are taken in the main browsers a
 ##### Behind the scenes:
 - ```updateCounter``` runs whenever two cards are turned.
 
-### Quit the game whenever I want.
+### 11. Quit the game whenever I want.
 - User can click the stop game link whenever they want. The game over page is triggered.
 - User can navigate back to home or to the contact & about page.
 
-### Get more information about the cards that are used.
+### 12. Get more information about the cards that are used.
 - The game over screen explains who created the images to give full credit.
 - A link to the owner's site shows all of his work. The link opens in a new tab.
 
-### Contact the maker of the game in case I have questions, suggestions or compliments.
+### 13. Contact the maker of the game in case I have questions, suggestions or compliments.
 - The contact & about page invites visitors to contact me via the provided email address.
 
-### Have fun!
+### 14. Have fun!
 - This one is difficult to test. The people who played the game so far, could not finish it without laughing!
 
 ## Features
