@@ -15,8 +15,22 @@
         <h3>Number of moves made<br> <span id="moves">0 </span></h3>
         <a href="game-over.html" class="quitter">stop game</a>
     </header>
+
+    
+      
+    <div class="temp" id="menu">
+        <a data-action="easy" class="level btn">easy</a>
+        <a data-action="medium" class="level btn">medium</a>
+        <a data-action="hard" class="level btn">hard</a>
+    </div>
+
+    <!-- <div id="menu">
+        <button data-action="save">Save</button>
+        <button data-action="load">Load</button>
+        <button data-action="search">Search</button>
+      </div> -->
     <div class="memory-game">
-        <div data-cardvalue="1" data-type="a" class="card clickable">
+        <div data-cardvalue="1" data-type="a" class="card not-in-game clickable">
             <picture class="domtest">
                 <source srcset="assets/images/1-james-a-desktop.jpg" media="(min-width: 600px)">
                 <img class="front-face" src="assets/images/1-james-a-mobile.jpg" alt="">
@@ -24,7 +38,7 @@
             <div class="context">Sure.</div>
             <div class="back-face"></div>
         </div>
-        <div data-cardvalue="1" data-type="q" class="card clickable">
+        <div data-cardvalue="1" data-type="q" class="card not-in-game clickable">
             <picture>
                 <source srcset="assets/images/1-james-q-desktop.jpg" media="(min-width: 600px)">
                 <img class="front-face" src="assets/images/1-james-q-mobile.jpg" alt="">
@@ -32,7 +46,7 @@
             <div class="context">Can you take the lamp out?</div>
             <div class="back-face"></div>
         </div>
-        <div data-cardvalue="2" data-type="a" class="card clickable">
+        <div data-cardvalue="2" data-type="a" class="card not-in-game clickable">
             <picture>
                 <source srcset="assets/images/2-james-a-desktop.jpg" media="(min-width: 600px)">
                 <img class="front-face" src="assets/images/2-james-a-mobile.jpg" alt="">
@@ -40,7 +54,7 @@
             <div class="context">1 : 0</div>
             <div class="back-face"></div>
         </div>
-        <div data-cardvalue="2" data-type="q" class="card clickable">
+        <div data-cardvalue="2" data-type="q" class="card not-in-game clickable">
             <picture>
                 <source srcset="assets/images/2-james-q-desktop.jpg" media="(min-width: 600px)">
                 <img class="front-face" src="assets/images/2-james-q-mobile.jpg" alt="">
@@ -48,7 +62,7 @@
             <div class="context">Can you make it like I fight the goose?</div>
             <div class="back-face"></div>
         </div>
-        <div data-cardvalue="3" data-type="a" class="card clickable">
+        <div data-cardvalue="3" data-type="a" class="card not-in-game clickable">
             <picture>
                 <source srcset="assets/images/3-james-a-desktop.jpg" media="(min-width: 600px)">
                 <img class="front-face" src="assets/images/3-james-a-mobile.jpg" alt="">
@@ -56,7 +70,7 @@
             <div class="context">Sure.</div>
             <div class="back-face"></div>
         </div>
-        <div data-cardvalue="3" data-type="q" class="card clickable">
+        <div data-cardvalue="3" data-type="q" class="card not-in-game clickable">
             <picture>
                 <source srcset="assets/images/3-james-q-desktop.jpg" media="(min-width: 600px)">
                 <img class="front-face" src="assets/images/3-james-q-mobile.jpg" alt="">
@@ -64,7 +78,7 @@
             <div class="context">Can you put me in a cool place?</div>
             <div class="back-face"></div>
         </div>
-        <div data-cardvalue="4" data-type="a" class="card clickable">
+        <div data-cardvalue="4" data-type="a" class="card not-in-game clickable">
             <picture>
                 <source srcset="assets/images/4-james-a-desktop.jpg" media="(min-width: 600px)">
                 <img class="front-face" src="assets/images/4-james-a-mobile.jpg" alt="">
@@ -72,7 +86,7 @@
             <div class="context">Here you go.</div>
             <div class="back-face"></div>
         </div>
-        <div data-cardvalue="4" data-type="q" class="card clickable">
+        <div data-cardvalue="4" data-type="q" class="card not-in-game clickable">
             <picture>
                 <source srcset="assets/images/4-james-q-desktop.jpg" media="(min-width: 600px)">
                 <img class="front-face" src="assets/images/4-james-q-mobile.jpg" alt="">
@@ -80,7 +94,7 @@
             <div class="context">Can you get more leaves on the tree?</div>
             <div class="back-face"></div>
         </div>
-        <div data-cardvalue="5" data-type="a" class="card clickable desktop">
+        <div data-cardvalue="5" data-type="a" class="card not-in-game clickable">
             <picture>
                 <source srcset="assets/images/5-james-a-desktop.jpg" media="(min-width: 600px)">
                 <img class="front-face" src="assets/images/5-james-a-mobile.jpg" alt="">
@@ -88,7 +102,7 @@
             <div class="context">Done.</div>
             <div class="back-face"></div>
         </div>
-        <div data-cardvalue="5" data-type="q" class="card clickable desktop">
+        <div data-cardvalue="5" data-type="q" class="card not-in-game clickable">
             <picture>
                 <source srcset="assets/images/5-james-q-desktop.jpg" media="(min-width: 600px)">
                 <img class="front-face" src="assets/images/5-james-q-mobile.jpg" alt="">
@@ -96,7 +110,7 @@
             <div class="context">Can you make our shirts the same?</div>
             <div class="back-face"></div>
         </div>
-        <div data-cardvalue="6" data-type="a" class="card clickable desktop">
+        <div data-cardvalue="6" data-type="a" class="card not-in-game clickable">
             <picture>
                 <source srcset="assets/images/6-james-a-desktop.jpg" media="(min-width: 600px)">
                 <img class="front-face" src="assets/images/6-james-a-mobile.jpg" alt="">
@@ -104,7 +118,7 @@
             <div class="context">Bigger and closer!</div>
             <div class="back-face"></div>
         </div>
-        <div data-cardvalue="6" data-type="q" class="card clickable desktop">
+        <div data-cardvalue="6" data-type="q" class="card not-in-game clickable">
             <picture>
                 <source srcset="assets/images/6-james-q-desktop.jpg" media="(min-width: 600px)">
                 <img class="front-face" src="assets/images/6-james-q-mobile.jpg" alt="">

@@ -5,7 +5,7 @@ let matchesMade = 0;
 let endScore;
 
 let allCards = Array.from(document.getElementsByClassName('card')); //put all card classes into an array
-var mobileScreenCards = allCards.slice(0, -4); //adjust number of cards for mobile screens
+let mobileScreenCards = allCards.slice(0, -4); //adjust number of cards for mobile screens
 
 //determine screen size and set number of cards accordingly
 var x = window.matchMedia("(max-width: 700px)");
@@ -23,13 +23,60 @@ function myFunction(x) {
       gameCards = allCards; // If not mobile screen, use all cards available
 
     }
-  }
+}
 
 cards = gameCards;
 
-//determine # of matches to end game
-let totalMatches = Math.floor(cards.length/2);
-// console.log(totalMatches); //to check the correct working of the media query and splice function.
+//add level selector here: 
+//mobile has two options: easy (2x3) and medium (3x4). Also explanation that hard and epic are only possible on large screens.
+//desktop has four options: easy, medium, hard (4x4) and epic (5x5)
+const beginner = 4;
+const easy = 6;
+const medium = 8;
+const hard = 12;
+let userChoice;
+let totalMatches;
+
+//event delegation by https://javascript.info/event-delegation
+class Menu {
+    constructor(elem) {
+      this._elem = elem;
+      elem.onclick = this.onClick.bind(this); // (*)
+    }
+
+    easy() {
+      userChoice = easy;
+    }
+   
+    medium() {
+      userChoice = medium;
+    }
+
+    hard() {
+      userChoice = hard;
+    }
+
+    onClick(event) {
+      let action = event.target.dataset.action;
+      if (action) {
+        this[action]();
+        totalMatches = userChoice/2;
+        determineCards();
+        // setTimer(); to do: add timer with times per level
+      }
+    };
+}
+
+new Menu(menu);
+
+function determineCards() {
+    for(let i = 0; i < userChoice; i++) {
+
+        gameCards[i].classList.remove('not-in-game');
+        
+    }
+    console.log(totalMatches);
+}
 
 //add event listener to all cards
 cards.forEach(card => {

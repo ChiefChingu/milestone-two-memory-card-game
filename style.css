@@ -147,10 +147,6 @@ li {
     }
 }
 
-.desktop {
-    display: none;
-}
-
 .front-face, .back-face {
     position: absolute;
     width: 100%;
@@ -233,6 +229,16 @@ a:hover {
     font-weight: 900;
 }
 
+/*level selector*/
+.temp {
+
+    margin-top: 8rem;
+}
+
+.not-in-game {
+    display: none;
+}
+
 @media screen and (min-width: 1025px) {
     .explanation {
         margin-top: 1rem;
@@ -246,10 +252,6 @@ a:hover {
 
     .wrapper-game-over {
         width: 600px;
-    }
-
-    .desktop {
-        display: initial;
     }
 
     h1 {
