@@ -78,7 +78,7 @@ function determineCards() {
         
     }
     totalMatches = userChoice/2;
-
+    shuffle();
 }
 
 
@@ -198,10 +198,7 @@ function resetBoard() {
         card.firstElementChild.children[1].classList.remove('animation');
         card.lastElementChild.className = 'back-face';
         
-    });
-    
-    shuffle();
-    
+    });    
 }
 
 //update moves counter
