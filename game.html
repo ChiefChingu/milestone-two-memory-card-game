@@ -6,8 +6,6 @@
     <title>Game on! | Memory Card Challenge</title>
     <link rel="stylesheet" href="style.css">
     <link href="https://fonts.googleapis.com/css?family=Lato&display=swap" rel="stylesheet">
-
-    
     <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.4.1/jquery.min.js"></script>
 </head>
 <body>
@@ -16,12 +14,30 @@
         <a href="game-over.html" class="quitter">stop game</a>
     </header>
     
-    <!-- To Do: create modal for level selection   -->
-    <div class="temp" id="menu">
-        <a data-action="easy" class="level btn">easy</a>
-        <a data-action="medium" class="level btn">medium</a>
-        <a data-action="hard" class="level btn">hard</a>
+    <div id=game-mode-selection>
+        <button id="myBtn">Chill mode</button>
+        <button id="challenge">Challenge mode</button>
     </div>
+
+    
+
+    <!-- The Modal -->
+    <div id="myModal" class="modal">
+
+    <!-- Modal content -->
+    <div class="modal-content">
+        <span class="close">&times;</span>
+        <div class="temp" id="menu">
+            <a data-action="easy" class="level btn">easy</a>
+            <a data-action="medium" class="level btn">medium</a>
+            <a data-action="hard" class="level btn">hard</a>
+        </div>
+        <p>Some text in the Modal..</p>
+    </div>
+
+    </div>
+
+ 
     
     <!-- Game grid -->
     <div class="memory-game">

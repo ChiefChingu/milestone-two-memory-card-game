@@ -2,7 +2,7 @@ let allowedTurns = 2;
 let cardValueTurnOne, cardValueTurnTwo;
 let numberOfMoves = 0;
 let matchesMade = 0;
-let challengeMode = false;
+let challengeMode = true;
 let userChoice;
 let totalMatches;
 
@@ -23,8 +23,8 @@ const easy = 2;
 const medium = 8;
 const hard = 12;
 
-
 //event delegation by https://javascript.info/event-delegation
+//select level difficulty
 class Menu {
     constructor(elem) {
       this._elem = elem;
@@ -49,12 +49,27 @@ class Menu {
         this[action]();
         totalMatches = userChoice/2;
         determineCards();
+        modal.style.display = "none";
+        btn.style.display = "none";
+        challengeMode = false;
+        gameSelector.style.display = "none";
         // setTimer(); to do: add timer with times per level
       }
     };
 }
 
 new Menu(menu);
+
+//select challenge mode
+document.getElementById('challenge').addEventListener('click', startChallengeMode);
+
+function startChallengeMode() {
+    challengeMode = true;
+    userChoice = 2;
+    determineCards();
+    gameSelector.style.display = "none";
+    
+}
 
 function determineCards() {
     for(let i = 0; i < userChoice; i++) {
@@ -218,4 +233,27 @@ function checkIfQuestion() {
             
         }, 900);
     }
+}
+
+
+var modal = document.getElementById("myModal");
+var btn = document.getElementById("myBtn");
+var span = document.getElementsByClassName("close")[0];
+var gameSelector = document.getElementById('game-mode-selection');
+
+// When the user clicks on the button, open the modal
+btn.onclick = function() {
+  modal.style.display = "block";
+}
+
+// When the user clicks on <span> (x), close the modal
+span.onclick = function() {
+  modal.style.display = "none";
+}
+
+// When the user clicks anywhere outside of the modal, close it
+window.onclick = function(event) {
+  if (event.target == modal) {
+    modal.style.display = "none";
+  }
 }
