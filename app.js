@@ -234,7 +234,7 @@ function checkIfQuestion() {
 
 
 var modal = document.getElementById("myModal");
-var btn = document.getElementById("myBtn");
+var btn = document.getElementById("chill");
 var span = document.getElementsByClassName("close")[0];
 var gameSelector = document.getElementById('game-mode-selection');
 
