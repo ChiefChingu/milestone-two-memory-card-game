@@ -16,6 +16,11 @@ No errors or warnings to show:
 ## User stories
 Each user story is tested thoroughly. All steps are taken in the main browsers at 3 different viewports: mobile (including tablet) and desktop.
 
+**add new user stories for game modes**
+- I want to choose how to play (leisure or challenge)
+- If leisure ...
+- If challenge ...
+
 ### 1. See an inviting game that makes me curious and want to play!
 - Homepage shows a catchy oneliner that triggers curiousity: try not to laugh.
 - Explanatory image shows a funny scene, enticing the user to get to know more.
@@ -154,6 +159,8 @@ The features are basically covered by the user stories. Repeating them here seem
 I tried to limit the number of cards on mobile for better UX (no scroll). First used ```display:none``` for the cards I wanted to hide. This worked, but it did not update the total number of possible matches. This was still based on all cards in the array. So, you could not win since the last matches were now from cards that are not displayed.
 
 I then tried to do it from within JS. I found how to do a media query in javascript via [W3Schools](https://www.w3schools.com/howto/howto_js_media_queries.asp). If a mobile device, then I sliced the array and removed the last two cards. This works. Now I just need to remove the last two cards, marked ```.desktop``` from the html flow. This is done with the normal media query in CSS.
+
+After my mentor call I decided to add levels of difficulty (like easy, medium, hard). This in turn lead to introducing game modes. These game modes made the Javascript media query redundant: I now control this via CSS (mobile users get less options to chose from).
 
 ### Flip cards and matching logic
 At first I created the variable allowedTurns to control that only two cards can be clicked and turned. This worked, but it did not prevent users from clicking the same card twice. When doing this, the allowedTurns did increment, resulting in one card turned and not being able to click a second one. 

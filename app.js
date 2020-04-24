@@ -2,39 +2,86 @@ let allowedTurns = 2;
 let cardValueTurnOne, cardValueTurnTwo;
 let numberOfMoves = 0;
 let matchesMade = 0;
-let endScore;
+let challengeMode = true;
+let userChoice;
+let totalMatches;
 
-let allCards = Array.from(document.getElementsByClassName('card')); //put all card classes into an array
-var mobileScreenCards = allCards.slice(0, -4); //adjust number of cards for mobile screens
-
-//determine screen size and set number of cards accordingly
-var x = window.matchMedia("(max-width: 700px)");
-myFunction(x); // Call listener function at run time
-x.addListener(myFunction); // Attach listener function on state changes
-
-function myFunction(x) {
-
-    if (x.matches) { // If media query matches, use mobile screen cards
-      
-      gameCards = mobileScreenCards;
-
-    } else {
-
-      gameCards = allCards; // If not mobile screen, use all cards available
-
-    }
-  }
-
-cards = gameCards;
-
-//determine # of matches to end game
-let totalMatches = Math.floor(cards.length/2);
-// console.log(totalMatches); //to check the correct working of the media query and splice function.
+//put all card classes into an array
+let cards = Array.from(document.getElementsByClassName('card')); 
 
 //add event listener to all cards
-cards.forEach(card => {
+cards.forEach(card => { 
     card.addEventListener('click', turnLogic);
 })
+
+//select game mode
+// challengeMode = false; //input from game mode modal
+
+//If leisure mode: level selector 
+const beginner = 4;
+const easy = 2;
+const medium = 8;
+const hard = 12;
+
+//event delegation by https://javascript.info/event-delegation
+//select level difficulty
+class Menu {
+    constructor(elem) {
+      this._elem = elem;
+      elem.onclick = this.onClick.bind(this); // (*)
+    }
+
+    easy() {
+      userChoice = easy;
+    }
+   
+    medium() {
+      userChoice = medium;
+    }
+
+    hard() {
+      userChoice = hard;
+    }
+
+    onClick(event) {
+      let action = event.target.dataset.action;
+      if (action) {
+        this[action]();
+        totalMatches = userChoice/2;
+        determineCards();
+        modal.style.display = "none";
+        btn.style.display = "none";
+        challengeMode = false;
+        gameSelector.style.display = "none";
+        // setTimer(); to do: add timer with times per level
+      }
+    };
+}
+
+new Menu(menu);
+
+//select challenge mode
+document.getElementById('challenge').addEventListener('click', startChallengeMode);
+
+function startChallengeMode() {
+    challengeMode = true;
+    userChoice = 2;
+    determineCards();
+    gameSelector.style.display = "none";
+    
+}
+
+function determineCards() {
+    for(let i = 0; i < userChoice; i++) {
+
+        cards[i].classList.remove('not-in-game');
+        
+    }
+    totalMatches = userChoice/2;
+
+}
+
+
 
 //turn card logic
 function turnLogic() {
@@ -47,7 +94,6 @@ function turnLogic() {
         cardValueTurnOne = this;
         allowedTurns--;
         checkIfQuestion();
-        // console.log(cardValueTurnOne.firstElementChild.children[1].className); //check the targeting of the right class
         
     } else
 
@@ -122,14 +168,40 @@ function animateCards() {
 }
 
 
-//check end game
+//check end game and if challenge launch next challenge
 function checkGameFinished() {
 
     if(matchesMade === totalMatches) {
-        
-        window.location.href = "game-over.html";
+        if(challengeMode) {
+            matchesMade = 0;
+            userChoice = userChoice + 2; //add more cards for next level
+            resetBoard();
+            determineCards();
+        } else {
+            
+            window.location.href = "game-over.html";
 
+        }
+        
+        
+    
     }
+}
+
+function resetBoard() {
+
+    cards.forEach(card => {
+        
+        card.classList.remove('visible');
+        card.classList.add('clickable');
+        card.classList.remove('animation');
+        card.firstElementChild.children[1].classList.remove('animation');
+        card.lastElementChild.className = 'back-face';
+        
+    });
+    
+    shuffle();
+    
 }
 
 //update moves counter
@@ -161,4 +233,27 @@ function checkIfQuestion() {
             
         }, 900);
     }
+}
+
+
+var modal = document.getElementById("myModal");
+var btn = document.getElementById("myBtn");
+var span = document.getElementsByClassName("close")[0];
+var gameSelector = document.getElementById('game-mode-selection');
+
+// When the user clicks on the button, open the modal
+btn.onclick = function() {
+  modal.style.display = "block";
+}
+
+// When the user clicks on <span> (x), close the modal
+span.onclick = function() {
+  modal.style.display = "none";
+}
+
+// When the user clicks anywhere outside of the modal, close it
+window.onclick = function(event) {
+  if (event.target == modal) {
+    modal.style.display = "none";
+  }
 }
