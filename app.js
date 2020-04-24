@@ -3,35 +3,38 @@ let cardValueTurnOne, cardValueTurnTwo;
 let numberOfMoves = 0;
 let matchesMade = 0;
 let endScore;
+let level;
 
 let allCards = Array.from(document.getElementsByClassName('card')); //put all card classes into an array
 let mobileScreenCards = allCards.slice(0, -4); //adjust number of cards for mobile screens
 
 //determine screen size and set number of cards accordingly
-var x = window.matchMedia("(max-width: 700px)");
-myFunction(x); // Call listener function at run time
-x.addListener(myFunction); // Attach listener function on state changes
+//this is now redundant, since the user can only select beginner, easy and medium on mobile.
 
-function myFunction(x) {
+// var x = window.matchMedia("(max-width: 700px)");
+// myFunction(x); // Call listener function at run time
+// x.addListener(myFunction); // Attach listener function on state changes
 
-    if (x.matches) { // If media query matches, use mobile screen cards
+// function myFunction(x) {
+
+//     if (x.matches) { // If media query matches, use mobile screen cards
       
-      gameCards = mobileScreenCards;
+//       gameCards = mobileScreenCards;
 
-    } else {
+//     } else {
 
-      gameCards = allCards; // If not mobile screen, use all cards available
+//       gameCards = allCards; // If not mobile screen, use all cards available
 
-    }
-}
+//     }
+// }
 
-cards = gameCards;
+cards = allCards;
 
 //add level selector here: 
 //mobile has two options: easy (2x3) and medium (3x4). Also explanation that hard and epic are only possible on large screens.
 //desktop has four options: easy, medium, hard (4x4) and epic (5x5)
 const beginner = 4;
-const easy = 6;
+const easy = 2;
 const medium = 8;
 const hard = 12;
 let userChoice;
@@ -72,10 +75,11 @@ new Menu(menu);
 function determineCards() {
     for(let i = 0; i < userChoice; i++) {
 
-        gameCards[i].classList.remove('not-in-game');
+        allCards[i].classList.remove('not-in-game');
         
     }
-    console.log(totalMatches);
+    totalMatches = userChoice/2;
+
 }
 
 //add event listener to all cards
@@ -169,14 +173,32 @@ function animateCards() {
 }
 
 
-//check end game
+//check end game and launch next challenge
 function checkGameFinished() {
 
     if(matchesMade === totalMatches) {
-        
-        window.location.href = "game-over.html";
-
+        matchesMade = 0;
+        userChoice = userChoice + 2;
+        resetBoard();
+        determineCards();
+    
     }
+}
+
+function resetBoard() {
+
+    cards.forEach(card => {
+        
+        card.classList.remove('visible');
+        card.classList.add('clickable');
+        card.classList.remove('animation');
+        card.firstElementChild.children[1].classList.remove('animation');
+        card.lastElementChild.className = 'back-face';
+        
+    });
+    
+    shuffle();
+    
 }
 
 //update moves counter
