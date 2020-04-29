@@ -1,34 +1,42 @@
+/* Game mode selection variables: 
+    - Chill mode: pick your level.
+    - Challenge mode: start at easy and automatically progress through the levels.
+*/
+
+const beginner = 4; //Chill mode levels.
+const easy = 2;
+const medium = 8;
+const hard = 12;
+let userChoice;
+
+let challengeMode = true; //Challenge mode.
+
+/* Game mechanic variables:
+    Setting rules and limitations.  
+*/
+
 let allowedTurns = 2;
-let cardValueTurnOne, cardValueTurnTwo;
 let numberOfMoves = 0;
 let matchesMade = 0;
-let challengeMode = true;
-let userChoice;
 let totalMatches;
+let cards = Array.from(document.getElementsByClassName('card')); //Put all card classes into an array.
+let cardValueTurnOne, cardValueTurnTwo; //Variables for match evaluation.
 
-//put all card classes into an array
-let cards = Array.from(document.getElementsByClassName('card')); 
+/* Add event listeners:
+    - Game cards.
+    - Game mode selection.
+*/
 
-//add event listener to all cards
+//Add event listener to all cards.
 cards.forEach(card => { 
     card.addEventListener('click', turnLogic);
 })
 
-//select game mode
-// challengeMode = false; //input from game mode modal
-
-//If leisure mode: level selector 
-const beginner = 4;
-const easy = 2;
-const medium = 8;
-const hard = 12;
-
-//event delegation by https://javascript.info/event-delegation
-//select level difficulty
+//Chill mode.
 class Menu {
     constructor(elem) {
       this._elem = elem;
-      elem.onclick = this.onClick.bind(this); // (*)
+      elem.onclick = this.onClick.bind(this);
     }
 
     easy() {
@@ -53,14 +61,14 @@ class Menu {
         btn.style.display = "none";
         challengeMode = false;
         gameSelector.style.display = "none";
-        // setTimer(); to do: add timer with times per level
+        // setTimer(); To do: add timer with times per level.
       }
     };
 }
 
 new Menu(menu);
 
-//select challenge mode
+//Select challenge mode.
 document.getElementById('challenge').addEventListener('click', startChallengeMode);
 
 function startChallengeMode() {
@@ -70,8 +78,7 @@ function startChallengeMode() {
     gameSelector.style.display = "none";
 }
 
-console.log(totalMatches);
-
+//Make selected number of cards visible.
 function determineCards() {
     for(let i = 0; i < userChoice; i++) {
 
@@ -83,14 +90,17 @@ function determineCards() {
     shuffle();
 }
 
+/* Main game logic:
+    - Turn cards.
+    - Evaluate match.
+*/
 
-
-//turn card logic
 function turnLogic() {
-    //check if card is first card
+    //Check if card is first card.
     if(allowedTurns == 2 && this.classList.contains('clickable')) {
 
-        //If first card: make card visible, prevent second click, store value in variable and decrease allowedTurns
+        /* If first card: make card visible, prevent second click, 
+        store value in variable and decrease allowedTurns. */
         this.classList.remove('clickable');
         this.classList.add('visible');
         cardValueTurnOne = this;
@@ -99,17 +109,18 @@ function turnLogic() {
         
     } else
 
-    //check if card is second card
+    //Check if card is second card.
     if(allowedTurns == 1 && this.classList.contains('clickable')) {
         
-        //If second card: make card visible, prevent second click, store value in variable and decrease allowedTurns
+        /* If second card: make card visible, prevent second click, 
+        store value in variable and decrease allowedTurns. */
         this.classList.remove('clickable');
         this.classList.add('visible');
         cardValueTurnTwo = this;
         allowedTurns--;
         
-            //evaluate cards and check for match
-            //If match, leave cards as is (visible, not clickable) and reset allowedTurns
+            /* Evaluate cards and check for match.
+            If match, leave cards as is (visible, not clickable) and reset allowedTurns. */
             if(cardValueTurnOne.dataset.cardvalue === cardValueTurnTwo.dataset.cardvalue) {
 
                     matchesMade++;
@@ -138,7 +149,7 @@ function turnLogic() {
 
             } else {
                 
-                //If no match, make cards invisible and clickable again
+                //If no match, make cards invisible and clickable again.
                 setTimeout(() => {
 
                     cardValueTurnTwo.classList.remove('visible');
@@ -157,7 +168,8 @@ function turnLogic() {
         }
     }
 
-//animate cards on match
+
+//Animate cards on match.
 function animateCards() {
 
     cardValueTurnOne.lastElementChild.className = '.back-face-hidden';
@@ -169,14 +181,13 @@ function animateCards() {
     
 }
 
-
-//check end game and if challenge launch next challenge
+//Check end game and if challenge launch next challenge.
 function checkGameFinished() {
 
     if(matchesMade === totalMatches) {
         if(challengeMode) {
             matchesMade = 0;
-            userChoice = userChoice + 2; //add more cards for next level
+            userChoice = userChoice + 2; //Add more cards for next level.
             resetBoard();
             determineCards();
         } else {
@@ -184,9 +195,6 @@ function checkGameFinished() {
             window.location.href = "game-over.html";
 
         }
-        
-        
-    
     }
 }
 
@@ -203,14 +211,14 @@ function resetBoard() {
     });    
 }
 
-//update moves counter
+//Update moves counter.
 function updateCounter() {
 
     document.getElementById("moves").innerHTML = numberOfMoves;
 
 }
 
-//Shuffle cards randomly
+//Shuffle cards randomly.
 function shuffle(){
 
     var parent = $(".memory-game");
@@ -222,6 +230,7 @@ function shuffle(){
     }
 }
 
+//Only show context if card is question card.
 function checkIfQuestion() {
 
     if(cardValueTurnOne.dataset.type === 'q') {
@@ -234,7 +243,7 @@ function checkIfQuestion() {
     }
 }
 
-
+// Modal from W3Schools.
 var modal = document.getElementById("myModal");
 var btn = document.getElementById("chill");
 var span = document.getElementsByClassName("close")[0];
