@@ -6,33 +6,27 @@
     box-sizing: border-box;
 }
 
-
 body {
     font-family: 'Lato', sans-serif;
 }    
-
 
 .wrapper {
     margin: 1rem auto 0 auto;
     padding: 1rem;
 }
 
-
 .wrapper-bottom-link {
     margin: 0;
     text-align: center;
 }
 
-
 ul li{
     display: inline-block;
 }
 
-
 li {
     padding: 0 1rem 1rem 1rem;  
 }
-
 
 .home-page-img {
     width: 80%;
@@ -41,7 +35,6 @@ li {
     border-radius: 5px;
 }
 
-
 .game-over-img {
     margin: 2rem auto;
     width: 300px;
@@ -49,13 +42,11 @@ li {
     box-shadow: 0 10px 1rem rgba(0,0,0,.16);
 }
 
-
 .explanation {
     font-size: 1.2rem;
     line-height: 1.6rem;
     text-align: center;
 }
-
 
 .explanation.left {
     padding-top: 1rem;
@@ -63,7 +54,6 @@ li {
     line-height: 1.9rem;
     text-align: left;
 }
-
 
 .btn {
     background-color: #ff8d1a;
@@ -81,18 +71,15 @@ li {
     text-transform: uppercase;
 }
 
-
 .btn:hover {
     background-color: #7d51a1;
     color: white;
 }
 
-
 a {
     color: #ff8d1a;
     text-align: center;
 }
-
 
 a:hover {
     color: #7d51a1;
@@ -111,13 +98,11 @@ header, .game-header {
     width: 100%;
 }
 
-
 header {
     display: grid;
     align-items: center;
     padding: 2rem 0;
     }
-
 
 .game-header {
     padding: 0.5rem;
@@ -126,16 +111,13 @@ header {
     top: 0;
     }
 
-
 #moves {
     font-size: 1.5rem;
 }
 
-
 h1 {
     text-align: center;
 }
-
 
 h3 {
     text-align: center;
@@ -143,12 +125,10 @@ h3 {
     font-size: 1rem;
 }
 
-
 .quitter {
     font-size: .9rem;
     color: white;
 }
-
 
 .quitter:hover {
     color: rgb(245, 84, 183);
@@ -163,7 +143,6 @@ h3 {
     gap: 3rem; 
 }
 
-
 #chill, #challenge {
     justify-self: center;
     align-self: center;
@@ -177,30 +156,25 @@ h3 {
     border-radius: 5px;
 }
 
-
 #game-mode-selection h2 {
     color: #7d51a1;
     padding-top: 1rem;
 }
-
 
 .icon {
     color: #7d51a1;;
     margin: 1.6rem auto 1rem auto;
 }
 
-
 #game-mode-selection p {
     color: #7d51a1;
     padding: 1rem;
 }
 
-
 .game-mode-selection-btn {
     margin: .5rem auto 2.5rem auto;
     width: 70%;
 }
-
 
 .not-in-game {
     display: none;
@@ -319,27 +293,39 @@ h3 {
     background-color: rgba(0,0,0,0.4);
 }
   
-  .modal-content {
+.modal-content {
     background-color: #fefefe;
-    margin: 15% auto;
+    margin: 20% auto;
     padding: 20px;
     border: 1px solid #888;
     width: 80%;
+    position: relative;
 }
 
-  .modal-content-choices {
-    margin-top: 8rem;
+.modal-content-choices {
+    margin-top: 1rem;
+    color: #7d51a1;
+    text-align: center;
+    padding-bottom: 1rem;
 }
+
+.modal-content-choices h2 {
+    color: #7d51a1;
+    text-align: center;
+}
+
   
-  .close {
+.close {
     color: #aaa;
-    float: right;
+    position: absolute;
+    top: 5px;
+    right: 10px;
     font-size: 28px;
     font-weight: bold;
 }
   
-  .close:hover,
-  .close:focus {
+.close:hover,
+.close:focus {
     color: black;
     text-decoration: none;
     cursor: pointer;
