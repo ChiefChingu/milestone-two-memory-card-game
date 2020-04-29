@@ -68,8 +68,9 @@ function startChallengeMode() {
     userChoice = 2;
     determineCards();
     gameSelector.style.display = "none";
-    
 }
+
+console.log(totalMatches);
 
 function determineCards() {
     for(let i = 0; i < userChoice; i++) {
@@ -77,6 +78,7 @@ function determineCards() {
         cards[i].classList.remove('not-in-game');
         
     }
+
     totalMatches = userChoice/2;
     shuffle();
 }

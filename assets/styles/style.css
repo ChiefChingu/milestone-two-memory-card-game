@@ -10,7 +10,7 @@ body {
 
 header, .game-header {
     background-color: #7d51a1;
-    background-image: url("assets/images/waves.svg");
+    background-image: url("../images/waves.svg");
     background-position: center;
     background-size: cover;
     color: white;
@@ -185,7 +185,7 @@ li {
 
 .back-face {
     background-color:  #2a97ce;
-    background-image: url("assets/images/waves.svg");
+    background-image: url("../images/waves.svg");
     background-position: center;
     background-size: cover;
 }
