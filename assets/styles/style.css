@@ -194,6 +194,11 @@ h3 {
     perspective: 800px;
 }
 
+/* Add styling grid logic for number of cards - desktop
+Perhaps add classes like grid-6, grid-8, grid-10, etc. 
+*/
+
+
 .card {
     position: relative;
     width: 100%;
@@ -298,7 +303,7 @@ h3 {
     margin: 20% auto;
     padding: 20px;
     border: 1px solid #888;
-    width: 80%;
+    width: 90%;
     position: relative;
 }
 
@@ -312,6 +317,13 @@ h3 {
 .modal-content-choices h2 {
     color: #7d51a1;
     text-align: center;
+}
+
+.modal-content-choices p {
+    color: grey;
+    font-size: 0.8rem;
+    text-align: center;
+    margin-top: -.5rem;
 }
 
   

@@ -20,6 +20,7 @@ let numberOfMoves = 0;
 let matchesMade = 0;
 let totalMatches;
 let cards = Array.from(document.getElementsByClassName('card')); //Put all card classes into an array.
+let allMatchesInGame = 3; /* cards.length/2; */ //End game for challenge mode.
 let cardValueTurnOne, cardValueTurnTwo; //Variables for match evaluation.
 
 /* Add event listeners:
@@ -57,8 +58,8 @@ class Menu {
         this[action]();
         totalMatches = userChoice/2;
         determineCards();
-        modal.style.display = "none";
-        btn.style.display = "none";
+        startChillModal.style.display = "none";
+        startChillBtn.style.display = "none";
         challengeMode = false;
         gameSelector.style.display = "none";
         // setTimer(); To do: add timer with times per level.
@@ -183,19 +184,32 @@ function animateCards() {
 
 //Check end game and if challenge launch next challenge.
 function checkGameFinished() {
+        
+        if(matchesMade === totalMatches) {
+            if(challengeMode) {
 
-    if(matchesMade === totalMatches) {
-        if(challengeMode) {
-            matchesMade = 0;
-            userChoice = userChoice + 2; //Add more cards for next level.
-            resetBoard();
-            determineCards();
-        } else {
-            
-            window.location.href = "game-over.html";
+                if(matchesMade === allMatchesInGame) {
+                    alert('You won!');
 
+                } else {
+
+                    matchesMade = 0;
+                    userChoice = userChoice + 2; //Add more cards for next level.
+                    resetBoard();
+                    determineCards();
+
+                }
+
+            } else {
+                
+                window.location.href = "game-over.html";
+    
+            }
         }
-    }
+    
+
+        
+    
 }
 
 function resetBoard() {
@@ -244,24 +258,24 @@ function checkIfQuestion() {
 }
 
 // Modal from W3Schools.
-var modal = document.getElementById("myModal");
-var btn = document.getElementById("chill");
-var span = document.getElementsByClassName("close")[0];
+var startChillModal = document.getElementById("startChillModal");
+var startChillBtn = document.getElementById("chill");
+var startChillSpan = document.getElementsByClassName("close")[0];
 var gameSelector = document.getElementById('game-mode-selection');
 
 // When the user clicks on the button, open the modal
-btn.onclick = function() {
-  modal.style.display = "block";
+startChillBtn.onclick = function() {
+  startChillModal.style.display = "block";
 }
 
 // When the user clicks on <span> (x), close the modal
-span.onclick = function() {
-  modal.style.display = "none";
+startChillSpan.onclick = function() {
+  startChillModal.style.display = "none";
 }
 
 // When the user clicks anywhere outside of the modal, close it
 window.onclick = function(event) {
-  if (event.target == modal) {
-    modal.style.display = "none";
+  if (event.target == startChillModal) {
+    startChillModal.style.display = "none";
   }
 }

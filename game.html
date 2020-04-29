@@ -19,26 +19,29 @@
         <a id="chill">
             <h2>Chill mode</h2>
             <i class="fas fa-umbrella-beach fa-3x icon"></i>
-            <p>Sit back, relax and have a laugh!</p>
+            <p>Sit back, relax and have a laugh! <br>No highscores, just fun.</p>
             <div class="btn game-mode-selection-btn">let me laugh!</div>
         </a>
         <a id="challenge">
             <h2>Challenge mode</h2>
             <i class="fas fa-trophy fa-3x icon"></i>
-            <p>Start simple, but beware: every level gets more cards and less seconds...</p>
+            <p>Start simple, but beware: every level gets more cards...</p>
             <div class="btn game-mode-selection-btn">I'm a winner!</div>
         </a>
     </div>
 
     <!-- Modal for chill mode -->
-    <div id="myModal" class="modal">
+    <div id="startChillModal" class="modal">
         <div class="modal-content">
             <span class="close">&times;</span>
             <div class="modal-content-choices" id="menu">
                 <h2>Select a difficulty</h2>
-                    <a data-action="easy" class="level btn">easy</a>    
+                    <a data-action="easy" class="level btn">easy</a>
+                    <p>6 cards</p>    
                     <a data-action="medium" class="level btn">medium</a>
+                    <p>8 cards</p>
                     <a data-action="hard" class="level btn">expert</a>
+                    <p>12 cards<br>scroll necessary on mobile</p>
             </div>
         </div>
     </div>
@@ -143,7 +146,15 @@
         </div>
     </div>
     <!-- End game grid -->
+
+    <!-- Chill mode game over modal -->
     
+    <!-- End chill mode game over modal -->
+
+    <!-- Challenge mode game over modal -->
+    
+    <!-- End challenge mode game over modal -->
+
     <div class="wrapper-bottom-link">
         <ul>
             <li><a href="index.html">home</a></li>
