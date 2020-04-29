@@ -6,27 +6,33 @@
     box-sizing: border-box;
 }
 
+
 body {
     font-family: 'Lato', sans-serif;
 }    
+
 
 .wrapper {
     margin: 1rem auto 0 auto;
     padding: 1rem;
 }
 
+
 .wrapper-bottom-link {
     margin: 0;
     text-align: center;
 }
 
+
 ul li{
     display: inline-block;
 }
 
+
 li {
     padding: 0 1rem 1rem 1rem;  
 }
+
 
 .home-page-img {
     width: 80%;
@@ -35,6 +41,7 @@ li {
     border-radius: 5px;
 }
 
+
 .game-over-img {
     margin: 2rem auto;
     width: 300px;
@@ -42,11 +49,13 @@ li {
     box-shadow: 0 10px 1rem rgba(0,0,0,.16);
 }
 
+
 .explanation {
     font-size: 1.2rem;
     line-height: 1.6rem;
     text-align: center;
 }
+
 
 .explanation.left {
     padding-top: 1rem;
@@ -54,6 +63,7 @@ li {
     line-height: 1.9rem;
     text-align: left;
 }
+
 
 .btn {
     background-color: #ff8d1a;
@@ -71,20 +81,24 @@ li {
     text-transform: uppercase;
 }
 
+
 .btn:hover {
     background-color: #7d51a1;
     color: white;
 }
+
 
 a {
     color: #ff8d1a;
     text-align: center;
 }
 
+
 a:hover {
     color: #7d51a1;
     font-weight: 900;
 }
+
 
 /* Header */
 header, .game-header {
@@ -97,11 +111,13 @@ header, .game-header {
     width: 100%;
 }
 
+
 header {
     display: grid;
     align-items: center;
     padding: 2rem 0;
     }
+
 
 .game-header {
     padding: 0.5rem;
@@ -110,13 +126,16 @@ header {
     top: 0;
     }
 
+
 #moves {
     font-size: 1.5rem;
 }
 
+
 h1 {
     text-align: center;
 }
+
 
 h3 {
     text-align: center;
@@ -124,15 +143,18 @@ h3 {
     font-size: 1rem;
 }
 
+
 .quitter {
     font-size: .9rem;
     color: white;
 }
 
+
 .quitter:hover {
     color: rgb(245, 84, 183);
     font-weight: 900;
 }
+
 
 /* Game mode selection */
 #game-mode-selection {
@@ -141,22 +163,49 @@ h3 {
     gap: 3rem; 
 }
 
+
 #chill, #challenge {
     justify-self: center;
     align-self: center;
     margin: 0 auto;
     padding: 0;
     text-align: center;
-    width: 225px;
-    height: 200px;
+    width: 80%;
+    /* height: 200px; */
     color: black;
     box-shadow: 0 10px 1rem rgba(0,0,0,.16);
     border-radius: 5px;
 }
 
+
+#game-mode-selection h2 {
+    color: #7d51a1;
+    padding-top: 1rem;
+}
+
+
+.icon {
+    color: #7d51a1;;
+    margin: 1.6rem auto 1rem auto;
+}
+
+
+#game-mode-selection p {
+    color: #7d51a1;
+    padding: 1rem;
+}
+
+
+.game-mode-selection-btn {
+    margin: .5rem auto 2.5rem auto;
+    width: 70%;
+}
+
+
 .not-in-game {
     display: none;
 }
+
 
 /* The game */
 .memory-game {
