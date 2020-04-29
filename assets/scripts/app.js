@@ -67,7 +67,7 @@ class Menu {
     };
 }
 
-new Menu(menu);
+// new Menu(menu);
 
 //Select challenge mode.
 document.getElementById('challenge').addEventListener('click', startChallengeMode);
@@ -189,7 +189,9 @@ function checkGameFinished() {
             if(challengeMode) {
 
                 if(matchesMade === allMatchesInGame) {
-                    alert('You won!');
+                     
+                    localStorage.setItem("lastgame", numberOfMoves);
+                    window.location.href = "game-over-challenge-mode.html";
 
                 } else {
 
@@ -266,6 +268,7 @@ var gameSelector = document.getElementById('game-mode-selection');
 // When the user clicks on the button, open the modal
 startChillBtn.onclick = function() {
   startChillModal.style.display = "block";
+  new Menu(menu);
 }
 
 // When the user clicks on <span> (x), close the modal
