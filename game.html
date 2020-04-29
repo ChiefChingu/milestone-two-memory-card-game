@@ -13,7 +13,7 @@
         <h3>Number of moves made<br> <span id="moves">0 </span></h3>
         <a href="game-over.html" class="quitter">stop game</a>
     </header>
-    
+
     <div id=game-mode-selection>
         <a id="chill">
             <h2>Chill mode</h2>
@@ -25,26 +25,19 @@
         </a>
     </div>
 
-    
-
-    <!-- The Modal -->
+    <!-- Modal for chill mode -->
     <div id="myModal" class="modal">
-
-    <!-- Modal content -->
-    <div class="modal-content">
-        <span class="close">&times;</span>
-        <div class="temp" id="menu">
-            <a data-action="easy" class="level btn">easy</a>
-            <a data-action="medium" class="level btn">medium</a>
-            <a data-action="hard" class="level btn">hard</a>
+        <div class="modal-content">
+            <span class="close">&times;</span>
+            <div class="modal-content-choices" id="menu">
+                <a data-action="easy" class="level btn">easy</a>
+                <a data-action="medium" class="level btn">medium</a>
+                <a data-action="hard" class="level btn">hard</a>
+            </div>
+            <p>Some text in the Modal..</p>
         </div>
-        <p>Some text in the Modal..</p>
     </div>
 
-    </div>
-
- 
-    
     <!-- Game grid -->
     <div class="memory-game">
         <div data-cardvalue="1" data-type="a" class="card not-in-game clickable">

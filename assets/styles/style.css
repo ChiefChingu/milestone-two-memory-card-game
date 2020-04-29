@@ -1,3 +1,5 @@
+/* General */
+
 * {
     padding: 0;
     margin: 0;
@@ -8,6 +10,83 @@ body {
     font-family: 'Lato', sans-serif;
 }    
 
+.wrapper {
+    margin: 1rem auto 0 auto;
+    padding: 1rem;
+}
+
+.wrapper-bottom-link {
+    margin: 0;
+    text-align: center;
+}
+
+ul li{
+    display: inline-block;
+}
+
+li {
+    padding: 0 1rem 1rem 1rem;  
+}
+
+.home-page-img {
+    width: 80%;
+    margin: 2rem auto;
+    box-shadow: 0 10px 1rem rgba(0,0,0,.16);
+    border-radius: 5px;
+}
+
+.game-over-img {
+    margin: 2rem auto;
+    width: 300px;
+    border-radius: 5px;
+    box-shadow: 0 10px 1rem rgba(0,0,0,.16);
+}
+
+.explanation {
+    font-size: 1.2rem;
+    line-height: 1.6rem;
+    text-align: center;
+}
+
+.explanation.left {
+    padding-top: 1rem;
+    font-size: 1.3rem;
+    line-height: 1.9rem;
+    text-align: left;
+}
+
+.btn {
+    background-color: #ff8d1a;
+    color: white;
+    font-size: 16px;
+    font-weight: 700;
+    text-decoration: none;
+    margin: 2rem auto 1rem auto;
+    border: none;
+    border-radius: 4px;
+    display: block;
+    padding: 0.75rem 1.5rem;
+    width: 160px;
+    text-align: center;
+    text-transform: uppercase;
+}
+
+.btn:hover {
+    background-color: #7d51a1;
+    color: white;
+}
+
+a {
+    color: #ff8d1a;
+    text-align: center;
+}
+
+a:hover {
+    color: #7d51a1;
+    font-weight: 900;
+}
+
+/* Header */
 header, .game-header {
     background-color: #7d51a1;
     background-image: url("../images/waves.svg");
@@ -55,6 +134,7 @@ h3 {
     font-weight: 900;
 }
 
+/* Game mode selection */
 #game-mode-selection {
     margin-top: 3rem;
     display: grid;
@@ -74,54 +154,11 @@ h3 {
     border-radius: 5px;
 }
 
-    
-
-
-.wrapper {
-    margin: 1rem auto 0 auto;
-    padding: 1rem;
+.not-in-game {
+    display: none;
 }
 
-.wrapper-bottom-link {
-    margin: 0;
-    text-align: center;
-}
-
-ul li{
-    display: inline-block;
-}
-
-li {
-    padding: 0 1rem 1rem 1rem;  
-}
-
-.home-page-img {
-    width: 80%;
-    margin: 2rem auto;
-    box-shadow: 0 10px 1rem rgba(0,0,0,.16);
-    border-radius: 5px;
-}
-
-.game-over-img {
-    margin: 2rem auto;
-    width: 300px;
-    border-radius: 5px;
-    box-shadow: 0 10px 1rem rgba(0,0,0,.16);
-}
-
-.explanation {
-    font-size: 1.2rem;
-    line-height: 1.6rem;
-    text-align: center;
-}
-
-.explanation.left {
-    padding-top: 1rem;
-    font-size: 1.3rem;
-    line-height: 1.9rem;
-    text-align: left;
-}
-
+/* The game */
 .memory-game {
     display: grid;
     grid-template-columns: repeat(2, 1fr);
@@ -141,32 +178,6 @@ li {
     border-radius: 5px;
     transform-style: preserve-3d;
     transition: transform .5s;
-}
-
-/* match animation */
-.animation {
-    transform: rotateX(180deg);
-    animation: tilt .4s;
-    
-}
-
-@keyframes tilt {
-  
-    0% {
-      transform: rotate(-1deg);
-    }
-    
-    33% {
-      transform: rotate(0deg);
-    }
-    
-    66% {
-      transform: rotate(-1deg);
-    }
-
-    100% {
-        transform: rotate(0deg);
-    }
 }
 
 .front-face, .back-face {
@@ -220,46 +231,71 @@ li {
     border-bottom-right-radius: 5px;
 }
 
-.btn {
-    background-color: #ff8d1a;
-    color: white;
-    font-size: 16px;
-    font-weight: 700;
-    text-decoration: none;
-    margin: 2rem auto 1rem auto;
-    border: none;
-    border-radius: 4px;
-    display: block;
-    padding: 0.75rem 1.5rem;
-    width: 160px;
-    text-align: center;
-    text-transform: uppercase;
+/* match pair animation */
+.animation {
+    transform: rotateX(180deg);
+    animation: tilt .4s;
 }
 
-.btn:hover {
-    background-color: #7d51a1;
-    color: white;
+@keyframes tilt {
+  
+    0% {
+      transform: rotate(-1deg);
+    }
+    
+    33% {
+      transform: rotate(0deg);
+    }
+    
+    66% {
+      transform: rotate(-1deg);
+    }
+
+    100% {
+        transform: rotate(0deg);
+    }
 }
 
-a {
-    color: #ff8d1a;
-    text-align: center;
+/* W3Schools modal*/
+.modal {
+    display: none;
+    position: fixed;
+    z-index: 1;
+    left: 0;
+    top: 0;
+    width: 100%;
+    height: 100%;
+    overflow: auto;
+    background-color: rgb(0,0,0);
+    background-color: rgba(0,0,0,0.4);
+}
+  
+  .modal-content {
+    background-color: #fefefe;
+    margin: 15% auto;
+    padding: 20px;
+    border: 1px solid #888;
+    width: 80%;
 }
 
-a:hover {
-    color: #7d51a1;
-    font-weight: 900;
-}
-
-/*level selector*/
-.temp {
-
+  .modal-content-choices {
     margin-top: 8rem;
 }
-
-.not-in-game {
-    display: none;
+  
+  .close {
+    color: #aaa;
+    float: right;
+    font-size: 28px;
+    font-weight: bold;
 }
+  
+  .close:hover,
+  .close:focus {
+    color: black;
+    text-decoration: none;
+    cursor: pointer;
+}
+
 
 @media screen and (min-width: 1025px) {
     .explanation {
@@ -336,41 +372,3 @@ a:hover {
     }
 }
 
-
-/* The Modal (background) */
-.modal {
-    display: none; /* Hidden by default */
-    position: fixed; /* Stay in place */
-    z-index: 1; /* Sit on top */
-    left: 0;
-    top: 0;
-    width: 100%; /* Full width */
-    height: 100%; /* Full height */
-    overflow: auto; /* Enable scroll if needed */
-    background-color: rgb(0,0,0); /* Fallback color */
-    background-color: rgba(0,0,0,0.4); /* Black w/ opacity */
-  }
-  
-  /* Modal Content/Box */
-  .modal-content {
-    background-color: #fefefe;
-    margin: 15% auto; /* 15% from the top and centered */
-    padding: 20px;
-    border: 1px solid #888;
-    width: 80%; /* Could be more or less, depending on screen size */
-  }
-  
-  /* The Close Button */
-  .close {
-    color: #aaa;
-    float: right;
-    font-size: 28px;
-    font-weight: bold;
-  }
-  
-  .close:hover,
-  .close:focus {
-    color: black;
-    text-decoration: none;
-    cursor: pointer;
-  }
