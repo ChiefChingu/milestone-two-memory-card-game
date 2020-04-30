@@ -1,49 +1,48 @@
-let message;
-let lastGameInt = parseInt(localStorage.getItem("lastgame"), 10); //create int from string
-// localStorage.setItem("highScore", "0"); //create highscore local storage, issue: it sets it to 0 every time....
-let highScoreInt = parseInt(localStorage.getItem("highScore"),10); //create int from string
-let difference;
+let lastGame = localStorage.getItem("lastGameLocal");
 
+// if(localStorage.getItem("game A") === null) {
+//     localStorage.setItem("game A", "A done");
+//     console.log(localStorage.getItem("game A"));
+// } else if(localStorage.getItem("game B") === null) {
+//     localStorage.setItem("game B", "B done");
+//     console.log(localStorage.getItem("game B"));
+// } else /* (localStorage.getItem("game C") === null) */ {
+//     localStorage.setItem("game C", "C done");
+//     console.log(localStorage.getItem("game C"));
+// }
 
-//set localstorage highscore
-localStorage.setItem("highScore", lastGameInt);
-
-
-if(highScoreInt === 0) {
-    localStorage.setItem("highScore", lastGameInt);
-    console.log(`Alright, this is your score to beat. Try again!`);
-} else {
-    if(lastGameInt < highScoreInt) {
-        difference = highScoreInt - lastGameInt;
-        localStorage.setItem("highScore", lastGameInt);
-        console.log(`Well done! You've beaten your highscore with ${difference} moves! Can you do better than this?`);
-    } else if (lastGameInt > highScoreInt) {
-        console.log(`Come on, you can do better! Try again!`)
-    } else if (lastGameInt === highScoreInt) {
-        console.log(`So close! Try again!`);
-    }
+// This does not work
+if(localStorage.getItem("game A") === null) {
+    localStorage.setItem("game A", lastGame);
+    console.log(localStorage.getItem("game A"));
+} else if(localStorage.getItem("game B") === null) {
+    localStorage.setItem("game B", lastGame);
+    console.log(localStorage.getItem("game B"));
+} else /* (localStorage.getItem("game C") === null) */ {
+    localStorage.setItem("game C", lastGame);
+    console.log(localStorage.getItem("game C"));
 }
 
-console.log(localStorage.getItem("highScore"));
-console.log(localStorage.getItem("lastgame"));
-console.log(message);
-console.log(lastGameInt, highScoreInt);
 
-document.getElementById("lastscore").innerHTML = localStorage.getItem("lastgame");
-document.getElementById("highscore").innerHTML = highScoreInt;
+console.log('game A', localStorage.getItem("game A"));
+console.log('game B', localStorage.getItem("game B"));
+console.log('game C', localStorage.getItem("game C"));
 
-function firstGame() {
-    if (lastGameInt = NaN) { //it is your first game and you can set the highscore to lastGameInt
-        localStorage.setItem("highScore", lastGameInt);
-    }
+/*  else if (localStorage.getItem("game B") === "B") {
+    console.log('match B');
+    localStorage.setItem("game B", "Done");
+    console.log(localStorage.getItem("game B"));
+} else if (localStorage.getItem("game C") === "C") {
+    console.log('match C');
+    localStorage.setItem("game A", "A");
+    localStorage.setItem("game B", "B");
+    localStorage.setItem("game C", "C");
+} */
 
-}
-
-console.log(lastGameInt, highScoreInt);
-
-
+/* Clear all local storage values */
 function resetLocalStorage() {
     localStorage.clear();
 }
 
 // resetLocalStorage();
+

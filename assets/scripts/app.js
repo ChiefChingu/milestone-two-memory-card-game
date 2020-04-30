@@ -20,7 +20,7 @@ let numberOfMoves = 0;
 let matchesMade = 0;
 let totalMatches;
 let cards = Array.from(document.getElementsByClassName('card')); //Put all card classes into an array.
-let allMatchesInGame = 3; /* cards.length/2; */ //End game for challenge mode.
+let allMatchesInGame = 2; /* cards.length/2; */ //End game for challenge mode.
 let cardValueTurnOne, cardValueTurnTwo; //Variables for match evaluation.
 
 /* Add event listeners:
@@ -190,7 +190,7 @@ function checkGameFinished() {
 
                 if(matchesMade === allMatchesInGame) {
                      
-                    localStorage.setItem("lastgame", numberOfMoves);
+                    localStorage.setItem("lastGameLocal", numberOfMoves);
                     window.location.href = "game-over-challenge-mode.html";
 
                 } else {
@@ -282,3 +282,4 @@ window.onclick = function(event) {
     startChillModal.style.display = "none";
   }
 }
+
