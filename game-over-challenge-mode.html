@@ -6,16 +6,25 @@
     <title>Memory Card Challenge</title>
     <link rel="stylesheet" href="./assets/styles/style.css">
     <link href="https://fonts.googleapis.com/css?family=Lato&display=swap" rel="stylesheet">
-    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.4.1/jquery.min.js"></script>
+    <script src="https://kit.fontawesome.com/aca8a0f519.js" crossorigin="anonymous"></script>
+    <!-- <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.4.1/jquery.min.js"></script> -->
 </head>
     <body>
         <header>
             <h1>Good Game!</h1>
         </header>
         <div class="wrapper wrapper-game-over">
-            <div>
-                Your highscore is: <span id="highscore">0</span> moves!<br>
-                Your score of last game is <span id="lastscore">0</span> moves.
+            <div class="best-game">
+                <p>Your best score is:</p><br> 
+                <i class="fas fa-award icon-score"></i>
+                <div class="grid-wrap">
+                    <div id="highscore">0</div>
+                    <div class="best-game-moves">moves!</div>
+                </div>
+                
+            </div>
+            <div class="last-game">
+                Your last game had <span id="lastscore">0</span> moves.
             </div>
             <a class="btn" href="game.html">play again!</a>
         </div>

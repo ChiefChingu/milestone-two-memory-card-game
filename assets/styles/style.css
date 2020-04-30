@@ -343,6 +343,64 @@ Perhaps add classes like grid-6, grid-8, grid-10, etc.
     cursor: pointer;
 }
 
+/* Game over page */
+.best-game {
+    margin-top: 3rem;
+    text-align: center;
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    grid-template-rows: auto auto;
+    gap: 10px;
+}
+
+.best-game p {
+    font-size: 2rem;
+    grid-column: 1 / -1;
+}
+
+.icon-score {
+    grid-column: 1;
+    grid-row: 2 / 3;
+    font-size: 6rem;
+    color: #7d51a1;
+    justify-self: end;
+    margin-top: 1rem;
+}
+
+.grid-wrap {
+    grid-column: 2;
+    grid-row: 2;
+    justify-self: start;
+}
+
+.best-game-moves {
+    font-size: 1rem;
+    margin-top: -1rem;
+}
+
+#highscore, #lastscore {
+    font-weight: 900;
+    color: #e166c4;
+}
+
+#highscore {
+    font-size: 7rem;
+    /* margin-top: 1rem; */
+    /* grid-column: 2;
+    grid-row: 2; */
+}
+
+#lastscore {
+    font-size: 1.5rem;
+}
+
+.last-game {
+    font-size: 1.5rem;
+    text-align: center;
+    margin-bottom: 3rem;
+}
+
+
 
 @media screen and (min-width: 1025px) {
     .explanation {
