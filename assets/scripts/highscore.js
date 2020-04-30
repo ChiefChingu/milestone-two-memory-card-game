@@ -30,33 +30,6 @@ if(localStorage.getItem("game A") === null) {
 
 document.getElementById("lastscore").innerHTML = lastGame;
 
-/* 
-// Logging 3 games
-if(localStorage.getItem("game A") === null) {
-    localStorage.setItem("game A", lastGame);
-    console.log(localStorage.getItem("game A"));
-} else if(localStorage.getItem("game B") === null) {
-    localStorage.setItem("game B", lastGame);
-    console.log(localStorage.getItem("game B"));
-} else {
-    localStorage.setItem("game C", lastGame);
-    console.log(localStorage.getItem("game C"));
-}
-
-//create button with resetGames
-
-function resetGames() {
-    localStorage.removeItem("game A");
-    localStorage.removeItem("game B");
-    localStorage.removeItem("game C");
-}
-
- */
-// console.log('game A', localStorage.getItem("game A"));
-// console.log('game B', localStorage.getItem("game B"));
-// console.log('game C', localStorage.getItem("game C"));
-
-
 /* Clear all local storage values */
 function resetLocalStorage() {
     localStorage.clear();
