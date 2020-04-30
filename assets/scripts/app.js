@@ -20,7 +20,7 @@ let numberOfMoves = 0;
 let matchesMade = 0;
 let totalMatches;
 let cards = Array.from(document.getElementsByClassName('card')); //Put all card classes into an array.
-let allMatchesInGame = 6; /* cards.length/2; */ //End game for challenge mode.
+let allMatchesInGame = 5; /* cards.length/2; */ //End game for challenge mode.
 let cardValueTurnOne, cardValueTurnTwo; //Variables for match evaluation.
 
 /* Add event listeners:
@@ -74,7 +74,7 @@ document.getElementById('challenge').addEventListener('click', startChallengeMod
 
 function startChallengeMode() {
     challengeMode = true;
-    userChoice = 2;
+    userChoice = 4;
     determineCards();
     gameSelector.style.display = "none";
 }
@@ -88,6 +88,7 @@ function determineCards() {
     }
 
     totalMatches = userChoice/2;
+    console.log('totalMatches this round', totalMatches);
     shuffle();
 }
 
