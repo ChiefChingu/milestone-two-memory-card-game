@@ -1,9 +1,12 @@
+/* prefixed by https://autoprefixer.github.io (PostCSS: v7.0.26, autoprefixer: v9.7.3) */
+
 /* General */
 
 * {
     padding: 0;
     margin: 0;
-    box-sizing: border-box;
+    -webkit-box-sizing: border-box;
+            box-sizing: border-box;
 }
 
 body {
@@ -31,7 +34,8 @@ li {
 .home-page-img {
     width: 80%;
     margin: 2rem auto;
-    box-shadow: 0 10px 1rem rgba(0,0,0,.16);
+    -webkit-box-shadow: 0 10px 1rem rgba(0,0,0,.16);
+            box-shadow: 0 10px 1rem rgba(0,0,0,.16);
     border-radius: 5px;
 }
 
@@ -39,7 +43,8 @@ li {
     margin: 2rem auto;
     width: 300px;
     border-radius: 5px;
-    box-shadow: 0 10px 1rem rgba(0,0,0,.16);
+    -webkit-box-shadow: 0 10px 1rem rgba(0,0,0,.16);
+            box-shadow: 0 10px 1rem rgba(0,0,0,.16);
 }
 
 .explanation {
@@ -99,8 +104,12 @@ header, .game-header {
 }
 
 header {
+    display: -ms-grid;
     display: grid;
-    align-items: center;
+    -webkit-box-align: center;
+    -webkit-align-items: center;
+        -ms-flex-align: center;
+            align-items: center;
     padding: 2rem 0;
     }
 
@@ -139,20 +148,26 @@ h3 {
 /* Game mode selection */
 #game-mode-selection {
     margin-top: 3rem;
+    display: -ms-grid;
     display: grid;
     gap: 3rem; 
 }
 
 #chill, #challenge {
-    justify-self: center;
-    align-self: center;
+    -ms-grid-column-align: center;
+        justify-self: center;
+    -webkit-align-self: center;
+        -ms-flex-item-align: center;
+                -ms-grid-row-align: center;
+            align-self: center;
     margin: 0 auto;
     padding: 0;
     text-align: center;
     width: 80%;
     /* height: 200px; */
     color: black;
-    box-shadow: 0 10px 1rem rgba(0,0,0,.16);
+    -webkit-box-shadow: 0 10px 1rem rgba(0,0,0,.16);
+            box-shadow: 0 10px 1rem rgba(0,0,0,.16);
     border-radius: 5px;
 }
 
@@ -183,15 +198,21 @@ h3 {
 
 /* The game */
 .memory-game {
+    display: -ms-grid;
     display: grid;
+    -ms-grid-columns: 1fr 10px 1fr;
     grid-template-columns: repeat(2, 1fr);
-    align-items: center;
+    -webkit-box-align: center;
+    -webkit-align-items: center;
+        -ms-flex-align: center;
+            align-items: center;
     justify-items: center;
     width: 90%;
     max-width: 450px;
     margin: 7rem auto 1rem auto;
     grid-gap: 10px;
-    perspective: 800px;
+    -webkit-perspective: 800px;
+            perspective: 800px;
 }
 
 /* Add styling grid logic for number of cards - desktop
@@ -204,8 +225,13 @@ Perhaps add classes like grid-6, grid-8, grid-10, etc.
     width: 100%;
     height: 150px;
     border-radius: 5px;
-    transform-style: preserve-3d;
+    -webkit-transform-style: preserve-3d;
+            transform-style: preserve-3d;
+    -webkit-transition: -webkit-transform .5s;
+    transition: -webkit-transform .5s;
+    -o-transition: transform .5s;
     transition: transform .5s;
+    transition: transform .5s, -webkit-transform .5s;
 }
 
 .front-face, .back-face {
@@ -213,13 +239,17 @@ Perhaps add classes like grid-6, grid-8, grid-10, etc.
     width: 100%;
     height: 100%;
     border-radius: 5px;
-    backface-visibility: hidden;
-    box-shadow: 0 10px 1rem rgba(0,0,0,.16);
+    -webkit-backface-visibility: hidden;
+            backface-visibility: hidden;
+    -webkit-box-shadow: 0 10px 1rem rgba(0,0,0,.16);
+            box-shadow: 0 10px 1rem rgba(0,0,0,.16);
 }
 
 .front-face {
-    transform: rotateX(180deg);
-    object-fit: cover;
+    -webkit-transform: rotateX(180deg);
+            transform: rotateX(180deg);
+    -o-object-fit: cover;
+       object-fit: cover;
 }
 
 .back-face {
@@ -234,7 +264,8 @@ Perhaps add classes like grid-6, grid-8, grid-10, etc.
 }
 
 .visible {
-    transform: rotateX(180deg);
+    -webkit-transform: rotateX(180deg);
+            transform: rotateX(180deg);
 }
 
 .context {
@@ -247,12 +278,18 @@ Perhaps add classes like grid-6, grid-8, grid-10, etc.
     background-color: grey;
     opacity: .7;
     color: white;
-    backface-visibility: hidden;
-    transform: rotateX(180deg);
+    -webkit-backface-visibility: hidden;
+            backface-visibility: hidden;
+    -webkit-transform: rotateX(180deg);
+            transform: rotateX(180deg);
     font-weight: 900;
     text-align: center;
+    display: -ms-grid;
     display: grid;
-    align-items: center;
+    -webkit-box-align: center;
+    -webkit-align-items: center;
+        -ms-flex-align: center;
+            align-items: center;
     padding: 0 0.2rem;
     height: 30%;
     border-bottom-left-radius: 5px;
@@ -261,26 +298,55 @@ Perhaps add classes like grid-6, grid-8, grid-10, etc.
 
 /* match pair animation */
 .animation {
-    transform: rotateX(180deg);
-    animation: tilt .4s;
+    -webkit-transform: rotateX(180deg);
+            transform: rotateX(180deg);
+    -webkit-animation: tilt .4s;
+            animation: tilt .4s;
+}
+
+@-webkit-keyframes tilt {
+  
+    0% {
+      -webkit-transform: rotate(-1deg);
+              transform: rotate(-1deg);
+    }
+    
+    33% {
+      -webkit-transform: rotate(0deg);
+              transform: rotate(0deg);
+    }
+    
+    66% {
+      -webkit-transform: rotate(-1deg);
+              transform: rotate(-1deg);
+    }
+
+    100% {
+        -webkit-transform: rotate(0deg);
+                transform: rotate(0deg);
+    }
 }
 
 @keyframes tilt {
   
     0% {
-      transform: rotate(-1deg);
+      -webkit-transform: rotate(-1deg);
+              transform: rotate(-1deg);
     }
     
     33% {
-      transform: rotate(0deg);
+      -webkit-transform: rotate(0deg);
+              transform: rotate(0deg);
     }
     
     66% {
-      transform: rotate(-1deg);
+      -webkit-transform: rotate(-1deg);
+              transform: rotate(-1deg);
     }
 
     100% {
-        transform: rotate(0deg);
+        -webkit-transform: rotate(0deg);
+                transform: rotate(0deg);
     }
 }
 
@@ -347,10 +413,29 @@ Perhaps add classes like grid-6, grid-8, grid-10, etc.
 .best-game {
     margin-top: 3rem;
     text-align: center;
+    display: -ms-grid;
     display: grid;
+    -ms-grid-columns: 40% 10px 60%;
     grid-template-columns: 40% 60%;
+    -ms-grid-rows: auto 10px auto;
     grid-template-rows: auto auto;
     gap: 10px;
+}
+.best-game > *:nth-child(1) {
+    -ms-grid-row: 1;
+    -ms-grid-column: 1;
+}
+.best-game > *:nth-child(2) {
+    -ms-grid-row: 1;
+    -ms-grid-column: 3;
+}
+.best-game > *:nth-child(3) {
+    -ms-grid-row: 3;
+    -ms-grid-column: 1;
+}
+.best-game > *:nth-child(4) {
+    -ms-grid-row: 3;
+    -ms-grid-column: 3;
 }
 
 .best-game p {
@@ -359,18 +444,25 @@ Perhaps add classes like grid-6, grid-8, grid-10, etc.
 }
 
 .icon-score {
+    -ms-grid-column: 1;
     grid-column: 1;
+    -ms-grid-row: 2;
+    -ms-grid-row-span: 1;
     grid-row: 2 / 3;
     font-size: 6rem;
     color: #7d51a1;
-    justify-self: end;
+    -ms-grid-column-align: end;
+        justify-self: end;
     margin-top: 1rem;
 }
 
 .grid-wrap {
+    -ms-grid-column: 2;
     grid-column: 2;
+    -ms-grid-row: 2;
     grid-row: 2;
-    justify-self: start;
+    -ms-grid-column-align: start;
+        justify-self: start;
 }
 
 .best-game-moves {
@@ -422,8 +514,12 @@ Perhaps add classes like grid-6, grid-8, grid-10, etc.
     }
 
     .game-header {
+        display: -ms-grid;
         display: grid;
-        align-items: center;
+        -webkit-box-align: center;
+        -webkit-align-items: center;
+            -ms-flex-align: center;
+                align-items: center;
         padding: 1rem 0 1rem 0;
     }
 
@@ -437,6 +533,7 @@ Perhaps add classes like grid-6, grid-8, grid-10, etc.
 
     .memory-game {
         max-width: 1000px;
+        -ms-grid-columns: 1fr 10px 1fr 10px 1fr 10px 1fr;
         grid-template-columns: repeat(4, 1fr);
         margin-top: 11rem;
         margin-bottom: 2rem;
@@ -447,7 +544,8 @@ Perhaps add classes like grid-6, grid-8, grid-10, etc.
     }
 
     .front-face {
-        object-fit: none;
+        -o-object-fit: none;
+           object-fit: none;
     }
 
     .card {
@@ -458,8 +556,12 @@ Perhaps add classes like grid-6, grid-8, grid-10, etc.
 
 @media screen and (min-width: 2000px) {
     .game-header {
+        display: -ms-grid;
         display: grid;
-        align-items: center;
+        -webkit-box-align: center;
+        -webkit-align-items: center;
+            -ms-flex-align: center;
+                align-items: center;
         padding: 2rem 0 1.5rem 0;
     }
 
@@ -476,4 +578,3 @@ Perhaps add classes like grid-6, grid-8, grid-10, etc.
         margin-bottom: 2rem;
     }
 }
-
