@@ -174,8 +174,8 @@ function turnLogic() {
 //Animate cards on match.
 function animateCards() {
 
-    cardValueTurnOne.lastElementChild.className = '.back-face-hidden animation';
-    cardValueTurnTwo.lastElementChild.className = '.back-face-hidden animation';
+    cardValueTurnOne.lastElementChild.className = '.back-face-hidden';
+    cardValueTurnTwo.lastElementChild.className = '.back-face-hidden';
     cardValueTurnOne.classList.add('animation');
     cardValueTurnTwo.classList.add('animation');
     cardValueTurnOne.firstElementChild.children[1].classList.add('animation');
