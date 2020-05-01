@@ -260,7 +260,10 @@ Perhaps add classes like grid-6, grid-8, grid-10, etc.
     background-size: cover;
 }
 
-
+.back-face-hidden {
+    /* color: white; */
+    color: transparent;
+}
 
 .visible {
     -webkit-transform: rotateX(180deg);
