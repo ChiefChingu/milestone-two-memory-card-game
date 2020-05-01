@@ -128,7 +128,7 @@ function turnLogic() {
                     matchesMade++;
                     numberOfMoves++;
                     allowedTurns = 2;
-                    animateCards();
+                    // animateCards();
         
                 setTimeout(() => {
                     
