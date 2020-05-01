@@ -9,8 +9,27 @@
         <!-- <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.4.1/jquery.min.js"></script> -->
     </head>
     <body>
-        <header>
+        <header class="site-header">
             <h1>Memory Challenge</h1>
+            <div class="site-header__menu-icon">
+                <div class="site-header__menu-icon__middle"></div>
+              </div>
+              <div class="site-header__overlay">
+                <div class="site-header__overlay-content">
+                  <nav class="primary-nav">
+                    <ul>
+                      <li><a href="index.html">Home</a></li>
+                      <li><a href="game.html">Game</a></li>
+                    </ul>
+                  </nav>
+                  <div class="site-header__overlay-subscribe">
+                    <h3 class="section-title">
+                      Want to leave a message?
+                    </h3>
+                    <a class="btn site-header__overlay-subscribe-button" href="#">send</a>
+                  </div>
+                </div>
+              </div>
         </header>
         <div class="wrapper">
             <div class="explanation">
@@ -26,6 +45,6 @@
                 <li><a href="contact.html">about & contact</a></li>
             </ul>
         </div>
-        <!-- <script src="app.js"></script> -->
+        <script src="./assets/scripts/MobileMenu.js"></script>
     </body>
 </html>

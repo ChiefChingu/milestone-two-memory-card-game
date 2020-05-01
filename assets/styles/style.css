@@ -23,12 +23,124 @@ body {
     text-align: center;
 }
 
-ul li{
-    display: inline-block;
+/* Menu */
+.site-header {
+    position: fixed;
+    background-color: #7d51a1;
+    width: 100%;
+    z-index: 2;
 }
 
-li {
-    padding: 0 1rem 1rem 1rem;  
+h1 {
+        padding-top: 25px;
+        text-align: center;
+        font-size: 3rem;       
+    }
+
+h2 {
+        position: relative;
+        top: 310px;
+        text-align: center; 
+    }
+
+.site-header__menu-icon {
+        width: 20px;
+        height: 19px;
+        position: absolute;
+        top: 25px;
+        left: 20px;
+        z-index: 3;
+}
+
+.site-header__menu-icon::before {
+            content: "";    
+            position: absolute;
+            top: 0;
+            left: 0;
+            width: 20px;
+            height: 3px;
+            background-color: white;
+            transform-origin: 0 0;
+            transition: transform .3s ease-out;
+        }
+
+.site-header__menu-icon__middle {
+            position: absolute;
+            top: 8px;
+            left: 0;
+            width: 20px;
+            height: 3px;
+            background-color: white;
+            transition: opacity .3s ease-out;
+        }
+
+.site-header__menu-icon::after {
+            content: "";  
+            position: absolute;
+            bottom: 0px;
+            left: 0;
+            width: 20px;
+            height: 3px;
+            background-color: white;
+            transform-origin: 0 100%;
+            transition: transform .3s ease-out;
+}
+
+.site-header__menu-icon--close-x::before {
+    transform: rotate(45deg) scaleX(1.25);
+}
+
+/* When closing, middle bar needs to be invisible. Was part of it via nested CSS */
+.site-header__menu-icon__middle--close-x {
+    opacity: 0;
+}
+
+.site-header__menu-icon--close-x::after {
+    transform: rotate(-45deg) scaleX(1.25) translateY(1px);
+}
+
+
+.site-header__overlay {
+        height: 100%;
+        width: 100%;
+        position: fixed;
+        z-index: 1;
+        top: 0;
+        left: 0;
+        background-color: #7d51a1;
+        overflow-y: hidden;
+        transition: 0.5s;
+        display: none;
+        background-image: url("../images/waves.svg");
+        background-position: center;
+        background-size: cover;
+        color: #fff;
+}
+    
+.site-header__overlay--is-visible {
+        display: block;
+}
+
+.site-header__overlay-content {
+        position: relative;
+        /* top: 25%; */
+        width: 100%;
+        text-align: center;
+        /* margin-top: 30px; */
+}
+      
+.site-header__overlay a {
+        padding: 8px;
+        text-decoration: none;
+        color: white;
+        font-size: 16px;
+        display: block;
+        transition: 0.3s;
+}
+      
+.site-header__overlay a:hover, 
+.site-header__overlay a:focus {
+        color: $mainYellow;
 }
 
 .home-page-img {
@@ -247,8 +359,10 @@ Perhaps add classes like grid-6, grid-8, grid-10, etc.
 }
 
 .front-face {
-    -webkit-transform: rotateX(180deg);
-            transform: rotateX(180deg);
+    /* -moz-transform: rotate(180deg);
+    -webkit-transform: rotateX(180deg); */
+    
+    transform: rotateX(180deg);
     -o-object-fit: cover;
        object-fit: cover;
 }
