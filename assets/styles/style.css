@@ -13,8 +13,20 @@ body {
     font-family: 'Lato', sans-serif;
 }    
 
+h2 {
+    position: relative;
+    top: 310px;
+    text-align: center; 
+}
+
+h3 {
+    text-align: center;
+    padding-top: 1rem;
+    font-size: 1rem;
+}
+
 .wrapper {
-    margin: 1rem auto 0 auto;
+    margin: 8rem auto 0 auto;
     padding: 1rem;
 }
 
@@ -23,33 +35,55 @@ body {
     text-align: center;
 }
 
-/* Menu */
-.site-header {
-    position: fixed;
+/* Header & menu */
+
+/* Header */
+.site-header, .game-header {
     background-color: #7d51a1;
+    background-image: url("../images/waves.svg");
+    background-position: center;
+    background-size: cover;
+    color: white;
+    height: auto;
     width: 100%;
     z-index: 2;
+    top: 0;
+    position: fixed;
+    padding: 1rem 0;
+    display: grid;
 }
 
-h1 {
-        padding-top: 25px;
-        text-align: center;
-        font-size: 3rem;       
+.site-header {
+    grid-template-columns: 10% 90%;
+    align-items: center;
+    /* padding: 2rem 0; */
+}
+
+.site-header-title {
+    grid-column: 2;
+    font-size: 2.2rem;
+    text-align: start;
+    margin-left: 0.5rem;
+}
+
+.game-header {
+    padding: 0.5rem;
+    /* position: fixed; */
+    z-index: 1;
+    top: 0;
     }
 
-h2 {
-        position: relative;
-        top: 310px;
-        text-align: center; 
-    }
+#moves {
+    font-size: 1.5rem;
+}
 
 .site-header__menu-icon {
-        width: 20px;
-        height: 19px;
-        position: absolute;
-        top: 25px;
-        left: 20px;
-        z-index: 3;
+    width: 20px;
+    height: 19px;
+    position: absolute;
+    top: 25px;
+    left: 10px;
+    z-index: 3;
 }
 
 .site-header__menu-icon::before {
@@ -90,7 +124,6 @@ h2 {
     transform: rotate(45deg) scaleX(1.25);
 }
 
-/* When closing, middle bar needs to be invisible. Was part of it via nested CSS */
 .site-header__menu-icon__middle--close-x {
     opacity: 0;
 }
@@ -98,7 +131,6 @@ h2 {
 .site-header__menu-icon--close-x::after {
     transform: rotate(-45deg) scaleX(1.25) translateY(1px);
 }
-
 
 .site-header__overlay {
         height: 100%;
@@ -202,60 +234,6 @@ a:hover {
     color: #7d51a1;
     font-weight: 900;
 }
-
-
-/* Header */
-header, .game-header {
-    background-color: #7d51a1;
-    background-image: url("../images/waves.svg");
-    background-position: center;
-    background-size: cover;
-    color: white;
-    height: auto;
-    width: 100%;
-}
-
-header {
-    display: -ms-grid;
-    display: grid;
-    -webkit-box-align: center;
-    -webkit-align-items: center;
-        -ms-flex-align: center;
-            align-items: center;
-    padding: 2rem 0;
-    }
-
-.game-header {
-    padding: 0.5rem;
-    /* position: fixed; */
-    z-index: 1;
-    top: 0;
-    }
-
-#moves {
-    font-size: 1.5rem;
-}
-
-h1 {
-    text-align: center;
-}
-
-h3 {
-    text-align: center;
-    padding-top: 1rem;
-    font-size: 1rem;
-}
-
-.quitter {
-    font-size: .9rem;
-    color: white;
-}
-
-.quitter:hover {
-    color: rgb(245, 84, 183);
-    font-weight: 900;
-}
-
 
 /* Game mode selection */
 #game-mode-selection {
