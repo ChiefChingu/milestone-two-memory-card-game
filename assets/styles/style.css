@@ -64,6 +64,7 @@ h3 {
     font-size: 2.2rem;
     text-align: start;
     margin-left: 0.5rem;
+    z-index: 3;
 }
 
 .game-header {
@@ -155,10 +156,9 @@ h3 {
 
 .site-header__overlay-content {
         position: relative;
-        /* top: 25%; */
         width: 100%;
         text-align: center;
-        /* margin-top: 30px; */
+        padding: 2rem;
 }
       
 .site-header__overlay a {
@@ -172,11 +172,29 @@ h3 {
       
 .site-header__overlay a:hover, 
 .site-header__overlay a:focus {
-        color: $mainYellow;
+        color: #e166c4;
+}
+
+.site-header__overlay-contact {
+    margin-top: 3rem;
+}
+
+.primary-nav {
+    padding-top: 8rem;
+}
+
+.primary-nav li {
+    list-style: none;
+}
+
+.primary-nav a {
+    font-size: 1.5rem;
+    font-weight: 700;
+    text-transform: uppercase;
 }
 
 .home-page-img {
-    width: 80%;
+    width: 95%;
     margin: 2rem auto;
     -webkit-box-shadow: 0 10px 1rem rgba(0,0,0,.16);
             box-shadow: 0 10px 1rem rgba(0,0,0,.16);
