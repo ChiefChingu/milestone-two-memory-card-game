@@ -18,3 +18,21 @@ class MobileMenu {
 }
 
 new MobileMenu();
+
+
+//emailJS
+function initEmailAccount(){
+  emailjs.init('user_TEJ6qvErK3u1SnFLlG4Gl');
+}
+
+function initEmailCode() {
+  document.getElementById('contact-form').addEventListener('submit', function(event) {
+      event.preventDefault();
+      // generate the contact number value
+      this.contact_number.value = Math.random() * 100000 | 0;
+      emailjs.sendForm('ms2_contact', 'template_2hqFHke2', this);
+  });
+}
+
+initEmailAccount();
+initEmailCode();
