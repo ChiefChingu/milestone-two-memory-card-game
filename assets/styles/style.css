@@ -193,6 +193,19 @@ h3 {
     text-transform: uppercase;
 }
 
+/* Contact form */
+#contact-form-invisible {
+    display: none;
+}
+
+#contact-form-thank-you {
+    display: none;
+}
+
+#contact-form-thank-you-visible {
+    display: initial;
+}
+
 .home-page-img {
     width: 95%;
     margin: 2rem auto;
