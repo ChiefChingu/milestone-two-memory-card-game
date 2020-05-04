@@ -63,6 +63,9 @@ class Menu {
         challengeMode = false;
         gameSelector.style.display = "none";
         document.querySelector(".site-header-title").style.display = "none";
+        document.getElementById("game-header__game-data").style.display = "grid";
+        document.getElementById("game-header__game-data").style.gridTemplateColumns = "1fr";
+        document.getElementById("bestScoreDiv").style.display = "none";
         // setTimer(); To do: add timer with times per level.
       }
     };
