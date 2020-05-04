@@ -7,22 +7,57 @@
     <link rel="stylesheet" href="./assets/styles/style.css">
     <link href="https://fonts.googleapis.com/css?family=Lato&display=swap" rel="stylesheet">
     <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.4.1/jquery.min.js"></script>
+    <script type="text/javascript" src="https://cdn.jsdelivr.net/npm/emailjs-com@2.4.1/dist/email.min.js"></script>
+    <script src="assets/scripts/MobileMenu.js" defer></script>
 </head>
     <body>
-        <header>
-            <h1>About & Contact</h1>
-        </header>
+        <header class="site-header">
+            <div class="site-header__menu-icon">
+                <div class="site-header__menu-icon__middle"></div>
+            </div>
+            <nav class="desktop-nav">
+              <ul>
+                <li><a href="index.html">Home</a></li>
+                <li><a href="game.html">Game</a></li>
+                <li><a href="about.html">About</a></li>
+                <li><a href="contact.html">Contact</a></li>
+              </ul>
+            </nav>
+            <h1 class="site-header-title">Contact</h1>
+            <div class="site-header__overlay">
+            <div class="site-header__overlay-content">
+                <nav class="primary-nav">
+                    <ul>
+                    <li><a href="index.html">Home</a></li>
+                    <li><a href="game.html">Game</a></li>
+                    <li><a href="about.html">About</a></li>
+                    </ul>
+                </nav>
+            </div>
+            </div>
+          </header>
+        
         <div class="wrapper">
             <div class="explanation left">
-                <p>This game is created as part of the Full Stack Software Development Diploma by Code Institute. It is the second milestone project, focused at interactive frontend development. For more information about this course visit <a href="https://codeinstitute.net/full-stack-software-development-diploma-netherlands">Code Institute</a>.</p>
-                <br>
-                <p>Feel free to leave a message with your suggestions, questions or compliments :) at chiefchingu@gmail.com!</p>
+                <form id="contact-form">
+                    <p class="contact-form-text">
+                      Feel free to leave a message with your suggestions, questions or compliments!
+                    </p>
+                    <input type="hidden" name="contact_number">
+                    <label>Name</label>
+                    <input type="text" name="user_name" required>
+                    <label>Email</label>
+                    <input type="email" name="user_email" required>
+                    <label>Message</label>
+                    <textarea name="message" required></textarea>
+                    <input class="btn" type="submit" value="Send">
+                  </form>
+                <div id="contact-form-thank-you">
+                <p>Thanks for contacting!</p>
+                </div>
             </div>
         </div>
-        <div class="wrapper-bottom-link">
-            <ul>
-                <li><a href="index.html">home</a></li>
-            </ul>
+        
         </div>
     </body>
 </html>

@@ -19,7 +19,6 @@ class MobileMenu {
 
 new MobileMenu();
 
-
 //emailJS
 function initEmailAccount(){
   emailjs.init('user_TEJ6qvErK3u1SnFLlG4Gl');
