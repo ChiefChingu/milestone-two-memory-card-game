@@ -64,7 +64,7 @@ h3 {
     font-size: 2.2rem;
     text-align: start;
     margin-left: 0.5rem;
-    z-index: 3;
+    /* z-index: 3; */
 }
 
 .game-header {
@@ -141,7 +141,7 @@ h3 {
         top: 0;
         left: 0;
         background-color: #7d51a1;
-        overflow-y: hidden;
+        overflow-y: scroll;
         transition: 0.5s;
         display: none;
         background-image: url("../images/waves.svg");
@@ -175,12 +175,8 @@ h3 {
         color: #e166c4;
 }
 
-.site-header__overlay-contact {
-    margin-top: 3rem;
-}
-
 .primary-nav {
-    padding-top: 8rem;
+    /* padding-top: 4rem; */
 }
 
 .primary-nav li {
@@ -188,14 +184,25 @@ h3 {
 }
 
 .primary-nav a {
-    font-size: 1.5rem;
+    font-size: 1.3rem;
     font-weight: 700;
     text-transform: uppercase;
 }
 
 /* Contact form */
+.site-header__overlay-contact {
+    margin-top: 2rem;
+}
 #contact-form-invisible {
     display: none;
+}
+
+.contact-form-text {
+    padding-bottom: 1rem;
+    font-size: 1.2rem;
+    line-height: 1.6rem;
+    text-align: start;
+    margin-left: 1rem;
 }
 
 #contact-form-thank-you {
@@ -205,6 +212,24 @@ h3 {
 #contact-form-thank-you-visible {
     display: initial;
 }
+
+label {
+    display: block;
+    text-align: start;
+    margin-left: 1rem;
+}
+
+input, textarea {
+    width: 90%;
+    height: 2rem;
+    margin: 0.5rem 0;
+}
+
+textarea {
+    height: 150px;
+}
+
+/* End contact form */
 
 .home-page-img {
     width: 95%;
