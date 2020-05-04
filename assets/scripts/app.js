@@ -66,12 +66,10 @@ class Menu {
         document.getElementById("game-header__game-data").style.display = "grid";
         document.getElementById("game-header__game-data").style.gridTemplateColumns = "1fr";
         document.getElementById("bestScoreDiv").style.display = "none";
-        // setTimer(); To do: add timer with times per level.
       }
     };
 }
 
-// new Menu(menu);
 
 //Select challenge mode.
 document.getElementById('challenge').addEventListener('click', startChallengeMode);
