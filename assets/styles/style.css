@@ -61,10 +61,16 @@ h3 {
 
 .game-header {
     padding: 0.5rem;
-    /* position: fixed; */
     z-index: 1;
     top: 0;
     }
+
+#game-header__game-data {
+        display: none;
+        grid-template-columns: 1fr 1fr;
+        grid-column: 2 / 4;
+
+}
 
 #moves {
     font-size: 1.5rem;
