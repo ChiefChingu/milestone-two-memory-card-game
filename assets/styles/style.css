@@ -26,13 +26,8 @@ h3 {
 }
 
 .wrapper {
-    margin: 8rem auto 0 auto;
+    margin: 5rem auto 0 auto;
     padding: 1rem;
-}
-
-.wrapper-bottom-link {
-    margin: 0;
-    text-align: center;
 }
 
 /* Header & menu */
@@ -63,8 +58,6 @@ h3 {
     grid-column: 2;
     font-size: 2.2rem;
     text-align: start;
-    margin-left: 0.5rem;
-    /* z-index: 3; */
 }
 
 .game-header {
@@ -683,10 +676,13 @@ Perhaps add classes like grid-6, grid-8, grid-10, etc.
 
     .wrapper {
         width: 700px;
+        
     }
 
     .wrapper-game-over {
         width: 600px;
+        padding-top: 1rem;
+        margin-top: 6rem;
     }
 
     h1 {
