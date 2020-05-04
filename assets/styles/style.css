@@ -175,9 +175,9 @@ h3 {
         color: #e166c4;
 }
 
-/* .primary-nav {
-    padding-top: 4rem;
-} */
+.desktop-nav {
+    display: none;
+}
 
 .primary-nav li {
     list-style: none;
@@ -645,6 +645,36 @@ Perhaps add classes like grid-6, grid-8, grid-10, etc.
 
 
 @media screen and (min-width: 1025px) {
+
+    .site-header__menu-icon {
+        display: none;
+    }
+
+    .site-header {
+        grid-template-columns: repeat(4, 1fr);
+    }
+
+    .site-header-title {
+        grid-column: 2 / 4;
+        text-align: center;
+    }
+
+    .desktop-nav {
+        display: initial;
+        text-align: end;
+        padding-right: 2rem;
+    }
+
+    .desktop-nav ul li {
+        display: inline-block;
+        padding: 0 0.5rem;
+    }
+
+    .desktop-nav a {
+        text-decoration: none;
+        color: white;
+    }
+
     .explanation {
         margin-top: 1rem;
         font-size: 1.5rem;
