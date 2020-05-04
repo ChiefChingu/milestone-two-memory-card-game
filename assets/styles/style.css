@@ -696,6 +696,14 @@ Perhaps add classes like grid-6, grid-8, grid-10, etc.
             -ms-flex-align: center;
                 align-items: center;
         padding: 1rem 0 1rem 0;
+        grid-template-columns: repeat(4, 1fr);
+    }
+
+    #game-header__game-data {
+        display: none;
+        grid-template-columns: 1fr 1fr;
+        grid-column: 2 / 4;
+
     }
 
     h3 {

@@ -62,6 +62,7 @@ class Menu {
         startChillBtn.style.display = "none";
         challengeMode = false;
         gameSelector.style.display = "none";
+        document.querySelector(".site-header-title").style.display = "none";
         // setTimer(); To do: add timer with times per level.
       }
     };
@@ -77,6 +78,9 @@ function startChallengeMode() {
     userChoice = 4;
     determineCards();
     gameSelector.style.display = "none";
+    document.getElementById("game-header__game-data").style.display = "grid";
+    document.querySelector(".site-header-title").style.display = "none";
+    updateBestMovesCounter();
 }
 
 //Make selected number of cards visible.
@@ -88,7 +92,7 @@ function determineCards() {
     }
 
     totalMatches = userChoice/2;
-    console.log('totalMatches this round', totalMatches);
+    
     shuffle();
 }
 
@@ -233,6 +237,13 @@ function updateCounter() {
 
     document.getElementById("moves").innerHTML = numberOfMoves;
 
+}
+
+//Update best score counter.
+function updateBestMovesCounter() {
+
+    document.getElementById("bestScore").innerHTML = localStorage.getItem("storedBestScore");
+    
 }
 
 //Shuffle cards randomly.
