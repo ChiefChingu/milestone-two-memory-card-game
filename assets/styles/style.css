@@ -672,6 +672,11 @@ Perhaps add classes like grid-6, grid-8, grid-10, etc.
     display: block;
 }
 
+#new-highscore, #draw, #no-highscore {
+    text-align: center;
+    font-size: 2rem;
+
+}
 
 @media screen and (min-width: 1025px) {
 

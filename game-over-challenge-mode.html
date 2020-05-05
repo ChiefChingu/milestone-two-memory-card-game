@@ -55,17 +55,23 @@
             </div>
         </header>
         <div class="wrapper wrapper-game-over">
-            <div class="best-game">
+          
+          <div id="new-highscore"></div>
+          <div id="draw"></div>
+          <div id="no-highscore"></div>
+          
+          <div class="best-game">
                 <p>Your best score is:</p><br> 
                 <i class="fas fa-award icon-score"></i>
                 <div class="grid-wrap">
                     <div id="highscore">0</div>
                     <div class="best-game-moves">moves!</div>
                 </div>  
-            </div>
+          </div>
             <div class="last-game">
                 Your last game had <span id="lastscore">0</span> moves.
             </div>
+
             <a class="btn" href="game.html">play again!</a>
             <p class="reset-score">Can't beat your highscore? Set it to 0...</p>
             <a id="reset-score" href="game.html">reset high score</a>

@@ -10,23 +10,20 @@ if(localStorage.getItem("game A") === null) {
 } else if(parseInt(lastGame,10) < bestScoreInt) { //Check if score is better than storedBestScore: must be integers. If so:
         
         localStorage.setItem("storedBestScore", lastGame); //storedBestScore is now the lastGame score.
-        console.log('New highscore!');      
         document.getElementById("highscore").innerHTML = localStorage.getItem("storedBestScore"); //Display new best score.
+        document.getElementById("new-highscore").innerHTML = "You did it! A new highscore! Woot!!";
         
     } else if(parseInt(lastGame,10) === bestScoreInt) { //Same score as best score
-        console.log('Almost! Try again!');
+        document.getElementById("draw").innerHTML = "You are as good as your, ehm, self? Try again!";
         document.getElementById("highscore").innerHTML = bestScoreInt; //Display old highscore.
     }
     
     
     else {
-        console.log('Too bad. Try again!');
+        document.getElementById("no-highscore").innerHTML = "What was that?? Let's not record this. Hurry, try again!";
         document.getElementById("highscore").innerHTML = bestScoreInt; //Display old highscore.
         
     }
-
-
-
 
 document.getElementById("lastscore").innerHTML = lastGame;
 
@@ -38,5 +35,7 @@ function resetLocalStorage() {
     console.log("loser!");
 }
 
-// resetLocalStorage();
-
+//Randomize messages - to do!
+//Draw
+//Highscore
+//No highscore
