@@ -56,19 +56,19 @@ h3 {
 }
 
 .site-header {
-    grid-template-columns: 10% 90%;
+    grid-template-columns: 10% 80% 10%;
     align-items: center;
     /* padding: 2rem 0; */
 }
 
 .site-header-title {
-    grid-column: 2 / 4;
-    font-size: 2.2rem;
-    text-align: start;
+    grid-column: 2;
+    font-size: 2rem;
+    text-align: center;
 }
 
 .game-header {
-    padding: 0.5rem;
+    /* padding: 0.5rem; */
     z-index: 1;
     top: 0;
     display: grid;
