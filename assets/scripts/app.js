@@ -63,10 +63,9 @@ class Menu {
         challengeMode = false;
         gameSelector.style.display = "none";
         document.querySelector(".site-header-title").style.display = "none";
-        document.getElementById("game-header__game-data").style.display = "grid";
-        document.getElementById("game-header__game-data").style.gridTemplateColumns = "1fr";
+        document.getElementById("game-header__game-data").style.display = "initial";
         document.getElementById("bestScoreDiv").style.display = "none";
-        document.getElementById("movesDiv").classList.remove("grid-align-right");
+        document.getElementById("movesDiv").classList.remove("challenge-mode-margin-right");
       }
     };
 }

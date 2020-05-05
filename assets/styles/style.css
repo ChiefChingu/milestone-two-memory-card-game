@@ -62,7 +62,7 @@ h3 {
 }
 
 .site-header-title {
-    grid-column: 2;
+    grid-column: 2 / 4;
     font-size: 2.2rem;
     text-align: start;
 }
@@ -78,12 +78,8 @@ h3 {
 #game-header__game-data {
         display: none;
         grid-template-columns: 1fr 1fr;
-        grid-column: 2 / 4;
+        grid-column: 2 / 3;
         column-gap: 1rem;
-}
-
-#game-header__game-data h3 {
-    margin-right: 2rem;
 }
 
 #bestScore {
@@ -734,12 +730,17 @@ Perhaps add classes like grid-6, grid-8, grid-10, etc.
 
     }
 
-    h3 {
-        font-size: 1rem;
+/* Necessary in old design. When redoing grids: check if still needed */
+    .challenge-mode-margin-right {
+        margin-right: 2rem;
     }
 
     #bestScoreDiv {
         margin-left: 2rem;
+    }
+
+    h3 {
+        font-size: 1rem;
     }
 
     #moves, #bestScore {
@@ -835,7 +836,7 @@ Perhaps add classes like grid-6, grid-8, grid-10, etc.
         font-size: 1.5rem;
     }
 
-    #moves {
+    #moves, #bestScore {
         font-size: 5rem;
     }
 
