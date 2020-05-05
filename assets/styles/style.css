@@ -813,6 +813,17 @@ Perhaps add classes like grid-6, grid-8, grid-10, etc.
         font-size: 5rem;
     }
 
+    .modal-content {
+        background-color: #fefefe;
+        margin: 8% auto;
+        padding: 20px;
+        border: 1px solid #888;
+        width: 700px;
+        position: relative;
+        border-radius: 5px;
+    }
+
+
     .memory-game {
         margin-top: 17rem;
         margin-bottom: 2rem;
