@@ -202,7 +202,7 @@ function checkGameFinished() {
                 } else {
 
                     matchesMade = 0;
-                    userChoice = userChoice + 2; //Add more cards for next level.
+                    userChoice = userChoice + 4; //Add more cards for next level.
                     resetBoard();
                     determineCards();
 
