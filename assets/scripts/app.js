@@ -20,7 +20,7 @@ let numberOfMoves = 0;
 let matchesMade = 0;
 let totalMatches;
 let cards = Array.from(document.getElementsByClassName('card')); //Put all card classes into an array.
-let allMatchesInGame = 5; /* cards.length/2; */ //End game for challenge mode.
+let allMatchesInGame = 4; /* cards.length/2; */ //End game for challenge mode.
 let cardValueTurnOne, cardValueTurnTwo; //Variables for match evaluation.
 
 /* Add event listeners:
@@ -243,6 +243,14 @@ function updateCounter() {
 //Update best score counter.
 function updateBestMovesCounter() {
 
+    if(localStorage.getItem("storedBestScore") === null) {
+        
+        document.getElementById("game-header__game-data").style.display = "initial";
+        document.getElementById("bestScoreDiv").style.display = "none";
+        document.getElementById("movesDiv").classList.remove("challenge-mode-margin-right");
+        
+    }
+    
     document.getElementById("bestScore").innerHTML = localStorage.getItem("storedBestScore");
     
 }
