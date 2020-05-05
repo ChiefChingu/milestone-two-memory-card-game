@@ -31,8 +31,11 @@ if(localStorage.getItem("game A") === null) {
 document.getElementById("lastscore").innerHTML = lastGame;
 
 /* Clear all local storage values */
+document.getElementById("reset-score").addEventListener("click", resetLocalStorage);
+
 function resetLocalStorage() {
     localStorage.clear();
+    console.log("loser!");
 }
 
 // resetLocalStorage();

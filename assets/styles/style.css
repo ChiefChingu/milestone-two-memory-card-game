@@ -663,6 +663,14 @@ Perhaps add classes like grid-6, grid-8, grid-10, etc.
     margin-bottom: 3rem;
 }
 
+.reset-score {
+    margin-top: 5rem;
+    text-align: center;
+}
+#reset-score {
+    padding-top: 1rem;
+    display: block;
+}
 
 
 @media screen and (min-width: 1025px) {
