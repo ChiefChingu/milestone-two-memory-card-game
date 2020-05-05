@@ -293,6 +293,7 @@ textarea {
     display: block;
     padding: 0.75rem 1.5rem;
     width: 160px;
+    height: auto;
     text-align: center;
     text-transform: uppercase;
 }
@@ -836,43 +837,43 @@ Perhaps add classes like grid-6, grid-8, grid-10, etc.
         width: 100%;
     }
     /* Contact form */
-#contact-form {
-    font-size: 1.2rem;
-    display: grid;
-    grid-template-columns: 10% 80% 10%;
-    grid-template-rows: auto;
+    #contact-form {
+        font-size: 1.2rem;
+        display: grid;
+        grid-template-columns: 10% 80% 10%;
+        grid-template-rows: auto;
 
-}
+    }
 
-.contact-form-text {
-    padding-bottom: 2rem;
-    font-size: 1.5rem;
-    line-height: 1.6rem;
-    text-align: center;
-    grid-row: 1;
-    grid-column: 1 / -1;
-}
+    .contact-form-text {
+        padding-bottom: 2rem;
+        font-size: 1.5rem;
+        line-height: 1.6rem;
+        text-align: center;
+        grid-row: 1;
+        grid-column: 1 / -1;
+    }
 
-#contact-form-thank-you-visible {
-    display: initial;
-}
+    #contact-form-thank-you-visible {
+        display: initial;
+    }
 
-label {
-    grid-column: 2;
-    justify-self: start;
-    align-self: center;
-    margin: 0;
-}
+    label {
+        grid-column: 2;
+        justify-self: start;
+        align-self: center;
+        margin: 0;
+    }
 
-input, textarea {
-    width: 100%;
-    height: 2rem;
-    grid-column: 2;
-}
+    input, textarea {
+        width: 100%;
+        height: 2rem;
+        grid-column: 2;
+    }
 
-textarea {
-    height: 150px;
-}   
+    textarea {
+        height: 150px;
+    }   
 
 /* End contact form */
 }
@@ -906,7 +907,6 @@ textarea {
         position: relative;
         border-radius: 5px;
     }
-
 
     .memory-game {
         margin-top: 17rem;
