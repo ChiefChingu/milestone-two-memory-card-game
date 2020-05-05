@@ -75,11 +75,16 @@ h3 {
     grid-template-columns: 10% 80% 10%;
     }
 
+.game-header h3{
+    padding: 0;
+}
+
 #game-header__game-data {
         display: none;
         grid-template-columns: 1fr 1fr;
         grid-column: 2 / 3;
         column-gap: 1rem;
+        align-items: start;
 }
 
 #bestScore {
