@@ -66,6 +66,7 @@ class Menu {
         document.getElementById("game-header__game-data").style.display = "grid";
         document.getElementById("game-header__game-data").style.gridTemplateColumns = "1fr";
         document.getElementById("bestScoreDiv").style.display = "none";
+        document.getElementById("movesDiv").classList.remove("grid-align-right");
       }
     };
 }
