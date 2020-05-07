@@ -4,7 +4,7 @@
 */
 
 const beginner = 4; //Chill mode levels.
-const easy = 2;
+const easy = 6;
 const medium = 8;
 const hard = 12;
 let userChoice;
@@ -179,13 +179,13 @@ function turnLogic() {
 //Animate cards on match.
 function animateCards() {
 
-    cardValueTurnOne.lastElementChild.className = 'back-face-hidden';
-    cardValueTurnTwo.lastElementChild.className = 'back-face-hidden';
+    
     cardValueTurnOne.classList.add('animation');
     cardValueTurnTwo.classList.add('animation');
     cardValueTurnOne.firstElementChild.classList.add('animation');
     cardValueTurnTwo.firstElementChild.classList.add('animation');
-    
+    cardValueTurnOne.lastElementChild.className = 'back-face-hidden';
+    cardValueTurnTwo.lastElementChild.className = 'back-face-hidden';
 }
 
 //Check end game and if challenge launch next challenge.
