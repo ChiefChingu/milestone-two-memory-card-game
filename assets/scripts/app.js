@@ -133,7 +133,7 @@ function turnLogic() {
                     matchesMade++;
                     numberOfMoves++;
                     allowedTurns = 2;
-                    // animateCards();
+                    animateCards();
         
                 setTimeout(() => {
                     
@@ -183,8 +183,8 @@ function animateCards() {
     cardValueTurnTwo.lastElementChild.className = 'back-face-hidden';
     cardValueTurnOne.classList.add('animation');
     cardValueTurnTwo.classList.add('animation');
-    cardValueTurnOne.firstElementChild.children[1].classList.add('animation');
-    cardValueTurnTwo.firstElementChild.children[1].classList.add('animation');
+    cardValueTurnOne.firstElementChild.classList.add('animation');
+    cardValueTurnTwo.firstElementChild.classList.add('animation');
     
 }
 
