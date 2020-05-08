@@ -14,19 +14,21 @@ Do we need something on UX planes????
 As a user I want to:
 
 1. See an inviting game that makes me curious and want to play!
-2. Understand what to do to start the game.
-3. Click any card as first card and card should turn.
-4. Click any card as second card and card should turn.
-5. Get extra help about what matches to look for.
-6. See if there is a match when two cards are turned.
-7. See the cards flip back when there is no match.
-8. See cards not flip back when there is a match.
-9. See the number of turns I made so far.
-10. Get confirmation when the game is finished.
-11. In the challenge mode: see my best score.
-12. Get more information about the cards that are used.
-13. Contact the maker of the game in case I have questions, suggestions or compliments.
-14. Have fun!
+2. Choose how to play.
+3. Be able to play at my leisure.
+4. Be able to play 'competitive' and beat my own scores.
+4. Click any card as first card and card should turn.
+5. Click any card as second card and card should turn.
+6. Get extra help about what matches to look for.
+7. See if there is a match when two cards are turned.
+8. See the cards flip back when there is no match.
+9. See cards not flip back when there is a match.
+10. See the number of turns I made so far.
+11. Get confirmation when the game is finished.
+12. In the challenge mode: see my best score.
+13. Get more information about the cards that are used.
+14. Contact the maker of the game in case I have questions, suggestions or compliments.
+15. Have fun!
 
 ## Features
 ### Existing features
