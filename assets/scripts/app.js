@@ -8,8 +8,12 @@ const easy = 6;
 const medium = 8;
 const hard = 12;
 let userChoice;
-
 let challengeMode = true; //Challenge mode.
+
+ //Check if Apple device for yes or no animation
+var isNotApple = navigator.userAgent.indexOf("Safari") > -1;
+
+document.write(isNotApple);
 
 /* Game mechanic variables:
     Setting rules and limitations.  
@@ -69,6 +73,7 @@ class Menu {
       }
     };
 }
+
 
 
 //Select challenge mode.
@@ -181,13 +186,16 @@ function turnLogic() {
 //Animate cards on match.
 function animateCards() {
 
-    
-    cardValueTurnOne.classList.add('animation');
-    cardValueTurnTwo.classList.add('animation');
-    cardValueTurnOne.firstElementChild.classList.add('animation');
-    cardValueTurnTwo.firstElementChild.classList.add('animation');
-    cardValueTurnOne.lastElementChild.className = 'back-face-hidden';
-    cardValueTurnTwo.lastElementChild.className = 'back-face-hidden';
+    if(isNotApple) {
+
+        cardValueTurnOne.classList.add('animation');
+        cardValueTurnTwo.classList.add('animation');
+        cardValueTurnOne.firstElementChild.classList.add('animation');
+        cardValueTurnTwo.firstElementChild.classList.add('animation');
+        cardValueTurnOne.lastElementChild.className = 'back-face-hidden';
+        cardValueTurnTwo.lastElementChild.className = 'back-face-hidden';
+
+    }  
 }
 
 //Check end game and if challenge launch next challenge.

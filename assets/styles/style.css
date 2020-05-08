@@ -474,8 +474,9 @@ Perhaps add classes like grid-6, grid-8, grid-10, etc.
             transform: rotateX(180deg);
     -webkit-animation: tilt 0.4s;
             animation: tilt 0.4s;
-            animation-fill-mode: backwards;
-    -webkit-animation-fill-mode: backwards;
+            /* animation-fill-mode: backwards;
+    -webkit-animation-fill-mode: backwards; */
+    /* does not fix the bug on Safari... */
 }
 
 @-webkit-keyframes tilt {
