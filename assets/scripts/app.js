@@ -11,9 +11,14 @@ let userChoice;
 let challengeMode = true; //Challenge mode.
 
  //Check if Apple device for yes or no animation
-var isNotApple = navigator.userAgent.indexOf("Safari") > -1;
+ let userAgentString = navigator.userAgent; 
 
-document.write(isNotApple);
+var safariAgent = navigator.userAgent.indexOf("Safari") > -1;
+let chromeAgent = userAgentString.indexOf("Chrome") > -1; 
+// Discard Safari since it also matches Chrome 
+if ((chromeAgent) && (safariAgent)) safariAgent = false; 
+
+document.write(safariAgent);
 
 /* Game mechanic variables:
     Setting rules and limitations.  
