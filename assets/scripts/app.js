@@ -191,7 +191,7 @@ function turnLogic() {
 //Animate cards on match.
 function animateCards() {
 
-    if(isNotApple) {
+    if(!safariAgent) {
 
         cardValueTurnOne.classList.add('animation');
         cardValueTurnTwo.classList.add('animation');
