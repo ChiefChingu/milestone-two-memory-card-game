@@ -134,6 +134,8 @@ function turnLogic() {
                     numberOfMoves++;
                     allowedTurns = 2;
                     animateCards();
+                    cardValueTurnOne.classList.add('visible');
+                    cardValueTurnTwo.classList.add('visible');
         
                 setTimeout(() => {
                     
@@ -182,8 +184,6 @@ function animateCards() {
     
     cardValueTurnOne.classList.add('animation');
     cardValueTurnTwo.classList.add('animation');
-    cardValueTurnOne.classList.add('visible'); //check if Safari gets this now
-    cardValueTurnTwo.classList.add('visible');
     cardValueTurnOne.firstElementChild.classList.add('animation');
     cardValueTurnTwo.firstElementChild.classList.add('animation');
     cardValueTurnOne.lastElementChild.className = 'back-face-hidden';
