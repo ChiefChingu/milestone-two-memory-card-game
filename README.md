@@ -1,6 +1,8 @@
 ## Introduction
 This is the second milestone project of the fullstack software development course of Code Institute. I selected the memory card game assignment: flip cards and find the matching pairs. My take on this game is to create a game with matching pairs that are not identical, but related...
 
+Also, there are two game modes: a mode where you play at your leisure. You can select the number of cards per gae. And a challenge mode: you start with 4 cards and need to go through 3 levels. Every level adds 4 cards.
+
 You can play the game [here](https://chiefchingu.github.io/milestone-two-memory-card-game/).
 
 ## UX
@@ -34,28 +36,44 @@ As a user I want to:
 - Navigation: minimal navigation to the about and contact page.
 
 #### Game page
+- Game modes: two types of games.
+- Game mode 1: chill mode, opens a window with difficulty setting.
+- Game mode 2: challenge mode, starts the game directly.
 - Game tiles: clickable, turn on click.
 - Card context: pairs do not have identical images, so a context is provided in a text label that appears after 1 second.
 - Game logic: in case there is a match, the cards animate and remain visible.
 - Moves counter: after each move (two cards turned) the counter updates.
-- Quit option: if user wants to quit, there is a link back to the homepage.
-- Navigation: minimal navigation to about and contact page and of course back to homepage.
+- Best score: if challenge mode and if played through once, it shows your best score.
+- Navigation: navigation to home, game start, about and contact.
 - Confirmation when game is finished: user goes to the game over page.
 
-#### Game over page
+#### Game over page - chill mode
 - Congratulations header.
 - Explanation of images: where to find the originals.
 - Call to action: stimulate the user to take action. In this case restart the game.
-- Navigation: minimal navigation to about and contact page and of course back to homepage.
+- Navigation: navigation to home, game start, about and contact.
 
-#### About and contact page
+#### Game over page - challenge mode
+- Congratulations header.
+- Best score, if available.
+- Last score.
+- Evaluation messages: depending on performance.
+- Call to action: stimulate the user to take action. In this case to try again and beat your best score.
+- Reset highscore: if you want to reset your best to 0.
+- Navigation: navigation to home, game start, about and contact.
+
+#### About page
 - Explanation of website.
-- Contact option.
+- Link to source of images.
+
+#### Contact page
+- Contact form.
 
 ### Features left to implement
-- Introduce levels: start with two cards at level 1. Then 3 cards at level 4, etc.
-- Personal high score: keep track of your games and try to beat your scores.
-- High score board: show all time statistics.
+- High score board: show all time statistics of all users.
+- Randomize images after selection of game mode. Currently, there is a set of 8 pairs. This could be a larger pool of pairs, so you get new images everytime you play again.
+- Randomize game over evaluation messages. Currently, there is one message for each scenario. This could be more messages per scenario.
+- Animations for Safari users. Currently, animations are disabled for Safari users: there is a bug which I cannot fix. Probably need a Macbook to be able to check the Safari browser console.
 
 ## Technologies Used
 
