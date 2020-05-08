@@ -458,15 +458,20 @@ Perhaps add classes like grid-6, grid-8, grid-10, etc.
             box-shadow: 0 10px 1rem rgba(0,0,0,.16);
 }
 
-.front-face {
-    /* -moz-transform: rotate(180deg);
-    -webkit-transform: rotateX(180deg); */
-    
+.front-face {   
     -webkit-transform: rotateX(180deg);
     
             transform: rotateX(180deg);
+    /* -o-object-fit: cover;
+       object-fit: cover; */
+}
+
+img {
+    width: 100%;
+    height: 100%;
     -o-object-fit: cover;
        object-fit: cover;
+    border-radius: 5px;
 }
 
 .back-face {
@@ -477,7 +482,6 @@ Perhaps add classes like grid-6, grid-8, grid-10, etc.
 }
 
 .back-face-hidden {
-    /* color: white; */
     color: transparent;
 }
 
