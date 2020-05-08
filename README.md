@@ -23,7 +23,7 @@ As a user I want to:
 8. See cards not flip back when there is a match.
 9. See the number of turns I made so far.
 10. Get confirmation when the game is finished.
-11. Quit the game whenever I want.
+11. In the challenge mode: see my best score.
 12. Get more information about the cards that are used.
 13. Contact the maker of the game in case I have questions, suggestions or compliments.
 14. Have fun!
@@ -71,11 +71,14 @@ As a user I want to:
 
 ### Features left to implement
 - High score board: show all time statistics of all users.
+- Timed mode: add a timer as extra challenge. Not included here, because I think it distracts from understanding the context and having a laugh. 
 - Randomize images after selection of game mode. Currently, there is a set of 8 pairs. This could be a larger pool of pairs, so you get new images everytime you play again.
 - Randomize game over evaluation messages. Currently, there is one message for each scenario. This could be more messages per scenario.
 - Animations for Safari users. Currently, animations are disabled for Safari users: there is a bug which I cannot fix. Probably need a Macbook to be able to check the Safari browser console.
 
 ## Technologies Used
+
+JS note: acknowledge the fact that JS code could be far more efficiently written. Make it modular, classes, no global variables, etc. At this stage, this is something I'd like to do, but cannot.
 
 ## Testing
 For a detailed overview: see [TEST.md](https://github.com/ChiefChingu/milestone-two-memory-card-game/blob/master/TEST.md).
@@ -83,3 +86,7 @@ For a detailed overview: see [TEST.md](https://github.com/ChiefChingu/milestone-
 ## Deployment
 
 ## Credits
+Add to credits: https://javascript.info/event-delegation
+Modal W3Schools
+Shuffle cards
+safari detection: https://www.geeksforgeeks.org/how-to-detect-the-user-browser-safari-chrome-ie-firefox-and-opera-using-javascript/
