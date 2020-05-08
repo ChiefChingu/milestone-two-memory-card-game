@@ -1,7 +1,7 @@
 ## Introduction
 This is the second milestone project of the fullstack software development course of Code Institute. I selected the memory card game assignment: flip cards and find the matching pairs. My take on this game is to create a game with matching pairs that are not identical, but related...
 
-Also, there are two game modes: a mode where you play at your leisure. You can select the number of cards per gae. And a challenge mode: you start with 4 cards and need to go through 3 levels. Every level adds 4 cards.
+Also, there are two game modes: a mode where you play at your leisure. You can select the number of cards per game. And a challenge mode: you start with 4 cards and need to go through 3 levels. Every level adds 4 cards.
 
 You can play the game [here](https://chiefchingu.github.io/milestone-two-memory-card-game/).
 
