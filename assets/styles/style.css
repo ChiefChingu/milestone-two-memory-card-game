@@ -470,8 +470,8 @@ Perhaps add classes like grid-6, grid-8, grid-10, etc.
 
 /* match pair animation */
 .animation {
-    /* -webkit-transform: rotateX(180deg);
-            transform: rotateX(180deg); */
+    -webkit-transform: rotateX(180deg);
+            transform: rotateX(180deg);
     -webkit-animation: tilt 0.4s;
             animation: tilt 0.4s;
 }

@@ -135,7 +135,7 @@ function turnLogic() {
                     allowedTurns = 2;
                     animateCards();
                     cardValueTurnOne.children[0].classList.add('visible');
-                    cardValueTurnTwo.children[0].classList.add('visible')
+                    cardValueTurnTwo.children[0].classList.add('visible');
         
                 setTimeout(() => {
                     
