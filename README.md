@@ -8,7 +8,7 @@ You can play the game [here](https://chiefchingu.github.io/milestone-two-memory-
 ## UX
 This project is designed with the mobile user in mind. The [wireframes](#) reflect this: mobile first and desktop second. Also, the code is written from the mobile perspective: the mobile viewport is the baseline. Media queries are used to handle the desktop viewport.
 
-I decided to create a very minimalistic design to ensure that all the focus goes to the game itself. This means a very minimal navigation at the bottom of each page, a combined contact and about page and of course the game page.
+Do we need something on UX planes????
 
 ### User Stories
 As a user I want to:
