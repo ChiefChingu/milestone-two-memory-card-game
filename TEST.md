@@ -18,7 +18,7 @@ Each user story is tested thoroughly. All steps are taken in the main browsers a
 
 ### 1. See an inviting game that makes me curious and want to play!
 - Homepage shows a catchy oneliner that triggers curiousity: try not to laugh.
-- Explanatory image shows a funny scene, enticing the user to get to know more.
+- Explanatory image shows a funny scene, enticing you to get to know more.
 - Click on the button 'game on' to start the game.
 
 ### 2. Choose how to play.
@@ -33,68 +33,93 @@ Each user story is tested thoroughly. All steps are taken in the main browsers a
     - Click medium: game starts with 8 cards.
     - Click hard: game starts with 12 cards.
 
-### 3. Click any card as first card and card should turn.
-- Cards turn as intended, front-face of the card is displayed.
+### 4. Be able to play 'competitive' and beat my own scores.
+- Click the Challenge mode.
+- The game starts with 4 cards.
+- Number of moves = 0  indicates that you can track the actions.
 
-### 4. Get extra help about what matches to look for.
-- Matching pairs consist of a question and answer card. In case the question card is turned: the question is displayed on the card.
+Note: if first challenge game or high score is reset to 0, you do not see the best score information in the header.
+
+### 5. Click any card as first card and card should turn.
+- Click any card as first card.
+- Card turns and a picture is showing.
+- Card stays flipped.
+
+### 6. Get extra help about what matches to look for.
+- Matching pairs consist of a question and answer card. In case the question card is turned: you see the question displayed on the card.
 - The question is only displayed on the first flipped card (if on the second card, the card will flip back when no match and then there is not enough time to read the text.)
 
+### 7. Click any card as second card and card should turn.
+- Click the first card that is turned again: nothing happens.You need to click any other card.
+- Click any card as second card.
+- Card turns as intended and picture is showing.
 
-### 5. Click any card as second card and card should turn.
-- Cards turn as intended, front-face of the card is displayed.
-- First card that is turned cannot be clicked again.
-- Second card that is turned cannot be clicked again.
+### 8. See if there is a match when two cards are turned.
+- Two cards are turned, it has to be checked if there is a match.
+- If a match: you see an animation that tilts the cards shortly.
+- Click the first and second card again: nothing happens.
 
+Note: Safari browsers bug out. The two cards animate (tilt) as expected, but then the second card that was turned disappears. After many tries of fixing (on iPhone only, so trial and error, no console checking), finally decided to disable animation for Safari browsers.
 
-
-### 6. See if there is a match when two cards are turned.
-- When two cards are turned, it has to be checked if there is a match.
-- If a match: animation that tilts the cards shortly.
-- If no match: cards flip back.
-
-
-
-### 7. See cards not flip back when there is a match.
-- When there is a match, the cards tilt slightly to indicate a match.
-- The context of both cards is displayed: the question and the answer.
-- The counter for number of moves updates with +1 move.
-- Both cards cannot be clicked again.
-- New cards can be clicked and turned.
-
-
-
-### 8. See the cards flip back when there is no match.
+### 9. See cards flip back when there is no match.
 - When no match, both cards flip back.
-- The counter for number of moves updates with +1 move.
 - New cards can be clicked.
 
+### 10. See the number of moves I made so far.
+- After a match or NO match: you can see the counter for number of moves increment with +1 move.
 
+### 11. In challenge mode: see my best score.
+- If no best score available (meaning: first time challenge mode or best score is reset): there is no best score, you can only see the number of moves in the header.
+- If best score is available: you see the best score in the header of the game page (next to the moves counter).
 
-### 9. Get confirmation when the game is finished.
-- When all pair are found, user sees a game over page.
+### 12. Get confirmation when the game is finished.
+- When all pairs are found, you see a game over page.
+- Depending on the selected game mode, you see:
 
+#### Chill mode
+- You see a congratulations header text.
+- You see an explanation of where the pictures come from.
+- You see a button to start a new game.
 
+#### Challenge mode
+- You see a congratulations header text.
+- You see a game evaluation message for:
+    - new highscore,
+    - draw,
+    - no new highscore.
+- You see your best score.
+- You see your last score.
+- You see a button to start a new game.
+- You see a link to reset your highscore.
 
-### 10. See the number of turns I made so far.
-- In the header you can see the number of turns so far.
-- After two cards are turned: when there is a match of pairs, the counter updates.
-- After two cards are turned: when there is no match of pairs, the counter updates.
+### 13. Reset best score to start fresh.
+- You see a link to reset your highscore.
+- Click on the link.
+- You go back to the game mode selection page.
+- Start a new challenge game.
+- You see no best score, only a moves counter.
 
+### 14. Get more information about the cards that are used.
+- Click on the About link in the menu.
+- If on mobile: open the mobile menu via the hamburger icon and click on the About link.
+- Read the explanation about the owner of the images.
+- Click the link to the owner's site.
+- The link opens in a new tab.
 
+### 15. Contact the maker of the game in case I have questions, suggestions or compliments.
+- Click on the Contact link in the menu.
+- You see a contact page with a form.
+- If on mobile: open the mobile menu via the hamburger icon. You see the contact form in the overlay.
+- Fill out the form and submit.
+- You see a thank you message.
+- Try to send the message without:
+  - a name,
+  - an email (leave empty),
+  - a valid email (make an error on purpose),
+  - a message.
+- For all instances: you see a warning that you need to provide the correct and/or complete information.
 
-### 11. Quit the game whenever I want.
-- User can click the stop game link whenever they want. The game over page is triggered.
-- User can navigate back to home or to the contact & about page.
-
-### 12. Get more information about the cards that are used.
-- The game over screen explains who created the images to give full credit.
-- A link to the owner's site shows all of his work. The link opens in a new tab.
-
-### 13. Contact the maker of the game in case I have questions, suggestions or compliments.
-- The contact & about page invites visitors to contact me via the provided email address.
-
-### 14. Have fun!
+### 16. Have fun!
 - This one is difficult to test. The people who played the game so far, could not finish it without laughing!
 
 ## Features

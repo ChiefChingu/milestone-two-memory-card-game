@@ -17,18 +17,18 @@ As a user I want to:
 2. Choose how to play.
 3. Be able to play at my leisure.
 4. Be able to play 'competitive' and beat my own scores.
-4. Click any card as first card and card should turn.
-5. Click any card as second card and card should turn.
+5. Click any card as first card and card should turn.
 6. Get extra help about what matches to look for.
-7. See if there is a match when two cards are turned.
-8. See the cards flip back when there is no match.
-9. See cards not flip back when there is a match.
+7. Click any card as second card and card should turn.
+8. See if there is a match when two cards are turned.
+9. See cards flip back when there is no match.
 10. See the number of turns I made so far.
-11. Get confirmation when the game is finished.
-12. In the challenge mode: see my best score.
-13. Get more information about the cards that are used.
-14. Contact the maker of the game in case I have questions, suggestions or compliments.
-15. Have fun!
+11. In challenge mode: see my best score.
+12. Get confirmation when the game is finished.
+13. Reset best score to start fresh.
+14. Get more information about the cards that are used.
+15. Contact the maker of the game in case I have questions, suggestions or compliments.
+16. Have fun!
 
 ## Features
 ### Existing features
