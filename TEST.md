@@ -17,6 +17,7 @@ No errors or warnings to show:
 Each user story is tested thoroughly. All steps are taken in the main browsers at 3 different viewports: mobile (including tablet) and desktop.
 
 ### 1. See an inviting game that makes me curious and want to play!
+- Go to [https://chiefchingu.github.io/milestone-two-memory-card-game/](https://chiefchingu.github.io/milestone-two-memory-card-game/).
 - Homepage shows a catchy oneliner that triggers curiousity: try not to laugh.
 - Explanatory image shows a funny scene, enticing you to get to know more.
 - Click on the button 'game on' to start the game.
@@ -29,9 +30,9 @@ Each user story is tested thoroughly. All steps are taken in the main browsers a
 ### 3. Be able to play at my leisure.
 - Click the Chill mode.
 - A modal opens with three options for a difficulty:
-    - Click easy: game starts with 4 cards.
-    - Click medium: game starts with 8 cards.
-    - Click hard: game starts with 12 cards.
+    - Click easy: game starts with 4 cards. Go back to the game mode selection.
+    - Click medium: game starts with 8 cards. Go back to the game mode selection.
+    - Click hard: game starts with 12 cards. Go back to the game mode selection.
 
 ### 4. Be able to play 'competitive' and beat my own scores.
 - Click the Challenge mode.
@@ -62,14 +63,14 @@ Note: if first challenge game or high score is reset to 0, you do not see the be
 Note: Safari browsers bug out. The two cards animate (tilt) as expected, but then the second card that was turned disappears. After many tries of fixing (on iPhone only, so trial and error, no console checking), finally decided to disable animation for Safari browsers.
 
 ### 9. See cards flip back when there is no match.
-- When no match, both cards flip back.
-- New cards can be clicked.
+- When no match, see that both cards flip back.
+- Click a new card as first card.
 
 ### 10. See the number of moves I made so far.
-- After a match or NO match: you can see the counter for number of moves increment with +1 move.
+- After a match or NO match: you see the counter for number of moves increment with +1 move.
 
 ### 11. In challenge mode: see my best score.
-- If no best score available (meaning: first time challenge mode or best score is reset): there is no best score, you can only see the number of moves in the header.
+- If no best score available (meaning: first time challenge mode or best score is reset): there is no best score, you only see the number of moves in the header.
 - If best score is available: you see the best score in the header of the game page (next to the moves counter).
 
 ### 12. Get confirmation when the game is finished.
