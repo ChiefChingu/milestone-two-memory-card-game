@@ -3,7 +3,6 @@
     - Challenge mode: start at easy and automatically progress through the levels.
 */
 
-const beginner = 4; //Chill mode levels.
 const easy = 6;
 const medium = 8;
 const hard = 12;
@@ -25,7 +24,7 @@ let numberOfMoves = 0;
 let matchesMade = 0;
 let totalMatches;
 let cards = Array.from(document.getElementsByClassName('card')); //Put all card classes into an array.
-let allMatchesInGame = 2; /* cards.length/2; */ //End game for challenge mode.
+let allMatchesInGame = cards.length/2; //End game for challenge mode.
 let cardValueTurnOne, cardValueTurnTwo; //Variables for match evaluation.
 
 /* Add event listeners:
