@@ -35,7 +35,9 @@ As a user I want to:
 #### Home
 - Explanatory image: explain what a user can expect by showing an example image.
 - Call to action: stimulate the user to take action. In this case start the game.
-- Navigation: minimal navigation to the about and contact page.
+- Navigation on desktop: links to Game, About and Contact.
+- Navigation on mobile: hamburger menu leads to modal with link to Game and About.
+- On mobile: the modal contains a contact form.
 
 #### Game page
 - Game modes: two types of games.
@@ -46,14 +48,17 @@ As a user I want to:
 - Game logic: in case there is a match, the cards animate and remain visible.
 - Moves counter: after each move (two cards turned) the counter updates.
 - Best score: if challenge mode and if played through once, it shows your best score.
-- Navigation: navigation to home, game start, about and contact.
-- Confirmation when game is finished: user goes to the game over page.
+- Navigation on desktop: links to Game, About and Contact.
+- Navigation on mobile: hamburger menu leads to modal with link to Game and About.
+- On mobile: the modal contains a contact form.
 
 #### Game over page - chill mode
 - Congratulations header.
 - Explanation of images: where to find the originals.
 - Call to action: stimulate the user to take action. In this case restart the game.
-- Navigation: navigation to home, game start, about and contact.
+- Navigation on desktop: links to Game, About and Contact.
+- Navigation on mobile: hamburger menu leads to modal with link to Game and About.
+- On mobile: the modal contains a contact form.
 
 #### Game over page - challenge mode
 - Congratulations header.
@@ -62,14 +67,20 @@ As a user I want to:
 - Evaluation messages: depending on performance.
 - Call to action: stimulate the user to take action. In this case to try again and beat your best score.
 - Reset highscore: if you want to reset your best to 0.
-- Navigation: navigation to home, game start, about and contact.
+- Navigation on desktop: links to Game, About and Contact.
+- Navigation on mobile: hamburger menu leads to modal with link to Game and About.
+- On mobile: the modal contains a contact form.
 
 #### About page
 - Explanation of website.
 - Link to source of images.
+- Navigation on desktop: links to Game, About and Contact.
+- Navigation on mobile: hamburger menu leads to modal with link to Game and About.
+- On mobile: the modal contains a contact form.
 
 #### Contact page
-- Contact form.
+- Only on desktop: contact form.
+- Navigation on desktop: links to Game, About and Contact.
 
 ### Features left to implement
 - High score board: show all time statistics of all users.
