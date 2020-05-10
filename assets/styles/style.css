@@ -773,7 +773,10 @@ img {
 
     .wrapper {
         width: 700px;
-        
+    }
+
+    .home-page-img {
+        width: 85%;
     }
 
     .wrapper-game-over {
@@ -999,5 +1002,9 @@ img {
     .memory-game {
         margin-top: 17rem;
         margin-bottom: 2rem;
+    }
+
+    .home-page-img {
+        width: 95%;
     }
 }
