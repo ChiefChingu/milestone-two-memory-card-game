@@ -132,18 +132,19 @@ The features are basically covered by the user stories. Repeating them here seem
 ||call to action|OK|
 ||navigation|OK|
 |Game page|game tiles|OK|
-||Card context|OK|
+||card context|OK|
 ||game logic|OK|
 ||moves counter|OK|
-||quit option|OK|
+||best score|OK|Only in challenge mode|
 ||navigation|OK|
 ||end game confirmation|OK|
 |Game over page|congratulations header|OK|
 ||explanation of images|OK|
 ||call to action|OK|
 ||navigation|OK|
-|Contact & about page|explanation of website|OK|
-||contact option|OK|
+|Contact page|contact form|OK|
+|About page|information about owner|OK|
+||link to owner's site|OK|
 
 ## Issues and solutions
 ### Determine viewport and adjust number of cards.
