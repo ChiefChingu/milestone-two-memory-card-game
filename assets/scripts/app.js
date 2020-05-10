@@ -3,7 +3,7 @@
     - Challenge mode: start at easy and automatically progress through the levels.
 */
 
-const easy = 6;
+const easy = 4;
 const medium = 8;
 const hard = 12;
 let userChoice;
