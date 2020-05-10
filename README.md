@@ -8,6 +8,8 @@ You can play the game [here](https://chiefchingu.github.io/milestone-two-memory-
 ## UX
 This project is designed with the mobile user in mind. The [wireframes](#) reflect this: mobile first and desktop second. Also, the code is written from the mobile perspective: the mobile viewport is the baseline. Media queries are used to handle the desktop viewport.
 
+Since this game depends heavily on the interpretation of images, I decided to warn users that rely on assistive technology (e.g. screen readers). An ```aria-label``` attribute is added explaining that this game is not suitable for use with assistive technology. Also, I warn them that there are no image alt tags specified for the game images.
+
 Do we need something on UX planes????
 
 ### User Stories
