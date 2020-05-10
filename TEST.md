@@ -60,7 +60,7 @@ Note: if first challenge game or high score is reset to 0, you do not see the be
 - If a match: you see an animation that tilts the cards shortly.
 - Click the first and second card again: nothing happens.
 
-Note: Safari browsers bug out. The two cards animate (tilt) as expected, but then the second card that was turned disappears. After many tries of fixing (on iPhone only, so trial and error, no console checking), finally decided to disable animation for Safari browsers. Full details at [section Issues and solutions](#add-animation-on-match).
+Note: Safari browsers bug out. The two cards animate (tilt) as expected, but then the second card that was turned disappears. After many tries of fixing (on iPhone only, so trial and error, no console checking), finally decided to disable animation for Safari browsers. Full details at section [Issues and solutions](#add-animation-on-match).
 
 ### 9. See cards flip back when there is no match.
 - When no match, see that both cards flip back.
