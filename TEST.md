@@ -273,84 +273,34 @@ function animateCards() {
     
 }
 ```
+
+Unfortunately, tests on Safari were not successful: the animation works, but then the card disappears completely. I tried many different things: switch order of animation, set background colors to transparent, set animation fill-mode. Nothing worked. The fact that I only have an iPhone to test is not helping. I cannot see in the console what exactly happens. Finally, I decided to disable the animation for Safari users.
+
+I found a script to detect the Safari browser and made the animation dependent:
+
+```javascript
+function animateCards() {
+
+    if(!safariAgent) {
+
+        cardValueTurnOne.classList.add('animation');
+        cardValueTurnTwo.classList.add('animation');
+        cardValueTurnOne.firstElementChild.classList.add('animation');
+        cardValueTurnTwo.firstElementChild.classList.add('animation');
+        cardValueTurnOne.lastElementChild.className = 'back-face-hidden';
+        cardValueTurnTwo.lastElementChild.className = 'back-face-hidden';
+
+    }  
+}
+```
+
 ### Messed up header when mobile users change orientation of their device
 I used vh to set the height of the header. This works as long as device is used in portrait orientation. Of course this no longer works correctly when you tilt your device: the viewport height will be much smaller, which resulted in shrinking headers and text overflow. Fixed this by setting the height to auto and applied padding to the elements inside it. However, the header is too high now. Fixed this by setting the media query to 800px (was 700px, so larger mobiles like iPhone X and Galaxy S10 triggered this viewport when in landscape: 740px long screens).
 
 ### Scroll necessary when resolution is 1920 x 1080
 When starting the game on screens with 1920 x 1080 resolution, the game is not displayed correctly. You need to scroll, which is annoying when playing the game. Solved this by adding an extra media query for this screen size: adjusted padding, font-size and margins to get the game fully on screen.
 
+### Keep highscores
+For the challenge mode I wanted to keep highscores. Or better: best score, since the lower your moves count is, the better your score is. I read about localStorage and wanted to use this to track your score.
 
-
-1. See an inviting game that makes me curious and want to play!
-2. Choose how to play.
-
-##### Behind the scenes:
-- All cards are collected in an array and get an event listener. A function is called upon click to flip the card. (code line: )
-- Chill mode opens 
-- When user is on a laptop/desktop: the initial array is put in the game array.
-- The total number of matches is calculated and stored in ```totalMatches``` to determine when the game finishes.
-- Upon loading the page, the game array is shuffled via the function ```shuffle```.
-
-3. Be able to play at my leisure.
-4. Be able to play 'competitive' and beat my own scores.
-4. Click any card as first card and card should turn.
-
-##### Behind the scenes:
-- Variable ```allowedTurns``` is set to 2. Each click decreases this value by 1.
-- Upon click the visible class is applied, which flips the card and shows the front-face.
-- Upon click the class clickable is removed, so the same card cannot be clicked twice when turned.
-
-5. Click any card as second card and card should turn.
-##### Behind the scenes:
-- When ```allowedTurns``` is 1 it means one more card can be clicked.
-- Upon click the visible class is applied, which flips the card and shows the front-face.
-- Upon click the class clickable is removed, so the same card cannot be clicked twice when turned.
-- Because ```allowedTurns``` is 1 it means this is the second card. The matching logic is triggered.
-
-6. Get extra help about what matches to look for.
-
-##### Behind the scenes:
-- Data attributes are used to distinguish question and answer cards.
-- Questions get ```data-type = q```.
-- When ```allowedTurns``` is 2 it means this is the first card. Then the next statement is triggered.
-- If ```data-type = q``` then the ```class = context``` is made visible, which shows the question on the card. This is done via function ```checkIfQuestion```.
-
-7. See if there is a match when two cards are turned.
-
-##### Behind the scenes:
-- All cards have a data attribute for match making: ```data-cardvalue```.
-- All matching pairs have an identical ```data-cardvalue```.
-- If statement checks for a match.
-8. See the cards flip back when there is no match.
-
-##### Behind the scenes:
-- When no match on ```data-cardvalue``` the cards flip back by removing the visible class.
-- Also, the context is removed from the question card.
-- To check if the game is finished with this match the function ```checkGameFinished``` is called. The ```matchesMade``` is compared to the ```totalMatches```.
-- The ```allowedTurns``` is reset to 2.
-- The cards become clickable again: class clickable is added.
-- Number of moves ```numberOfMoves``` is incremented by 1 via a function ```updateCounter```.
-
-9. See cards not flip back when there is a match.
-
-##### Behind the scenes:
-- If these ```data-cardvalue``` match, a function ```animateCards``` for the tilt animation is triggered.
-- Also, both the question and answer context are made visible.
-- A variable to track the number of matches ```matchesMade``` is incremented by 1.
-- A variable to track the number of moves ```numberOfMoves``` is incremented by 1 via a function ```updateCounter```.
-- The ```allowedTurns``` is reset to 2.
-- The clickable class remains removed.
-- The visible class remains added.
-
-10. See the number of turns I made so far.
-##### Behind the scenes:
-- ```updateCounter``` runs whenever two cards are turned.
-
-11. Get confirmation when the game is finished.
-##### Behind the scenes:
-- ```checkGameFinished``` evaluates an if statement. If ```totalMatches = matchesMade``` the game over page is triggered. 
-
-12. In the challenge mode: see my best score.
-13. Get more information about the cards that are used.
-14. Contact the maker of the game in case I have questions, suggestions or compliments.
-15. Have fun!
+It gave some serious headaches to compare new scores with the saved localStorage best score. I wanted the best score only when there was a best score. So, when you play for the first time, there is no best score. Only your last score. Also, since I started the code with declaring the variables at each page refresh, the saved values were overwritten. When I finally found out that you can declare localStorage without first declaring the variable I could make this functionality work flawlessly. The code is in the file 'Highscore.js'.
