@@ -124,27 +124,44 @@ Note: Safari browsers bug out. The two cards animate (tilt) as expected, but the
 - This one is difficult to test. The people who played the game so far, could not finish it without laughing!
 
 ## Features
-The features are basically covered by the user stories. Repeating them here seems superfluous, so a summary is given here.
+Most of the features are covered by the test of user stories. For completeness, the total summary is given below.
 
 |Area | Feature | Test passed|Remarks
 |------| -------|:---------:|--------
 |Home|explanatory image|OK|
 ||call to action|OK|
-||navigation|OK|
-|Game page|game tiles|OK|
+||navigation on desktop|OK|
+||navigation on mobile|OK|
+||on mobile: modal has contact form|OK|
+|Game page|game modes|OK|
+||chill mode: select level|OK|
+||challenge mode: start level|OK|
+||game tiles|OK|
 ||card context|OK|
-||game logic|OK|
+||game logic|OK|Safari animation bugged, see user story #8|
 ||moves counter|OK|
-||best score|OK|Only in challenge mode|
-||navigation|OK|
+||best score|OK|Only challenge mode|
 ||end game confirmation|OK|
+||navigation on desktop|OK|
+||navigation on mobile|OK|
+||on mobile: modal has contact form|OK|
 |Game over page|congratulations header|OK|
-||explanation of images|OK|
+||explanation of images|OK|Only chill mode|
+||best score|OK|Only challenge mode|
+||last score|OK|Only challenge mode|
+||evaluation messages|OK|Only challenge mode|
+||reset highscore|OK|Only challenge mode|
 ||call to action|OK|
-||navigation|OK|
-|Contact page|contact form|OK|
-|About page|information about owner|OK|
-||link to owner's site|OK|
+||navigation on desktop|OK|
+||navigation on mobile|OK|
+||on mobile: modal has contact form|OK|
+|About page|explanation of website|OK|
+||link to source images|OK|
+||navigation on desktop|OK|
+||navigation on mobile|OK|
+||on mobile: modal has contact form|OK|
+|Contact page|contact form|OK|Only desktop|
+||navigation on desktop|OK|
 
 ## Issues and solutions
 ### Determine viewport and adjust number of cards.
