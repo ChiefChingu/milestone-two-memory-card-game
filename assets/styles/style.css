@@ -733,6 +733,10 @@ img {
 
 @media screen and (min-width: 1025px) {
 
+    .hide-on-desktop {
+        display: none;
+    }
+
     .site-header__menu-icon {
         display: none;
     }
