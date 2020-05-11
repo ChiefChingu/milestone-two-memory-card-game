@@ -338,4 +338,5 @@ It gave some serious headaches to compare new scores with the saved localStorage
 ### Animation bug
 After the first challenge (four cards) the second challenge loads. Upon loading you can see some cards animate while not being turned. It appears that the four cards from the first level do this. Also, when flipping these cards and forming a match they disappear for a second and come back. No more animation here. The eight cards from this level now bug as well in the next level with 12 cards.
 
-It seemed that I accidentally forgot to adjust the removal of the animation when the board is reset for the next level (script tries to remove the animation from the img tag, which no longer has a class. See )
+It seemed that I accidentally forgot to adjust the removal of the animation when the board is reset for the next level (script tries to remove the animation from the img tag, which no longer has a class. Also, instead of targeting the ```card``` I accidentally targeted the ```this``` value.
+
