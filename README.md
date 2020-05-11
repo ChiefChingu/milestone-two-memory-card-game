@@ -39,7 +39,11 @@ Full details on features: [Features](#features).
 The structure of the site is very simple: homepage connects to the game page, about page and contact page.
 The game page has one child: the game-over page.
 
-structure-plane.png
+![structure-plane](assets/images/structure-plane.png)
+
+
+![structure-plane](https://github.com/ChiefChingu/milestone-two-memory-card-game/blob/master/assets/images/structure-plane.png)
+
 
 ### Skeleton Plane
 
