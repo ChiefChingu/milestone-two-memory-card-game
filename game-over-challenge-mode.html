@@ -1,83 +1,107 @@
 <!DOCTYPE html>
 <html lang="en">
+
 <head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Game Over | Memory Challenge</title>
-    <link rel="stylesheet" href="./assets/styles/style.css">
-    <link href="https://fonts.googleapis.com/css?family=Lato&display=swap" rel="stylesheet">
-    <script src="https://kit.fontawesome.com/aca8a0f519.js" crossorigin="anonymous"></script>
-    <script src="https://cdn.jsdelivr.net/npm/emailjs-com@2.4.1/dist/email.min.js"></script>
-    
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Game Over | Memory Challenge</title>
+  <link rel="stylesheet" href="./assets/styles/style.css">
+  <link href="https://fonts.googleapis.com/css?family=Lato&display=swap" rel="stylesheet">
+  <script src="https://kit.fontawesome.com/aca8a0f519.js" crossorigin="anonymous"></script>
+  <script src="https://cdn.jsdelivr.net/npm/emailjs-com@2.4.1/dist/email.min.js"></script>  
 </head>
-    <body>
-        <header class="site-header" aria-label="This site contains a visual memory game. The game is not suitable to play via a screen reader.">
-            <div class="site-header__menu-icon">
-                <div class="site-header__menu-icon__middle"></div>
-            </div>
-            <nav class="desktop-nav">
-              <ul>
-                <li><a href="index.html">Home</a></li>
-                <li><a href="game.html">Game</a></li>
-                <li><a href="about.html">About</a></li>
-                <li><a href="contact.html">Contact</a></li>
-              </ul>
-            </nav>
-            <h1 class="site-header-title">Good Game!</h1>
-            <div class="site-header__overlay">
-              <div class="site-header__overlay-content">
-                <nav class="primary-nav">
-                  <ul>
-                    <li><a href="index.html">Home</a></li>
-                    <li><a href="game.html">Game</a></li>
-                    <li><a href="about.html">About</a></li>
-                  </ul>
-                </nav>
-                <div class="site-header__overlay-contact">
-                  <form id="contact-form">
-                    <p class="contact-form-text">
-                      Feel free to leave a message with your suggestions, questions or compliments!
-                    </p>
-                    <input type="hidden" name="contact_number">
-                    <label>Name</label>
-                    <input type="text" name="user_name" required>
-                    <label>Email</label>
-                    <input type="email" name="user_email" required>
-                    <label>Message</label>
-                    <textarea name="message" required></textarea>
-                    <input class="btn" type="submit" value="Send">
-                  </form>
-                  <div id="contact-form-thank-you">
-                    <p>Thanks for contacting!</p>
-                  </div>
-                </div>
-              </div>
-            </div>
-        </header>
-        <div class="wrapper wrapper-game-over">
+
+  <body>
+
+    <header class="site-header" aria-label="This site contains a visual memory game. The game is not suitable to play via a screen reader.">
+
+      <div class="site-header__menu-icon">
+          <div class="site-header__menu-icon__middle"></div>
+      </div>
+      
+      <nav class="desktop-nav">
+        <ul>
+          <li><a href="index.html">Home</a></li>
+          <li><a href="game.html">Game</a></li>
+          <li><a href="about.html">About</a></li>
+          <li><a href="contact.html">Contact</a></li>
+        </ul>
+      </nav>
+        
+      <h1 class="site-header-title">Good Game!</h1>
+        
+      <div class="site-header__overlay">
+        <div class="site-header__overlay-content">
           
-          <div id="new-highscore"></div>
-          <div id="draw"></div>
-          <div id="no-highscore"></div>
-          
-          <div class="best-game">
-                <p>Your best score is:</p><br> 
-                <i class="fas fa-award icon-score"></i>
-                <div class="grid-wrap">
-                    <div id="highscore">0</div>
-                    <div class="best-game-moves">moves!</div>
-                </div>  
-          </div>
-            <div class="last-game">
-                Your last game had <span id="lastscore">0</span> moves.
+          <nav class="primary-nav">
+            <ul>
+              <li><a href="index.html">Home</a></li>
+              <li><a href="game.html">Game</a></li>
+              <li><a href="about.html">About</a></li>
+            </ul>
+          </nav>
+
+          <div class="site-header__overlay-contact">
+            <form id="contact-form">
+
+              <p class="contact-form-text">
+                Feel free to leave a message with your suggestions, questions or compliments!
+              </p>
+
+              <input type="hidden" name="contact_number">
+              <label>Name</label>
+              <input type="text" name="user_name" required>
+              <label>Email</label>
+              <input type="email" name="user_email" required>
+              <label>Message</label>
+              <textarea name="message" required></textarea>
+              <input class="btn" type="submit" value="Send">
+
+            </form>
+
+            <div id="contact-form-thank-you">
+              <p>Thanks for contacting!</p>
             </div>
 
-            <a class="btn" href="game.html">play again!</a>
-            <p class="reset-score">Can't beat your highscore? Set it to 0...</p>
-            <a id="reset-score" href="game.html">reset high score</a>
-            
+          </div>
+
         </div>
-        <script src="./assets/scripts/highscore.js"></script>
-        <script src="./assets/scripts/MobileMenu.js"></script>
-    </body>
+      </div>
+
+    </header>
+
+    <div class="wrapper wrapper-game-over">
+      
+      <div id="new-highscore"></div>
+      <div id="draw"></div>
+      <div id="no-highscore"></div>
+      
+      <div class="best-game">
+
+        <p>Your best score is:</p><br>
+
+        <i class="fas fa-award icon-score"></i>
+
+        <div class="grid-wrap">
+            <div id="highscore">0</div>
+            <div class="best-game-moves">moves!</div>
+        </div>
+
+      </div>
+      
+      <div class="last-game">
+          Your last game had <span id="lastscore">0</span> moves.
+      </div>
+
+      <a class="btn" href="game.html">play again!</a>
+      <p class="reset-score">Can't beat your highscore? Set it to 0...</p>
+      <a id="reset-score" href="game.html">reset high score</a>
+        
+    </div>
+
+    <script src="./assets/scripts/highscore.js"></script>
+    <script src="./assets/scripts/MobileMenu.js"></script>
+
+  </body>
+
 </html>

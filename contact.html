@@ -1,47 +1,46 @@
 <!DOCTYPE html>
 <html lang="en">
-<head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Contact | Memory Challenge</title>
-    <link rel="stylesheet" href="./assets/styles/style.css">
-    <link href="https://fonts.googleapis.com/css?family=Lato&display=swap" rel="stylesheet">
-    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.4.1/jquery.min.js"></script>
-    <script src="https://cdn.jsdelivr.net/npm/emailjs-com@2.4.1/dist/email.min.js"></script>
-</head>
+
+    <head>
+        <meta charset="UTF-8">
+        <meta name="viewport" content="width=device-width, initial-scale=1.0">
+        <title>Contact | Memory Challenge</title>
+        <link rel="stylesheet" href="./assets/styles/style.css">
+        <link href="https://fonts.googleapis.com/css?family=Lato&display=swap" rel="stylesheet">
+        <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.4.1/jquery.min.js"></script>
+        <script src="https://cdn.jsdelivr.net/npm/emailjs-com@2.4.1/dist/email.min.js"></script>
+    </head>
+
     <body>
+
         <header class="site-header" aria-label="This site contains a visual memory game. The game is not suitable to play via a screen reader.">
+            
             <div class="site-header__menu-icon">
                 <div class="site-header__menu-icon__middle"></div>
             </div>
+
             <nav class="desktop-nav">
-              <ul>
-                <li><a href="index.html">Home</a></li>
-                <li><a href="game.html">Game</a></li>
-                <li><a href="about.html">About</a></li>
-                <li><a href="contact.html">Contact</a></li>
-              </ul>
-            </nav>
-            <h1 class="site-header-title">Contact</h1>
-            <div class="site-header__overlay">
-            <div class="site-header__overlay-content">
-                <nav class="primary-nav">
-                    <ul>
+                <ul>
                     <li><a href="index.html">Home</a></li>
                     <li><a href="game.html">Game</a></li>
                     <li><a href="about.html">About</a></li>
-                    </ul>
-                </nav>
-            </div>
-            </div>
+                    <li><a href="contact.html">Contact</a></li>
+                </ul>
+            </nav>
+
+            <h1 class="site-header-title">Contact</h1>
+
         </header>
         
         <div class="wrapper">
             <div class="explanation left">
+
                 <form id="contact-form">
+                    
                     <p class="contact-form-text">
-                      Feel free to leave a message with your suggestions, questions or compliments!
+                        Feel free to leave a message with your suggestions, questions or compliments!
                     </p>
+
                     <input type="hidden" name="contact_number">
                     <label>Name</label>
                     <input type="text" name="user_name" required>
@@ -50,12 +49,18 @@
                     <label>Message</label>
                     <textarea name="message" required></textarea>
                     <input class="btn" type="submit" value="Send">
-                  </form>
+
+                </form>
+
                 <div id="contact-form-thank-you">
-                <p>Thanks for contacting!</p>
+                    <p>Thanks for contacting!</p>
                 </div>
+                
             </div>
         </div>
+
         <script src="assets/scripts/MobileMenu.js"></script>
+
     </body>
+
 </html>
