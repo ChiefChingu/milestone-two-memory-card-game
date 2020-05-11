@@ -38,9 +38,10 @@ I changed the code from ```id="game-header__game-data" id="game-header__game-dat
 
 ### JSHint
 #### MobileMenu.js
-- One undefined variable: ```emailjs```. This is out of my control, I use the EmailJS code as per instruction. 
+- Undefined variable: ```emailjs``` (lines 35 and 54). This is out of my control, I use the EmailJS code as per instruction. 
+- Unexpected use of '|' (line 53). Again out of my control, I use the EmailJS code as per instruction.
 - After warnings about 'only available in ES6' I searched for a solution. I add /*jshint esversion: 6 */ at the top of every JS file. This fixed the warnings.
-- Do not use 'new' for side effects: fixed by storing the new object in a ```var```.
+- Do not use 'new' for side effects: fixed by storing the new object in a ```var```. This however led to a notification that there is an unused variable...
 
 ### Highscore.js
 No warnings.
