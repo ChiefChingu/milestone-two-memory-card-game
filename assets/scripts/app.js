@@ -195,7 +195,7 @@ function animateCards() {
         cardValueTurnTwo.firstElementChild.classList.add('animation');
         
 
-    // }  
+    }  
 }
 
 //Check end game and if challenge launch next challenge.
