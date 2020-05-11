@@ -221,6 +221,7 @@ Add to credits: https://javascript.info/event-delegation
 Modal W3Schools
 Shuffle cards
 safari detection: https://www.geeksforgeeks.org/how-to-detect-the-user-browser-safari-chrome-ie-firefox-and-opera-using-javascript/
+Mobile menu
 
 ## Special note on JavaScript
 JS note: acknowledge the fact that JS code could be far more efficiently written. Make it modular, classes, no global variables, etc. At this stage, this is something I'd like to do, but cannot.

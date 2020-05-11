@@ -200,7 +200,7 @@ function turnLogic() {
 //Animate cards on match.
 function animateCards() {
 
-    if(!safariAgent) { //Animation is bugged on Safari
+    if(!safariAgent) { //Animation is bugged on Safari.
 
         cardValueTurnOne.lastElementChild.className = 'back-face-hidden';
         cardValueTurnTwo.lastElementChild.className = 'back-face-hidden';
@@ -220,12 +220,12 @@ function checkGameFinished() {
 
             if(challengeMode) {
 
-                if(matchesMade === allMatchesInGame) { //End of game
+                if(matchesMade === allMatchesInGame) { //End of game.
                      
                     localStorage.setItem("lastGameLocal", numberOfMoves); //Set localStorage for use in Highscore.js
                     window.location.href = "game-over-challenge-mode.html";
 
-                } else { //New level of challenge mode
+                } else { //New level of challenge mode.
 
                     matchesMade = 0;
                     userChoice = userChoice + 4; //Add more cards for next level.
@@ -234,7 +234,7 @@ function checkGameFinished() {
 
                 }
 
-            } else { //Chill mode game over page
+            } else { //Chill mode game over page.
                 
                 window.location.href = "game-over.html";
     
@@ -243,6 +243,7 @@ function checkGameFinished() {
     
 }
 
+//For challenge mode: get ready for next level.
 function resetBoard() {
 
     cards.forEach(card => {
@@ -284,6 +285,7 @@ function shuffle(){
 
     var parent = $(".memory-game");
     var divs = parent.children();
+    
     while (divs.length) {
 
         parent.append(divs.splice(Math.floor(Math.random() * divs.length), 1)[0]);
