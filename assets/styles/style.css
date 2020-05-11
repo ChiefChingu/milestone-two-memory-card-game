@@ -427,11 +427,6 @@ a:hover {
             perspective: 800px;
 }
 
-/* Add styling grid logic for number of cards - desktop
-Perhaps add classes like grid-6, grid-8, grid-10, etc. 
-*/
-
-
 .card {
     position: relative;
     width: 100%;
