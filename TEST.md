@@ -195,9 +195,9 @@ I then tried to do it from within JS. I found how to do a media query in javascr
 After my mentor call I decided to add levels of difficulty (like easy, medium, hard). This in turn lead to introducing game modes. These game modes made the Javascript media query redundant: I now control this via CSS (mobile users get less options to chose from).
 
 ### Flip cards and matching logic
-At first I created the variable allowedTurns to control that only two cards can be clicked and turned. This worked, but it did not prevent users from clicking the same card twice. When doing this, the allowedTurns did increment, resulting in one card turned and not being able to click a second one. 
+At first I created the variable allowedTurns to control that only two cards can be clicked and turned. This worked, but it did not prevent users from clicking the same card twice. When doing this, the ```allowedTurns``` did increment, resulting in one card turned and not being able to click a second one. 
 
-That is why I added a second check, a class: clickable. At the start of the game all cards have this class. When a card is clicked and turned, this class is removed. So, you can no longer click one card twice. Then, when the cards are evaluated for a match the class clickable can be added again (if there was no match).
+That is why I added a second check, a class: ```clickable```. At the start of the game all cards have this class. When a card is clicked and turned, this class is removed. So, you can no longer click one card twice. Then, when the cards are evaluated for a match the class ```clickable``` can be added again (if there was no match).
 
 ```javascript
 function selectCard() {
@@ -220,7 +220,8 @@ function evaluateCards() {
     console.log('check match');
 ```
 
-This worked perfect: you cannot click the same card twice. Big caveat though: this setup made it very difficult to evaluate if there was a match. So, I decided to separate turn one and turn two. No problems here when there was a match: the right classes were applied already (clickable removed visible added). I only needed to reset the allowedTurns. In case there was no match, I ran into problems again. I could target the last card turned and add classes. However, I could no longer target the first card that was turned. 
+This worked perfect: you cannot click the same card twice. Big caveat though: this setup made it very difficult to evaluate if there was a match. So, I decided to separate turn one and turn two. No problems here when there was a match: the right classes were applied already (```clickable``` removed ```visible``` added). I only needed to reset the ```allowedTurns```. In case there was no match, I ran into problems again. I could target the last card turned and add classes. However, I could no longer target the first card that was turned.
+
 ```javascript
 function checkTurn() {
 
@@ -304,7 +305,7 @@ cardValueTurnOne.firstElementChild.classList.add('animation');
 cardValueTurnTwo.firstElementChild.classList.add('animation');
 ```
 
-Unfortunately, tests on Safari were not successful: the animation works, but then the card disappears completely. I tried many different things: switch order of animation, set background colors to transparent, set animation fill-mode. Nothing worked. The fact that I only have an iPhone to test is not helping. I cannot see in the console what exactly happens. Finally, I decided to disable the animation for Safari users.
+Unfortunately, tests on Safari were not successful: the animation works, but then the card disappears completely. I tried many different things: switch order of animation, set background colors to transparent, set ```animation fill-mode```. Nothing worked. The fact that I only have an iPhone to test is not helping. I cannot see in the console what exactly happens. Finally, I decided to disable the animation for Safari users.
 
 I found a script to detect the Safari browser and made the animation dependent:
 
@@ -331,9 +332,9 @@ I used vh to set the height of the header. This works as long as device is used 
 When starting the game on screens with 1920 x 1080 resolution, the game is not displayed correctly. You need to scroll, which is annoying when playing the game. Solved this by adding an extra media query for this screen size: adjusted padding, font-size and margins to get the game fully on screen.
 
 ### Keep highscores
-For the challenge mode I wanted to keep highscores. Or better: best score, since the lower your moves count is, the better your score is. I read about localStorage and wanted to use this to track your score.
+For the challenge mode I wanted to keep highscores. Or better: best score, since the lower your moves count is, the better your score is. I read about ```localStorage``` and wanted to use this to track your score.
 
-It gave some serious headaches to compare new scores with the saved localStorage best score. I wanted the best score only when there was a best score. So, when you play for the first time, there is no best score. Only your last score. Also, since I started the code with declaring the variables at each page refresh, the saved values were overwritten. When I finally found out that you can declare localStorage without first declaring the variable I could make this functionality work flawlessly. The code is in the file [Highscore.js](https://github.com/ChiefChingu/milestone-two-memory-card-game/blob/master/assets/scripts/highscore.js).
+It gave some serious headaches to compare new scores with the saved ```localStorage``` best score. I wanted the best score only when there was a best score. So, when you play for the first time, there is no best score. Only your last score. Also, since I started the code with declaring the variables at each page refresh, the saved values were overwritten. When I finally found out that you can declare ```localStorage``` without first declaring the variable I could make this functionality work flawlessly. The code is in the file [Highscore.js](https://github.com/ChiefChingu/milestone-two-memory-card-game/blob/master/assets/scripts/highscore.js).
 
 ### Animation bug
 After the first challenge (four cards) the second challenge loads. Upon loading you can see some cards animate while not being turned. It appears that the four cards from the first level do this. Also, when flipping these cards and forming a match they disappear for a second and come back. No more animation here. The eight cards from this level now bug as well in the next level with 12 cards.
