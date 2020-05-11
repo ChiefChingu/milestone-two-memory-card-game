@@ -13,6 +13,7 @@ Errors and warnings due to autoprefix: [style.css](https://jigsaw.w3.org/css-val
 ## W3C Markup Validation Service
 First time use lead to the following errors.
 
+### index.html
 Possible misuse of 'aria-label'. 
 I moved the aria-label from the body tag to the header tag and this solved the error.
 
@@ -22,6 +23,12 @@ I added this upon reading about alt text. It was advised to add a description to
 *You should also remember to add alt text to form buttons. Otherwise, screen readers might pass over them and some visitors won’t be able to interact with your website.* [Source](https://ahrefs.com/blog/alt-text/)
 
 I removed the alt text from the forms to solve this error.
+
+### game.html
+Duplicate attribute 'id'
+I changed the code from ```id="game-header__game-data" id="game-header__game-data-chill"``` to ```id="game-header__game-data game-header__game-data-chill"```
+
+
 
 No errors or warnings to show:
 - [index.html](https://validator.w3.org/nu/?doc=https%3A%2F%2Fchiefchingu.github.io%2Fmilestone-two-memory-card-game%2F).
