@@ -185,7 +185,7 @@ function turnLogic() {
 //Animate cards on match.
 function animateCards() {
 
-    if(!safariAgent) {
+    // if(!safariAgent) {
 
         cardValueTurnOne.lastElementChild.className = 'back-face-hidden';
         cardValueTurnTwo.lastElementChild.className = 'back-face-hidden';
@@ -195,7 +195,7 @@ function animateCards() {
         cardValueTurnTwo.firstElementChild.classList.add('animation');
         
 
-    }  
+    // }  
 }
 
 //Check end game and if challenge launch next challenge.
@@ -224,9 +224,6 @@ function checkGameFinished() {
     
             }
         }
-    
-
-        
     
 }
 
