@@ -3,12 +3,9 @@ This is the second milestone project of the fullstack software development cours
 
 Also, there are two game modes: a mode where you play at your leisure. You can select the number of cards per game. And a challenge mode: you start with 4 cards and need to go through 3 levels. Every level adds 4 cards.
 
-You can play the game [here](https://chiefchingu.github.io/milestone-two-memory-card-game/).
-
 ## UX
 Although this project is a default/standard project, I decided to use the method of Jesse Garrett: the five planes of UX.
 
-This project is designed with the mobile user in mind. The [wireframes](#) reflect this: mobile first and desktop second. Also, the code is written from the mobile perspective: the mobile viewport is the baseline. Media queries are used to handle the desktop viewport.
 
 Since this game depends heavily on the interpretation of images, I decided to warn users that rely on assistive technology (e.g. screen readers). An ```aria-label``` attribute is added explaining that this game is not suitable for use with assistive technology. Also, I warn them that there are no image alt tags specified for the game images.
 
@@ -41,15 +38,25 @@ The game page has one child: the game-over page.
 
 ![structure-plane](assets/images/structure-plane.png)
 
-
-![structure-plane](https://github.com/ChiefChingu/milestone-two-memory-card-game/blob/master/assets/images/structure-plane.png)
-
-
 ### Skeleton Plane
+This project is designed with the mobile user in mind: mobile first and desktop second. The mobile viewport is the baseline. Media queries are used to handle the desktop viewport.
 
+The wireframes are found [here](#). 
 
 ### Surface Plane
+The final product can be viewed [here](https://chiefchingu.github.io/milestone-two-memory-card-game/).
 
+#### Typography
+Google Font Lato. Easy on the eyes, but not too playful.
+
+#### Color palette
+Background color is white: easy on the eye, provides a clean and clear background.
+
+Contrasting colors:
+- Purple for headers (#7d51a1).
+- Blue for the cards (#2a97ce).
+- Orange for CTAs (#ff8d1a).
+- Pink for secondary contrast (#e166c4).
 
 ### User Stories
 As a user I want to:
