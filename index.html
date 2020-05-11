@@ -1,72 +1,89 @@
 <!DOCTYPE html>
 <html lang="en">
-    <head>
-        <meta charset="UTF-8">
-        <meta name="viewport" content="width=device-width, initial-scale=1.0">
-        <title>Memory Challenge</title>
-        <link rel="stylesheet" href="./assets/styles/style.css">
-        <link href="https://fonts.googleapis.com/css?family=Lato&display=swap" rel="stylesheet">
-        <script src="https://cdn.jsdelivr.net/npm/emailjs-com@2.4.1/dist/email.min.js"></script>
-        <script src="./assets/scripts/MobileMenu.js" defer></script>
-    </head>
 
-    <body>
+  <head>
+      <meta charset="UTF-8">
+      <meta name="viewport" content="width=device-width, initial-scale=1.0">
+      <title>Memory Challenge</title>
+      <link rel="stylesheet" href="./assets/styles/style.css">
+      <link href="https://fonts.googleapis.com/css?family=Lato&display=swap" rel="stylesheet">
+      <script src="https://cdn.jsdelivr.net/npm/emailjs-com@2.4.1/dist/email.min.js"></script>
+  </head>
+
+  <body>
       
-      <header class="site-header" aria-label="This site contains a visual memory game. The game is not suitable to play via a screen reader.">
+    <header class="site-header" aria-label="This site contains a visual memory game. The game is not suitable to play via a screen reader.">
 
-        <div class="site-header__menu-icon">
-            <div class="site-header__menu-icon__middle"></div>
-        </div>
-
-        <nav class="desktop-nav">
-          <ul>
-            <li><a href="index.html">Home</a></li>
-            <li><a href="game.html">Game</a></li>
-            <li><a href="about.html">About</a></li>
-            <li><a href="contact.html">Contact</a></li>
-          </ul>
-        </nav>
-
-        <h1 class="site-header-title">Memory Challenge</h1>
-
-        <div class="site-header__overlay">
-          <div class="site-header__overlay-content">
-            <nav class="primary-nav">
-              <ul>
-                <li><a href="index.html">Home</a></li>
-                <li><a href="game.html">Game</a></li>
-                <li><a href="about.html">About</a></li>
-              </ul>
-            </nav>
-            <div class="site-header__overlay-contact">
-              <form id="contact-form">
-                <p class="contact-form-text">
-                  Feel free to leave a message with your suggestions, questions or compliments!
-                </p>
-                <input type="hidden" name="contact_number">
-                <label>Name</label>
-                <input type="text" name="user_name" required>
-                <label>Email</label>
-                <input type="email" name="user_email" required>
-                <label>Message</label>
-                <textarea name="message" required></textarea>
-                <input class="btn" type="submit" value="Send">
-              </form>
-              <div id="contact-form-thank-you">
-                <p>Thanks for contacting!</p>
-              </div>
-            </div>
-          </div>
-        </div>
-      </header>
-      <div class="wrapper">
-        <div class="explanation">
-            <p>Turn a card, find the other matching card and finish the game.</p><br>
-            <p>Without laughing!</p>
-            <img class="home-page-img" src="assets/images/james-fridman-desktop.jpg" alt="explanation of image pairs">
-            <p>Are you up for the challenge?</p>   
-        </div>
-        <a class="btn" href="game.html">game on!</a>
+      <div class="site-header__menu-icon">
+          <div class="site-header__menu-icon__middle"></div>
       </div>
-    </body>
+
+      <nav class="desktop-nav">
+        <ul>
+          <li><a href="index.html">Home</a></li>
+          <li><a href="game.html">Game</a></li>
+          <li><a href="about.html">About</a></li>
+          <li><a href="contact.html">Contact</a></li>
+        </ul>
+      </nav>
+
+      <h1 class="site-header-title">Memory Challenge</h1>
+
+      <div class="site-header__overlay">
+        <div class="site-header__overlay-content">
+          
+          <nav class="primary-nav">
+            <ul>
+              <li><a href="index.html">Home</a></li>
+              <li><a href="game.html">Game</a></li>
+              <li><a href="about.html">About</a></li>
+            </ul>
+          </nav>
+
+          <div class="site-header__overlay-contact">
+            <form id="contact-form">
+
+              <p class="contact-form-text">
+                Feel free to leave a message with your suggestions, questions or compliments!
+              </p>
+
+              <input type="hidden" name="contact_number">
+              <label>Name</label>
+              <input type="text" name="user_name" required>
+              <label>Email</label>
+              <input type="email" name="user_email" required>
+              <label>Message</label>
+              <textarea name="message" required></textarea>
+              <input class="btn" type="submit" value="Send">
+
+            </form>
+            
+            <div id="contact-form-thank-you">
+              <p>Thanks for contacting!</p>
+            </div>
+
+          </div>
+
+        </div>
+      </div>
+    
+    </header>
+
+    <div class="wrapper">
+      
+      <div class="explanation">
+          <p>Turn a card, find the other matching card and finish the game.</p><br>
+          <p>Without laughing!</p>
+          <img class="home-page-img" src="assets/images/james-fridman-desktop.jpg" alt="explanation of image pairs">
+          <p>Are you up for the challenge?</p>   
+      </div>
+
+      <a class="btn" href="game.html">game on!</a>
+      
+    </div>
+
+    <script src="./assets/scripts/MobileMenu.js"></script>
+  
+  </body>
+
 </html>
