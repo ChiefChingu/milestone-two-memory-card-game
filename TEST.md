@@ -36,6 +36,11 @@ I removed the alt text from the forms to solve this error.
 Duplicate attribute 'id'
 I changed the code from ```id="game-header__game-data" id="game-header__game-data-chill"``` to ```id="game-header__game-data"```
 
+### JSHint
+#### MobileMenu.js
+One undefined variable: ```emailjs```. This is out of my control, I use the EmailJS code as per instruction. 
+Only warnings about
+
 ## User stories
 Each user story is tested thoroughly. All steps are taken in the main browsers at 3 different viewports: mobile (including tablet) and desktop.
 

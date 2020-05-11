@@ -1,3 +1,5 @@
+/*jshint esversion: 6 */ 
+
 /* Game mode selection variables: 
     - Chill mode: pick your level.
     - Challenge mode: start at easy and automatically progress through the levels.

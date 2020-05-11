@@ -1,3 +1,5 @@
+/*jshint esversion: 6 */ 
+
 let lastGame = localStorage.getItem("lastGameLocal");
 let bestScoreInt = parseInt(localStorage.getItem("storedBestScore"), 10);
 
