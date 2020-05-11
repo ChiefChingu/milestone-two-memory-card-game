@@ -26,7 +26,7 @@ I removed the alt text from the forms to solve this error.
 
 ### game.html
 Duplicate attribute 'id'
-I changed the code from ```id="game-header__game-data" id="game-header__game-data-chill"``` to ```id="game-header__game-data game-header__game-data-chill"```
+I changed the code from ```id="game-header__game-data" id="game-header__game-data-chill"``` to ```id="game-header__game-data"```
 
 
 
