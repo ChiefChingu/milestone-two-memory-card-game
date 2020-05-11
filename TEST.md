@@ -38,8 +38,18 @@ I changed the code from ```id="game-header__game-data" id="game-header__game-dat
 
 ### JSHint
 #### MobileMenu.js
-One undefined variable: ```emailjs```. This is out of my control, I use the EmailJS code as per instruction. 
-Only warnings about
+- One undefined variable: ```emailjs```. This is out of my control, I use the EmailJS code as per instruction. 
+- After warnings about 'only available in ES6' I searched for a solution. I add /*jshint esversion: 6 */ at the top of every JS file. This fixed the warnings.
+- Do not use 'new' for side effects: fixed by storing the new object in a ```var```.
+
+### Highscore.js
+No warnings.
+
+### App.js
+- Do not use 'new' for side effects (line 322).
+- One undefined variable: ```menu``` (line 322).
+
+Unfortunately, I could not fix these warnings. The code is from the event delegation [snippet](https://javascript.info/event-delegation). 
 
 ## User stories
 Each user story is tested thoroughly. All steps are taken in the main browsers at 3 different viewports: mobile (including tablet) and desktop.

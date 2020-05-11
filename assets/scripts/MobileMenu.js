@@ -27,7 +27,7 @@ class MobileMenu {
 
 }
 
-new MobileMenu();
+var mobileMenu = new MobileMenu();
 
 //emailJS
 function initEmailAccount(){

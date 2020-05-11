@@ -1,4 +1,6 @@
 /*jshint esversion: 6 */ 
+/*globals $:false */
+
 
 /* Game mode selection variables: 
     - Chill mode: pick your level.
@@ -37,7 +39,7 @@ let cardValueTurnOne, cardValueTurnTwo; //Variables for match evaluation.
 //Add event listener to all cards.
 cards.forEach(card => { 
     card.addEventListener('click', turnLogic);
-})
+});
 
 //Chill mode.
 class Menu {
@@ -80,7 +82,7 @@ class Menu {
         document.getElementById("movesDiv").classList.remove("challenge-mode-margin-right");
 
       }
-    };
+    }
 }
 
 
@@ -169,7 +171,7 @@ function turnLogic() {
                     cardValueTurnOne.children[1].className = 'show-context';                  
                     cardValueTurnTwo.children[1].className = 'show-context';
 
-                }, 900)
+                }, 900);
 
                 setTimeout(()=> {
 
@@ -211,7 +213,6 @@ function animateCards() {
         cardValueTurnOne.firstElementChild.classList.add('animation');
         cardValueTurnTwo.firstElementChild.classList.add('animation');
         
-
     }  
 }
 
@@ -318,17 +319,17 @@ var gameSelector = document.getElementById('game-mode-selection');
 startChillBtn.onclick = function() {
   startChillModal.style.display = "block";
   new Menu(menu);
-}
+};
 
 // When the user clicks on <span> (x), close the modal
 startChillSpan.onclick = function() {
   startChillModal.style.display = "none";
-}
+};
 
 // When the user clicks anywhere outside of the modal, close it
 window.onclick = function(event) {
   if (event.target == startChillModal) {
     startChillModal.style.display = "none";
   }
-}
+};
 
