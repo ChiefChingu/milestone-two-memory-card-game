@@ -71,7 +71,6 @@ h3 {
     -webkit-box-align: center;
         -ms-flex-align: center;
             align-items: center;
-    /* padding: 2rem 0; */
 }
 
 .site-header-title {
@@ -82,7 +81,6 @@ h3 {
 }
 
 .game-header {
-    /* padding: 0.5rem; */
     z-index: 1;
     top: 0;
     display: -ms-grid;
@@ -96,18 +94,18 @@ h3 {
 }
 
 #game-header__game-data {
-        display: none;
-        -ms-grid-columns: 1fr 1rem 1fr;
-        grid-template-columns: 1fr 1fr;
-        -ms-grid-column: 2;
-        -ms-grid-column-span: 1;
-        grid-column: 2 / 3;
-        -webkit-column-gap: 1rem;
-           -moz-column-gap: 1rem;
-                column-gap: 1rem;
-        -webkit-box-align: start;
-            -ms-flex-align: start;
-                align-items: start;
+    display: none;
+    -ms-grid-columns: 1fr 1rem 1fr;
+    grid-template-columns: 1fr 1fr;
+    -ms-grid-column: 2;
+    -ms-grid-column-span: 1;
+    grid-column: 2 / 3;
+    -webkit-column-gap: 1rem;
+        -moz-column-gap: 1rem;
+            column-gap: 1rem;
+    -webkit-box-align: start;
+        -ms-flex-align: start;
+            align-items: start;
 }
 
 #bestScore {
@@ -132,51 +130,51 @@ h3 {
 }
 
 .site-header__menu-icon::before {
-            content: "";    
-            position: absolute;
-            top: 0;
-            left: 0;
-            width: 20px;
-            height: 3px;
-            background-color: white;
-            -webkit-transform-origin: 0 0;
-                -ms-transform-origin: 0 0;
-                    transform-origin: 0 0;
-            -webkit-transition: -webkit-transform .3s ease-out;
-            transition: -webkit-transform .3s ease-out;
-            -o-transition: transform .3s ease-out;
-            transition: transform .3s ease-out;
-            transition: transform .3s ease-out, -webkit-transform .3s ease-out;
-        }
+    content: "";    
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 20px;
+    height: 3px;
+    background-color: white;
+    -webkit-transform-origin: 0 0;
+        -ms-transform-origin: 0 0;
+            transform-origin: 0 0;
+    -webkit-transition: -webkit-transform .3s ease-out;
+    transition: -webkit-transform .3s ease-out;
+    -o-transition: transform .3s ease-out;
+    transition: transform .3s ease-out;
+    transition: transform .3s ease-out, -webkit-transform .3s ease-out;
+}
 
 .site-header__menu-icon__middle {
-            position: absolute;
-            top: 8px;
-            left: 0;
-            width: 20px;
-            height: 3px;
-            background-color: white;
-            -webkit-transition: opacity .3s ease-out;
-            -o-transition: opacity .3s ease-out;
-            transition: opacity .3s ease-out;
-        }
+    position: absolute;
+    top: 8px;
+    left: 0;
+    width: 20px;
+    height: 3px;
+    background-color: white;
+    -webkit-transition: opacity .3s ease-out;
+    -o-transition: opacity .3s ease-out;
+    transition: opacity .3s ease-out;
+}
 
 .site-header__menu-icon::after {
-            content: "";  
-            position: absolute;
-            bottom: 0px;
-            left: 0;
-            width: 20px;
-            height: 3px;
-            background-color: white;
-            -webkit-transform-origin: 0 100%;
-                -ms-transform-origin: 0 100%;
-                    transform-origin: 0 100%;
-            -webkit-transition: -webkit-transform .3s ease-out;
-            transition: -webkit-transform .3s ease-out;
-            -o-transition: transform .3s ease-out;
-            transition: transform .3s ease-out;
-            transition: transform .3s ease-out, -webkit-transform .3s ease-out;
+    content: "";  
+    position: absolute;
+    bottom: 0px;
+    left: 0;
+    width: 20px;
+    height: 3px;
+    background-color: white;
+    -webkit-transform-origin: 0 100%;
+        -ms-transform-origin: 0 100%;
+            transform-origin: 0 100%;
+    -webkit-transition: -webkit-transform .3s ease-out;
+    transition: -webkit-transform .3s ease-out;
+    -o-transition: transform .3s ease-out;
+    transition: transform .3s ease-out;
+    transition: transform .3s ease-out, -webkit-transform .3s ease-out;
 }
 
 .site-header__menu-icon--close-x::before {
@@ -196,49 +194,49 @@ h3 {
 }
 
 .site-header__overlay {
-        height: 100%;
-        width: 100%;
-        position: fixed;
-        z-index: 1;
-        top: 0;
-        left: 0;
-        background-color: #7d51a1;
-        overflow-y: scroll;
-        -webkit-transition: 0.5s;
-        -o-transition: 0.5s;
-        transition: 0.5s;
-        display: none;
-        background-image: url("../images/waves.svg");
-        background-position: center;
-        background-size: cover;
-        color: #fff;
+    height: 100%;
+    width: 100%;
+    position: fixed;
+    z-index: 1;
+    top: 0;
+    left: 0;
+    background-color: #7d51a1;
+    overflow-y: scroll;
+    -webkit-transition: 0.5s;
+    -o-transition: 0.5s;
+    transition: 0.5s;
+    display: none;
+    background-image: url("../images/waves.svg");
+    background-position: center;
+    background-size: cover;
+    color: #fff;
 }
     
 .site-header__overlay--is-visible {
-        display: block;
+    display: block;
 }
 
 .site-header__overlay-content {
-        position: relative;
-        width: 100%;
-        text-align: center;
-        padding: 2rem;
+    position: relative;
+    width: 100%;
+    text-align: center;
+    padding: 2rem;
 }
       
 .site-header__overlay a {
-        padding: 8px;
-        text-decoration: none;
-        color: white;
-        font-size: 16px;
-        display: block;
-        -webkit-transition: 0.3s;
-        -o-transition: 0.3s;
-        transition: 0.3s;
+    padding: 8px;
+    text-decoration: none;
+    color: white;
+    font-size: 16px;
+    display: block;
+    -webkit-transition: 0.3s;
+    -o-transition: 0.3s;
+    transition: 0.3s;
 }
       
 .site-header__overlay a:hover, 
 .site-header__overlay a:focus {
-        color: #e166c4;
+    color: #e166c4;
 }
 
 .desktop-nav {
@@ -377,7 +375,6 @@ a:hover {
     padding: 0;
     text-align: center;
     width: 80%;
-    /* height: 200px; */
     color: black;
     -webkit-box-shadow: 0 10px 1rem rgba(0,0,0,.16);
             box-shadow: 0 10px 1rem rgba(0,0,0,.16);
@@ -457,8 +454,6 @@ a:hover {
     -webkit-transform: rotateX(180deg);
     
             transform: rotateX(180deg);
-    /* -o-object-fit: cover;
-       object-fit: cover; */
 }
 
 img {
@@ -518,9 +513,6 @@ img {
             transform: rotateX(180deg);
     -webkit-animation: tilt 0.4s;
             animation: tilt 0.4s;
-            /* animation-fill-mode: backwards;
-    -webkit-animation-fill-mode: backwards; */
-    /* does not fix the bug on Safari... */
 }
 
 @-webkit-keyframes tilt {
@@ -610,7 +602,6 @@ img {
     text-align: center;
     margin-top: -.5rem;
 }
-
   
 .close {
     color: #aaa;
@@ -696,9 +687,6 @@ img {
 
 #highscore {
     font-size: 7rem;
-    /* margin-top: 1rem; */
-    /* grid-column: 2;
-    grid-row: 2; */
 }
 
 #lastscore {
@@ -723,7 +711,6 @@ img {
 #new-highscore, #draw, #no-highscore {
     text-align: center;
     font-size: 2rem;
-
 }
 
 @media screen and (min-width: 1025px) {
@@ -806,7 +793,6 @@ img {
         -ms-grid-column: 2;
         -ms-grid-column-span: 2;
         grid-column: 2 / 4;
-
     }
 
     .challenge-mode-margin-right {
@@ -835,7 +821,6 @@ img {
            -moz-column-gap: 1.5rem;
                 column-gap: 1.5rem;
         width: 700px;
-    
     }
 
     #chill, #challenge {
@@ -904,7 +889,8 @@ img {
         height: 230px;
         width: 100%;
     }
-    /* Contact form */
+
+    /* Contact form only for desktop*/
     #contact-form {
         font-size: 1.2rem;
         display: -ms-grid;
@@ -971,6 +957,7 @@ img {
 
 
 @media screen and (min-width: 2000px) {
+    
     .game-header {
         display: -ms-grid;
         display: grid;
