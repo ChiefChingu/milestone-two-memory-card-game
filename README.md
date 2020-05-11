@@ -6,7 +6,6 @@ Also, there are two game modes: a mode where you play at your leisure. You can s
 ## UX
 Although this project is a default/standard project, I decided to use the method of Jesse Garrett: the five planes of UX.
 
-
 Since this game depends heavily on the interpretation of images, I decided to warn users that rely on assistive technology (e.g. screen readers). An ```aria-label``` attribute is added explaining that this game is not suitable for use with assistive technology. Also, I warn them that there are no image alt tags specified for the game images.
 
 ### Strategy Plane
@@ -57,6 +56,8 @@ Contrasting colors:
 - Blue for the cards (#2a97ce).
 - Orange for CTAs (#ff8d1a).
 - Pink for secondary contrast (#e166c4).
+
+The contrasting colors are checked in a [color blind web page filter](https://www.toptal.com/designers/colorfilter) with good results on all filters.
 
 ### User Stories
 As a user I want to:
