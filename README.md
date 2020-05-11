@@ -181,8 +181,6 @@ As a user I want to:
     - to check CSS
     - [https://jigsaw.w3.org/css-validator/](https://jigsaw.w3.org/css-validator/)
 
-JS note: acknowledge the fact that JS code could be far more efficiently written. Make it modular, classes, no global variables, etc. At this stage, this is something I'd like to do, but cannot.
-
 ## Testing
 For a detailed overview: see [TEST.md](https://github.com/ChiefChingu/milestone-two-memory-card-game/blob/master/TEST.md).
 
@@ -193,3 +191,6 @@ Add to credits: https://javascript.info/event-delegation
 Modal W3Schools
 Shuffle cards
 safari detection: https://www.geeksforgeeks.org/how-to-detect-the-user-browser-safari-chrome-ie-firefox-and-opera-using-javascript/
+
+## Special note on JavaScript
+JS note: acknowledge the fact that JS code could be far more efficiently written. Make it modular, classes, no global variables, etc. At this stage, this is something I'd like to do, but cannot.
