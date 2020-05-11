@@ -152,7 +152,7 @@ As a user I want to:
 
 ### Libraries
 - JQuery
-    - only for the shuffle cards function (see [Credits](# credits))
+    - only for the shuffle cards function, see [Credits](# credits)
     - [https://jquery.com](https://jquery.com)
 - Google Fonts
     - to use Lato fonts
@@ -199,7 +199,7 @@ To publish the website:
 - Under GitHub pages, click on the dropdown under 'Source' and select the 'Master Branch' option.
 - A green box should appear with the following message 'Your site is published at https://chiefchingu.github.io/milestone-two-memory-card-game/'.
 
-For more information and great details about publishing: (GitHub)[https://help.github.com/en/github/working-with-github-pages/configuring-a-publishing-source-for-your-github-pages-site].
+For more information and great details about publishing: [GitHub](https://help.github.com/en/github/working-with-github-pages/configuring-a-publishing-source-for-your-github-pages-site).
 
 ### Cloning a Repository
 To clone the website from within your IDE:
