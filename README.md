@@ -162,7 +162,24 @@ As a user I want to:
     - [https://fontawesome.com](https://fontawesome.com) 
 
 ### Other tools
-
+- Color blind filter
+    - to check the used color palette
+    - [https://www.toptal.com/designers/colorfilter](https://www.toptal.com/designers/colorfilter)
+- Sqoosh
+    - to compress images for faster loading on mobile and desktop
+    - [https://squoosh.app](https://squoosh.app)
+- GT Metrix
+    - to check the loading times
+    - [https://gtmetrix.com](https://gtmetrix.com)
+- JSHint
+    - to check JavaScript
+    - [https://jshint.com](https://jshint.com)
+- Markup Validation Service
+    - to check HTML
+    - [https://validator.w3.org](https://validator.w3.org)
+- CSS Validation Service
+    - to check CSS
+    - [https://jigsaw.w3.org/css-validator/](https://jigsaw.w3.org/css-validator/)
 
 JS note: acknowledge the fact that JS code could be far more efficiently written. Make it modular, classes, no global variables, etc. At this stage, this is something I'd like to do, but cannot.
 
