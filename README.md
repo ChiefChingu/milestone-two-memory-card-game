@@ -6,11 +6,46 @@ Also, there are two game modes: a mode where you play at your leisure. You can s
 You can play the game [here](https://chiefchingu.github.io/milestone-two-memory-card-game/).
 
 ## UX
+Although this project is a default/standard project, I decided to use the method of Jesse Garrett: the five planes of UX.
+
 This project is designed with the mobile user in mind. The [wireframes](#) reflect this: mobile first and desktop second. Also, the code is written from the mobile perspective: the mobile viewport is the baseline. Media queries are used to handle the desktop viewport.
 
 Since this game depends heavily on the interpretation of images, I decided to warn users that rely on assistive technology (e.g. screen readers). An ```aria-label``` attribute is added explaining that this game is not suitable for use with assistive technology. Also, I warn them that there are no image alt tags specified for the game images.
 
-Do we need something on UX planes????
+### Strategy Plane
+The strategy plane defines the product objectives (goals of the developer and/or organization) and the user needs (goals that come from outside).
+
+#### Product objectives
+There is one clear goal for me to create this product: show my skills and qualifications in order to pass the second milestone project.
+I added one more objective to this: I want to get a score of at least 80% in order to receive 'first grade honors' at the end of the complete course.
+
+#### User needs
+Difficult to determine the user needs. There is clearly no real problem that is solved by this game. The number one user need is: kill some time in a fun way. 
+
+### Scope Plane
+Basic features for a memory card game are:
+- cards that form a match.
+- clickable cards that turn and show the other side.
+- a counter to show how many moves you made.
+
+Advanced features for a high grade are:
+- multiple game modes.
+- keep track of highscores.
+- add a twist to the matches you need to find.
+
+Full details on features: [Features](#features).
+
+### Structure Plane
+The structure of the site is very simple: homepage connects to the game page, about page and contact page.
+The game page has one child: the game-over page.
+
+structure-plane.png
+
+### Skeleton Plane
+
+
+### Surface Plane
+
 
 ### User Stories
 As a user I want to:
