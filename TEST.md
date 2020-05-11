@@ -4,7 +4,11 @@ Back to the [README](https://github.com/ChiefChingu/milestone-two-memory-card-ga
 First I tested the project with the validators for css and markup. Then I manually tested all user stories and features (if relevant). All results are displayed below. The last section goes into more detail of the issues I encountered.
 
 ## W3C CSS Validation Service
-No errors or warnings to show: [style.css](https://jigsaw.w3.org/css-validator/validator?uri=https%3A%2F%2Fchiefchingu.github.io%2Fmilestone-two-memory-card-game%2F&profile=css3svg&usermedium=all&warning=1&vextwarning=&lang=nl).
+Upon recommendation by Code Institute, I used the autoprefix tool to add vendor prefixes. This unfortunately led to errors and warnings in the CSS while using the validator of jigsaw.w3.org. However, when using the validator of css-validator.org there were no errors and warnings. To be sure I also sent a request to Student Care about the issue of autoprefixer and validation.
+
+No errors or warnings: [style.css](http://www.css-validator.org/validator?uri=https%3A%2F%2Fchiefchingu.github.io%2Fmilestone-two-memory-card-game%2F&profile=css21&usermedium=all&warning=1&lang=en).
+
+Errors and warnings due to autoprefix: [style.css](https://jigsaw.w3.org/css-validator/validator?uri=https%3A%2F%2Fchiefchingu.github.io%2Fmilestone-two-memory-card-game%2F&profile=css3svg&usermedium=all&warning=1&vextwarning=&lang=nl).
 
 ## W3C Markup Validation Service
 No errors or warnings to show:
@@ -12,6 +16,8 @@ No errors or warnings to show:
 - [game.html](https://validator.w3.org/nu/?doc=https%3A%2F%2Fchiefchingu.github.io%2Fmilestone-two-memory-card-game%2Fgame.html).
 - [game-over.html](https://validator.w3.org/nu/?doc=https%3A%2F%2Fchiefchingu.github.io%2Fmilestone-two-memory-card-game%2Fgame-over.html).
 - [contact.html](https://validator.w3.org/nu/?doc=https%3A%2F%2Fchiefchingu.github.io%2Fmilestone-two-memory-card-game%2Fcontact.html).
+
+
 
 ## User stories
 Each user story is tested thoroughly. All steps are taken in the main browsers at 3 different viewports: mobile (including tablet) and desktop.
