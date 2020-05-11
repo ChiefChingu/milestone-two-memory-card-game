@@ -1,66 +1,92 @@
 <!DOCTYPE html>
 <html lang="en">
-<head>
+
+  <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Game Over | Memory Challenge</title>
     <link rel="stylesheet" href="./assets/styles/style.css">
     <link href="https://fonts.googleapis.com/css?family=Lato&display=swap" rel="stylesheet">
     <script src="https://cdn.jsdelivr.net/npm/emailjs-com@2.4.1/dist/email.min.js"></script>
-    
-</head>
-    <body>
-        <header class="site-header" aria-label="This site contains a visual memory game. The game is not suitable to play via a screen reader.">
-            <div class="site-header__menu-icon">
-                <div class="site-header__menu-icon__middle"></div>
+  </head>
+
+  <body>
+
+    <header class="site-header" aria-label="This site contains a visual memory game. The game is not suitable to play via a screen reader.">
+      
+      <div class="site-header__menu-icon">
+          <div class="site-header__menu-icon__middle"></div>
+      </div>
+
+      <nav class="desktop-nav">
+        <ul>
+          <li><a href="index.html">Home</a></li>
+          <li><a href="game.html">Game</a></li>
+          <li><a href="about.html">About</a></li>
+          <li><a href="contact.html">Contact</a></li>
+        </ul>
+      </nav>
+
+      <h1 class="site-header-title">Good Game!</h1>
+
+      <div class="site-header__overlay">
+        <div class="site-header__overlay-content">
+          
+          <nav class="primary-nav">
+            <ul>
+              <li><a href="index.html">Home</a></li>
+              <li><a href="game.html">Game</a></li>
+              <li><a href="about.html">About</a></li>
+            </ul>
+          </nav>
+
+          <div class="site-header__overlay-contact">
+            <form id="contact-form">
+
+              <p class="contact-form-text">
+                Feel free to leave a message with your suggestions, questions or compliments!
+              </p>
+
+              <input type="hidden" name="contact_number">
+              <label>Name</label>
+              <input type="text" name="user_name" required>
+              <label>Email</label>
+              <input type="email" name="user_email" required>
+              <label>Message</label>
+              <textarea name="message" required></textarea>
+              <input class="btn" type="submit" value="Send">
+
+            </form>
+
+            <div id="contact-form-thank-you">
+              <p>Thanks for contacting!</p>
             </div>
-            <nav class="desktop-nav">
-              <ul>
-                <li><a href="index.html">Home</a></li>
-                <li><a href="game.html">Game</a></li>
-                <li><a href="about.html">About</a></li>
-                <li><a href="contact.html">Contact</a></li>
-              </ul>
-            </nav>
-            <h1 class="site-header-title">Good Game!</h1>
-            <div class="site-header__overlay">
-              <div class="site-header__overlay-content">
-                <nav class="primary-nav">
-                  <ul>
-                    <li><a href="index.html">Home</a></li>
-                    <li><a href="game.html">Game</a></li>
-                    <li><a href="about.html">About</a></li>
-                  </ul>
-                </nav>
-                <div class="site-header__overlay-contact">
-                  <form id="contact-form">
-                    <p class="contact-form-text">
-                      Feel free to leave a message with your suggestions, questions or compliments!
-                    </p>
-                    <input type="hidden" name="contact_number">
-                    <label>Name</label>
-                    <input type="text" name="user_name" required>
-                    <label>Email</label>
-                    <input type="email" name="user_email" required>
-                    <label>Message</label>
-                    <textarea name="message" required></textarea>
-                    <input class="btn" type="submit" value="Send">
-                  </form>
-                  <div id="contact-form-thank-you">
-                    <p>Thanks for contacting!</p>
-                  </div>
-                </div>
-              </div>
-            </div>
-        </header>
-        <div class="wrapper wrapper-game-over">
-            <div class="explanation">
-                <p>All pictures are made by James Fridman. A great guy that makes hilarious edits to pictures that are sent to him for corrections.</p>
-                <img class="game-over-img" src="assets/images/jamesfridman.com.png" alt="james fridman">
-                <p>Unfortunately, there is no link to each individual request on his site. You'll have to manually browse his catalogue to find the ones that are used. This is however a very fun thing to do! Check it out <a target="blank" href="https://www.jamesfridman.com">here</a>.</p>
-            </div>
-            <a class="btn" href="game.html">play again!</a>
+
+          </div>
+
         </div>
-        <script src="./assets/scripts/MobileMenu.js"></script>
-    </body>
+      </div>
+
+    </header>
+
+    <div class="wrapper wrapper-game-over">
+
+      <div class="explanation">
+
+        <p>All pictures are made by James Fridman. A great guy that makes hilarious edits to pictures that are sent to him for corrections.</p>
+
+        <img class="game-over-img" src="assets/images/jamesfridman.com.png" alt="james fridman">
+
+        <p>Unfortunately, there is no link to each individual request on his site. You'll have to manually browse his catalogue to find the ones that are used. This is however a very fun thing to do! Check it out <a target="blank" href="https://www.jamesfridman.com">here</a>.</p>
+        
+      </div>
+      
+      <a class="btn" href="game.html">play again!</a>
+
+    </div>
+
+    <script src="./assets/scripts/MobileMenu.js"></script>
+
+  </body>
+
 </html>
