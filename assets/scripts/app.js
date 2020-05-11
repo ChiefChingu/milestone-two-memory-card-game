@@ -7,7 +7,7 @@ const easy = 4;
 const medium = 8;
 const hard = 12;
 let userChoice;
-let challengeMode = true; //Challenge mode.
+let challengeMode = true; //Challenge mode has 3 levels and best score tracking.
 
 //Check if Apple device. If yes: no animation.
 let userAgentString = navigator.userAgent; 
@@ -57,19 +57,26 @@ class Menu {
     }
 
     onClick(event) {
+
       let action = event.target.dataset.action;
       if (action) {
+
         this[action]();
         totalMatches = userChoice/2;
         determineCards();
+        challengeMode = false;
+
+        // Hide the game mode selection
         startChillModal.style.display = "none";
         startChillBtn.style.display = "none";
-        challengeMode = false;
         gameSelector.style.display = "none";
+
+        //Remove the best score tracker and compensate layout
         document.querySelector(".site-header-title").style.display = "none";
         document.getElementById("game-header__game-data").style.display = "initial";
         document.getElementById("bestScoreDiv").style.display = "none";
         document.getElementById("movesDiv").classList.remove("challenge-mode-margin-right");
+
       }
     };
 }
@@ -79,17 +86,24 @@ class Menu {
 document.getElementById('challenge').addEventListener('click', startChallengeMode);
 
 function startChallengeMode() {
+
     challengeMode = true;
     userChoice = 4;
     determineCards();
+
+    // Hide the game mode selection
     gameSelector.style.display = "none";
+
+    //Adjust header: two counters
     document.getElementById("game-header__game-data").style.display = "grid";
     document.querySelector(".site-header-title").style.display = "none";
     updateBestMovesCounter();
+
 }
 
 //Make selected number of cards visible.
 function determineCards() {
+
     for(let i = 0; i < userChoice; i++) {
 
         cards[i].classList.remove('not-in-game');
@@ -107,6 +121,7 @@ function determineCards() {
 */
 
 function turnLogic() {
+
     //Check if card is first card.
     if(allowedTurns == 2 && this.classList.contains('clickable')) {
 
@@ -185,7 +200,7 @@ function turnLogic() {
 //Animate cards on match.
 function animateCards() {
 
-    if(!safariAgent) {
+    if(!safariAgent) { //Animation is bugged on Safari
 
         cardValueTurnOne.lastElementChild.className = 'back-face-hidden';
         cardValueTurnTwo.lastElementChild.className = 'back-face-hidden';
@@ -202,14 +217,15 @@ function animateCards() {
 function checkGameFinished() {
         
         if(matchesMade === totalMatches) {
+
             if(challengeMode) {
 
-                if(matchesMade === allMatchesInGame) {
+                if(matchesMade === allMatchesInGame) { //End of game
                      
-                    localStorage.setItem("lastGameLocal", numberOfMoves);
+                    localStorage.setItem("lastGameLocal", numberOfMoves); //Set localStorage for use in Highscore.js
                     window.location.href = "game-over-challenge-mode.html";
 
-                } else {
+                } else { //New level of challenge mode
 
                     matchesMade = 0;
                     userChoice = userChoice + 4; //Add more cards for next level.
@@ -218,7 +234,7 @@ function checkGameFinished() {
 
                 }
 
-            } else {
+            } else { //Chill mode game over page
                 
                 window.location.href = "game-over.html";
     
@@ -251,7 +267,7 @@ function updateCounter() {
 //Update best score counter.
 function updateBestMovesCounter() {
 
-    if(localStorage.getItem("storedBestScore") === null) {
+    if(localStorage.getItem("storedBestScore") === null) { //In case first game or highscore reset
         
         document.getElementById("game-header__game-data").style.display = "initial";
         document.getElementById("bestScoreDiv").style.display = "none";
