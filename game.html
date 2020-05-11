@@ -1,5 +1,6 @@
 <!DOCTYPE html>
 <html lang="en">
+
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
@@ -9,13 +10,16 @@
     <script src="https://kit.fontawesome.com/aca8a0f519.js" crossorigin="anonymous"></script>
     <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.4.1/jquery.min.js"></script>
     <script src="https://cdn.jsdelivr.net/npm/emailjs-com@2.4.1/dist/email.min.js"></script>
-    
 </head>
+
 <body>
+
     <header class="game-header" aria-label="This page contains a visual memory game. The game is not suitable to play via a screen reader. The images in this game have no alt tag text.">
-        <div class="site-header__menu-icon">
+        
+        div class="site-header__menu-icon">
             <div class="site-header__menu-icon__middle"></div>
         </div>
+
         <nav class="desktop-nav">
           <ul>
             <li><a href="index.html">Home</a></li>
@@ -24,9 +28,12 @@
             <li><a href="contact.html">Contact</a></li>
           </ul>
         </nav>
+
         <h1 class="site-header-title">Select Mode</h1>
+
         <div class="site-header__overlay">
           <div class="site-header__overlay-content">
+
             <nav class="primary-nav">
               <ul>
                 <li><a href="index.html">Home</a></li>
@@ -34,11 +41,14 @@
                 <li><a href="about.html">About</a></li>
               </ul>
             </nav>
+
             <div class="site-header__overlay-contact">
               <form id="contact-form">
+                
                 <p class="contact-form-text">
                   Feel free to leave a message with your suggestions, questions or compliments!
                 </p>
+
                 <input type="hidden" name="contact_number">
                 <label>Name</label>
                 <input type="text" name="user_name" required>
@@ -47,52 +57,69 @@
                 <label>Message</label>
                 <textarea name="message" required></textarea>
                 <input class="btn" type="submit" value="Send">
+
               </form>
+
               <div id="contact-form-thank-you">
                 <p>Thanks for contacting!</p>
               </div>
+
             </div>
+
           </div>
         </div>
+
         <div id="game-header__game-data">
             <h3 id="movesDiv" class="grid-align-right challenge-mode-margin-right">Moves made<br> <span id="moves">0 </span></h3>
             <h3 id="bestScoreDiv" class="grid-align-left">Best score<br><span id="bestScore">0 </span></h3>
-        </div>           
+        </div>
+
     </header>
 
     <div id=game-mode-selection>
+
         <a id="chill">
             <h2>Chill mode</h2>
             <i class="fas fa-umbrella-beach fa-3x icon"></i>
             <p>Sit back, relax and have a laugh! <br>No highscores, just fun.</p>
             <div class="btn game-mode-selection-btn">let me laugh!</div>
         </a>
+
         <a id="challenge">
             <h2>Challenge mode</h2>
             <i class="fas fa-trophy fa-3x icon"></i>
             <p>Start simple, but beware: every level gets more cards...</p>
             <div class="btn game-mode-selection-btn">I'm a winner!</div>
         </a>
+
     </div>
 
-    <!-- Modal for chill mode -->
+    <!-- Modal for chill mode difficulty setting -->
     <div id="startChillModal" class="modal">
         <div class="modal-content">
+
             <span class="close">&times;</span>
+
             <div class="modal-content-choices" id="menu">
                 <h2>Select a difficulty</h2>
-                    <a data-action="easy" class="level btn">easy</a>
-                    <p>4 cards</p>    
-                    <a data-action="medium" class="level btn">medium</a>
-                    <p>8 cards</p>
-                    <a data-action="hard" class="level btn">expert</a>
-                    <p>12 cards<br><span class="hide-on-desktop">scroll necessary on mobile</span></p>
+
+                <a data-action="easy" class="level btn">easy</a>
+                <p>4 cards</p>
+
+                <a data-action="medium" class="level btn">medium</a>
+                <p>8 cards</p>
+
+                <a data-action="hard" class="level btn">expert</a>
+                <p>12 cards<br><span class="hide-on-desktop">scroll necessary on mobile</span></p>
+
             </div>
+
         </div>
     </div>
 
     <!-- Game grid -->
     <div class="memory-game">
+
         <div data-cardvalue="1" data-type="a" class="card not-in-game clickable">
             <picture class="front-face">
                 <source srcset="assets/images/1-james-a-desktop.jpg" media="(min-width: 600px)">
@@ -101,14 +128,16 @@
             <div class="context">Sure.</div>
             <div class="back-face"></div>
         </div>
+
         <div data-cardvalue="1" data-type="q" class="card not-in-game clickable">
             <picture class="front-face" >
                 <source srcset="assets/images/1-james-q-desktop.jpg" media="(min-width: 600px)">
-                <img src="assets/images/1-james-q-mobile.jpg" alt="">
+                <img src="assets/images/1-james-q-mobile.jpg" alt=""> <!-- Empty alt --> 
             </picture>
             <div class="context">Can you take the lamp out?</div>
             <div class="back-face"></div>
         </div>
+
         <div data-cardvalue="2" data-type="a" class="card not-in-game clickable">
             <picture class="front-face" >
                 <source srcset="assets/images/2-james-a-desktop.jpg" media="(min-width: 600px)">
@@ -117,6 +146,7 @@
             <div class="context">1 : 0</div>
             <div class="back-face"></div>
         </div>
+
         <div data-cardvalue="2" data-type="q" class="card not-in-game clickable">
             <picture class="front-face">
                 <source srcset="assets/images/2-james-q-desktop.jpg" media="(min-width: 600px)">
@@ -125,6 +155,7 @@
             <div class="context">Can you make it like I fight the goose?</div>
             <div class="back-face"></div>
         </div>
+
         <div data-cardvalue="3" data-type="a" class="card not-in-game clickable">
             <picture class="front-face" >
                 <source srcset="assets/images/3-james-a-desktop.jpg" media="(min-width: 600px)">
@@ -133,6 +164,7 @@
             <div class="context">Sure.</div>
             <div class="back-face"></div>
         </div>
+
         <div data-cardvalue="3" data-type="q" class="card not-in-game clickable">
             <picture class="front-face" >
                 <source srcset="assets/images/3-james-q-desktop.jpg" media="(min-width: 600px)">
@@ -141,6 +173,7 @@
             <div class="context">Can you put me in a cool place?</div>
             <div class="back-face"></div>
         </div>
+
         <div data-cardvalue="4" data-type="a" class="card not-in-game clickable">
             <picture class="front-face" >
                 <source srcset="assets/images/4-james-a-desktop.jpg" media="(min-width: 600px)">
@@ -149,6 +182,7 @@
             <div class="context">Here you go.</div>
             <div class="back-face"></div>
         </div>
+
         <div data-cardvalue="4" data-type="q" class="card not-in-game clickable">
             <picture class="front-face" >
                 <source srcset="assets/images/4-james-q-desktop.jpg" media="(min-width: 600px)">
@@ -157,6 +191,7 @@
             <div class="context">Can you get more leaves on the tree?</div>
             <div class="back-face"></div>
         </div>
+
         <div data-cardvalue="5" data-type="a" class="card not-in-game clickable">
             <picture class="front-face">
                 <source srcset="assets/images/5-james-a-desktop.jpg" media="(min-width: 600px)">
@@ -165,6 +200,7 @@
             <div class="context">Done.</div>
             <div class="back-face"></div>
         </div>
+
         <div data-cardvalue="5" data-type="q" class="card not-in-game clickable">
             <picture class="front-face">
                 <source srcset="assets/images/5-james-q-desktop.jpg" media="(min-width: 600px)">
@@ -173,6 +209,7 @@
             <div class="context">Can you make our shirts the same?</div>
             <div class="back-face"></div>
         </div>
+
         <div data-cardvalue="6" data-type="a" class="card not-in-game clickable">
             <picture class="front-face">
                 <source srcset="assets/images/6-james-a-desktop.jpg" media="(min-width: 600px)">
@@ -181,6 +218,7 @@
             <div class="context">Bigger and closer!</div>
             <div class="back-face"></div>
         </div>
+
         <div data-cardvalue="6" data-type="q" class="card not-in-game clickable">
             <picture class="front-face">
                 <source srcset="assets/images/6-james-q-desktop.jpg" media="(min-width: 600px)">
@@ -189,9 +227,13 @@
             <div class="context">Can you make the waterfall bigger or closer?</div>
             <div class="back-face"></div>
         </div>
+
     </div>
     <!-- End game grid -->
+
     <script src="./assets/scripts/app.js"></script>
     <script src="./assets/scripts/MobileMenu.js"></script>
+
 </body>
+
 </html>

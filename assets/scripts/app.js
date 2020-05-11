@@ -237,7 +237,8 @@ function resetBoard() {
         card.classList.remove('visible');
         card.classList.add('clickable');
         card.classList.remove('animation');
-        card.firstElementChild.children[1].classList.remove('animation');
+        cardValueTurnOne.firstElementChild.classList.remove('animation');
+        cardValueTurnTwo.firstElementChild.classList.remove('animation');
         card.lastElementChild.className = 'back-face';
         
     });    

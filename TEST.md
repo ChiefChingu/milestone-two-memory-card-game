@@ -278,12 +278,12 @@ I then decided to show text on the flipped card when there is a match. Still, th
 Being able to target the right individual card I wondered why I could not use this to get the slider working. I tried the slider again, but ran into the same issue, so left it behind for good. I now slide in the context without a button click.
 
 ### Add animation on match
-When there is a match of cards I want to show this visually by nudging the matched pair. For some reason the cards first show the back-face, nudge and then show the front-face again. I tried targeting different elements of the card: 
-```cardValueTurnOne.firstElementChild.children[1].classList.add('animation');``` results in adding the animation to the front-face. The picture disappears for the duration of the animation and then appears again.
+When there is a match of cards I want to show this visually by nudging the matched pair. For some reason the cards first show the back-face, nudge and then show the ```front-face``` again. I tried targeting different elements of the card: 
+```cardValueTurnOne.firstElementChild.children[1].classList.add('animation');``` results in adding the animation to the ```front-face```. The picture disappears for the duration of the animation and then appears again.
 
-I tried removing the back-face, but then I end up with a white space. When I added the animation to both the parent (div class card) and the front-face the animation worked! However, putting the back-face back, caused the same problems as before. But, now I could at least see the animation work as intended.
+I tried removing the ```back-face```, but then I end up with a white space. When I added the animation to both the parent (```<div class="card"```) and the ```front-face``` the animation worked! However, putting the ```back-face``` back, caused the same problems as before. But, now I could at least see the animation work as intended.
 
-Next step is to disable the back-face on a match before the animation happens. End result:
+Next step is to disable the ```back-face``` on a match before the animation happens. End result:
 ```javascript
 function animateCards() {
 
@@ -295,6 +295,13 @@ function animateCards() {
     cardValueTurnTwo.firstElementChild.children[1].classList.add('animation');
     
 }
+```
+
+Then I found out that the animation did not work on Firefox... After many tries, I finally found the issue: the class ```front-face``` was set on the ```img```. I moved it up to the parent element ```<picture>``` and this solved the problem. Of course, I needed to change the DOM selecting too.
+
+```javascript
+cardValueTurnOne.firstElementChild.classList.add('animation');
+cardValueTurnTwo.firstElementChild.classList.add('animation');
 ```
 
 Unfortunately, tests on Safari were not successful: the animation works, but then the card disappears completely. I tried many different things: switch order of animation, set background colors to transparent, set animation fill-mode. Nothing worked. The fact that I only have an iPhone to test is not helping. I cannot see in the console what exactly happens. Finally, I decided to disable the animation for Safari users.
@@ -327,3 +334,8 @@ When starting the game on screens with 1920 x 1080 resolution, the game is not d
 For the challenge mode I wanted to keep highscores. Or better: best score, since the lower your moves count is, the better your score is. I read about localStorage and wanted to use this to track your score.
 
 It gave some serious headaches to compare new scores with the saved localStorage best score. I wanted the best score only when there was a best score. So, when you play for the first time, there is no best score. Only your last score. Also, since I started the code with declaring the variables at each page refresh, the saved values were overwritten. When I finally found out that you can declare localStorage without first declaring the variable I could make this functionality work flawlessly. The code is in the file [Highscore.js](https://github.com/ChiefChingu/milestone-two-memory-card-game/blob/master/assets/scripts/highscore.js).
+
+### Animation bug
+After the first challenge (four cards) the second challenge loads. Upon loading you can see some cards animate while not being turned. It appears that the four cards from the first level do this. Also, when flipping these cards and forming a match they disappear for a second and come back. No more animation here. The eight cards from this level now bug as well in the next level with 12 cards.
+
+It seemed that I accidentally forgot to adjust the removal of the animation when the board is reset for the next level (script tries to remove the animation from the img tag, which no longer has a class. See )
