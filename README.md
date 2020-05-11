@@ -185,9 +185,33 @@ As a user I want to:
     - [https://autoprefixer.github.io](https://autoprefixer.github.io)
 
 ## Testing
-For a detailed overview: see [TEST.md](https://github.com/ChiefChingu/milestone-two-memory-card-game/blob/master/TEST.md).
+All standard online tests passed without any problems.
+
+The manual tests are detailed in the [TEST.md](https://github.com/ChiefChingu/milestone-two-memory-card-game/blob/master/TEST.md).
 
 ## Deployment
+### GitHub Pages
+To publish the website:
+
+- Open GitHub and go to your site's 'Repositories'.
+- Go to 'Settings'.
+- Scroll down until you see 'GitHub Pages'.
+- Under GitHub pages, click on the dropdown under 'Source' and select the 'Master Branch' option.
+- A green box should appear with the following message 'Your site is published at https://chiefchingu.github.io/milestone-two-memory-card-game/'.
+
+For more information and great details about publishing: (GitHub)[https://help.github.com/en/github/working-with-github-pages/configuring-a-publishing-source-for-your-github-pages-site].
+
+### Cloning a Repository
+To clone the website from within your IDE:
+
+- Go to the main page of the GitHub repository and click on the dropdown menu 'Clone or download'.
+- Select 'Clone with HTTPS'.
+- Open the command line in your IDE.
+- Navigate to the directory where you want to clone the project.
+- Type 'git clone' followed by the copied URL: paste it right after 'git clone'.
+- Press 'Enter' and the local clone will be created
+
+For more information and details about cloning: [GitHub](https://help.github.com/en/github/creating-cloning-and-archiving-repositories/cloning-a-repository-from-github).
 
 ## Credits
 Add to credits: https://javascript.info/event-delegation
