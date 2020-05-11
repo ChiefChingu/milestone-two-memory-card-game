@@ -138,6 +138,30 @@ As a user I want to:
 - Animations for Safari users. Currently, animations are disabled for Safari users: there is a bug which I cannot fix. Probably need a Macbook to be able to check the Safari browser console.
 
 ## Technologies Used
+### Languages
+- HTML
+    - to create the elements
+    - [https://whatwg.org](https://whatwg.org)
+- CSS
+    - to style the html elements
+    - [https://www.w3.org/Style/CSS/](https://www.w3.org/Style/CSS/)
+- JavaScript
+    - to provide interactivity and logic
+    - [https://developer.mozilla.org/en-US/docs/Web/JavaScript](https://developer.mozilla.org/en-US/docs/Web/JavaScript)
+
+### Libraries
+- JQuery
+    - only for the shuffle cards function (see [Credits](# credits))
+    - [https://jquery.com](https://jquery.com)
+- Google Fonts
+    - to use Lato fonts
+    - [https://fonts.google.com/specimen/Lato](https://fonts.google.com/specimen/Lato)
+- Font Awesome
+    - to use icons
+    - [https://fontawesome.com](https://fontawesome.com) 
+
+### Other tools
+
 
 JS note: acknowledge the fact that JS code could be far more efficiently written. Make it modular, classes, no global variables, etc. At this stage, this is something I'd like to do, but cannot.
 
