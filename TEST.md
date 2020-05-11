@@ -11,6 +11,18 @@ No errors or warnings: [style.css](http://www.css-validator.org/validator?uri=ht
 Errors and warnings due to autoprefix: [style.css](https://jigsaw.w3.org/css-validator/validator?uri=https%3A%2F%2Fchiefchingu.github.io%2Fmilestone-two-memory-card-game%2F&profile=css3svg&usermedium=all&warning=1&vextwarning=&lang=nl).
 
 ## W3C Markup Validation Service
+First time use lead to the following errors.
+
+Possible misuse of 'aria-label'. 
+I moved the aria-label from the body tag to the header tag and this solved the error.
+
+Attribute 'alt' is not allowed on element 'input'. 
+I added this upon reading about alt text. It was advised to add a description to the form button.
+
+*You should also remember to add alt text to form buttons. Otherwise, screen readers might pass over them and some visitors won’t be able to interact with your website.* [Source](https://ahrefs.com/blog/alt-text/)
+
+I removed the alt text from the forms to solve this error.
+
 No errors or warnings to show:
 - [index.html](https://validator.w3.org/nu/?doc=https%3A%2F%2Fchiefchingu.github.io%2Fmilestone-two-memory-card-game%2F).
 - [game.html](https://validator.w3.org/nu/?doc=https%3A%2F%2Fchiefchingu.github.io%2Fmilestone-two-memory-card-game%2Fgame.html).
