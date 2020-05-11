@@ -187,12 +187,13 @@ function animateCards() {
 
     if(!safariAgent) {
 
+        cardValueTurnOne.lastElementChild.className = 'back-face-hidden';
+        cardValueTurnTwo.lastElementChild.className = 'back-face-hidden';
         cardValueTurnOne.classList.add('animation');
         cardValueTurnTwo.classList.add('animation');
         cardValueTurnOne.firstElementChild.classList.add('animation');
         cardValueTurnTwo.firstElementChild.classList.add('animation');
-        cardValueTurnOne.lastElementChild.className = 'back-face-hidden';
-        cardValueTurnTwo.lastElementChild.className = 'back-face-hidden';
+        
 
     }  
 }
