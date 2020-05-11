@@ -159,7 +159,10 @@ As a user I want to:
     - [https://fonts.google.com/specimen/Lato](https://fonts.google.com/specimen/Lato)
 - Font Awesome
     - to use icons
-    - [https://fontawesome.com](https://fontawesome.com) 
+    - [https://fontawesome.com](https://fontawesome.com)
+- EmailJS
+    - to send contact form
+    - [https://www.emailjs.com](https://www.emailjs.com)
 
 ### Other tools
 - Color blind filter
@@ -185,9 +188,9 @@ As a user I want to:
     - [https://autoprefixer.github.io](https://autoprefixer.github.io)
 
 ## Testing
-All standard online tests passed without any problems.
+All standard online tests passed without any major problems.
 
-The manual tests are detailed in the [TEST.md](https://github.com/ChiefChingu/milestone-two-memory-card-game/blob/master/TEST.md).
+The online and manual tests are detailed in the [TEST.md](https://github.com/ChiefChingu/milestone-two-memory-card-game/blob/master/TEST.md).
 
 ## Deployment
 ### GitHub Pages
