@@ -152,7 +152,7 @@ As a user I want to:
 
 ### Libraries
 - JQuery
-    - only for the shuffle cards function, see [Credits](# credits)
+    - only for the shuffle cards function (see [Credits](#credits))
     - [https://jquery.com](https://jquery.com)
 - Google Fonts
     - to use Lato fonts
