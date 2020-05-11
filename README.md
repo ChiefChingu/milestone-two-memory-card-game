@@ -217,11 +217,18 @@ To clone the website from within your IDE:
 For more information and details about cloning: [GitHub](https://help.github.com/en/github/creating-cloning-and-archiving-repositories/cloning-a-repository-from-github).
 
 ## Credits
-Add to credits: https://javascript.info/event-delegation
-Modal W3Schools
-Shuffle cards
-safari detection: https://www.geeksforgeeks.org/how-to-detect-the-user-browser-safari-chrome-ie-firefox-and-opera-using-javascript/
-Mobile menu
+### Content
+All copy is own content.
+
+### Media
+All media comes from James Fridman. Do visit his [site](https://www.jamesfridman.com) and [foundation](https://www.jamesfridmanfoundation.org)!
+
+### Acknowledgements
+- For the three buttons in the Chill mode modal I used the functionality from [https://javascript.info/event-delegation](https://javascript.info/event-delegation).
+- The Chill mode modal is based on the modal from [W3Schools](https://www.w3schools.com/howto/howto_css_modals.asp).
+- The shuffle card function is based on this snippet at [JSFiddle](https://jsfiddle.net/C6LPY/2/).
+- To detect Safari browsers I made use of this [article](https://www.geeksforgeeks.org/how-to-detect-the-user-browser-safari-chrome-ie-firefox-and-opera-using-javascript/).
+- The mobile menu is an adaptation of the menu I learned in this course by[Brad Schiff](https://www.udemy.com/course/git-a-web-developer-job-mastering-the-modern-workflow/).
 
 ## Special note on JavaScript
 JS note: acknowledge the fact that JS code could be far more efficiently written. Make it modular, classes, no global variables, etc. At this stage, this is something I'd like to do, but cannot.
