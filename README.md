@@ -248,4 +248,5 @@ All media comes from James Fridman. Do visit his [site](https://www.jamesfridman
 - The mobile menu is an adaptation of the menu I learned in this course by[Brad Schiff](https://www.udemy.com/course/git-a-web-developer-job-mastering-the-modern-workflow/).
 
 ## Special note on JavaScript
-JS note: acknowledge the fact that JS code could be far more efficiently written. Make it modular, classes, no global variables, etc. At this stage, this is something I'd like to do, but cannot.
+The game works as intended. However, while coding the JavaScript logic, I soon felt the need to organize the code better. In my opinion it would be better to have separate files for the various game functions and game elements. Unfortunately, I did not manage to do this in a bug free way. While using modules I kept running into errors about variables that were not accessible. Also, I understand that I use lots of global variables which is bad practice. I checked in the Slack channel if this is something that is required at current skill level/milestone project. The answer is that this is not expected.
+
