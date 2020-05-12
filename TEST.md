@@ -55,6 +55,8 @@ Unfortunately, I could not fix these warnings. The code is from the event delega
 ## User stories
 Each user story is tested thoroughly. All steps are taken in the main browsers at 3 different viewports: mobile (including tablet) and desktop.
 
+Note that in this project the assumption is that there is only one type of user (one role).
+
 ### 1. See an inviting game that makes me curious and want to play!
 - Go to [https://chiefchingu.github.io/milestone-two-memory-card-game/](https://chiefchingu.github.io/milestone-two-memory-card-game/).
 - Homepage shows a catchy oneliner that triggers curiousity: try not to laugh.

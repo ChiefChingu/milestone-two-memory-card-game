@@ -76,7 +76,7 @@ Contrasting colors:
 The contrasting colors are checked in a [color blind web page filter](https://www.toptal.com/designers/colorfilter) with good results on all filters.
 
 ### User Stories
-As a user I want to:
+In this project the assumption is that there is only one type of user (one role). As a user I want to:
 
 1. See an inviting game that makes me curious and want to play!
 2. Choose how to play.
