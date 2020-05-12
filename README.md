@@ -40,7 +40,7 @@ The game page has one child: the game-over page.
 ### Skeleton Plane
 This project is designed with the mobile user in mind: mobile first and desktop second. The mobile viewport is the baseline. Media queries are used to handle the desktop viewport.
 
-The wireframes are found [here](#). 
+The wireframes are found [here](https://github.com/ChiefChingu/milestone-two-memory-card-game/blob/master/wireframes.pdf). 
 
 ### Surface Plane
 The final product can be viewed [here](https://chiefchingu.github.io/milestone-two-memory-card-game/).
