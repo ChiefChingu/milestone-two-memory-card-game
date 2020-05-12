@@ -204,6 +204,12 @@ Most of the features are covered by the test of user stories. For completeness, 
 |Contact page|contact form|OK|Only desktop|
 ||navigation on desktop|OK|
 
+## Aria-label
+One special remark on the testing of the ```aria-label```: I tried to test it with the following programs.
+
+- [Axe Accessibility](https://www.deque.com/axe/): did not detect the ```aria-label```.
+- [NV Access](https://www.nvaccess.org): did not read the label. There is a plugin for aria, but I could not install this: out of date.
+
 ## Issues and solutions
 ### Determine viewport and adjust number of cards.
 I tried to limit the number of cards on mobile for better UX (no scroll). First used ```display:none``` for the cards I wanted to hide. This worked, but it did not update the total number of possible matches. This was still based on all cards in the array. So, you could not win since the last matches were now from cards that are not displayed.
