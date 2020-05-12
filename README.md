@@ -1,5 +1,7 @@
 [Introduction](#introduction)
+
 [UX](#ux)
+
 - [Strategy plane](#strategy-plane)
 - [Scope plane](#scope-plane)
 - [Structure plane](#structure-plane)
