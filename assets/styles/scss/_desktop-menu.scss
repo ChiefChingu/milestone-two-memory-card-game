@@ -1,0 +1,23 @@
+.desktop-nav {
+    display: none;
+}
+
+@media screen and (min-width: 1025px) {
+
+    .desktop-nav {
+        display: initial;
+        text-align: end;
+        padding-right: 2rem;
+    }
+
+    .desktop-nav ul li {
+        display: inline-block;
+        padding: 0 0.5rem;
+    }
+
+    .desktop-nav a {
+        text-decoration: none;
+        color: white;
+    }
+
+}

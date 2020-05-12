@@ -1,0 +1,107 @@
+.site-header__overlay-contact {
+    margin-top: 2rem;
+}
+#contact-form-invisible {
+    display: none;
+}
+
+.contact-form-text {
+    padding-bottom: 1rem;
+    font-size: 1.2rem;
+    line-height: 1.6rem;
+    text-align: start;
+    margin-left: 1rem;
+}
+
+#contact-form-thank-you {
+    display: none;
+}
+
+#contact-form-thank-you-visible {
+    display: initial;
+}
+
+label {
+    display: block;
+    text-align: start;
+    margin-left: 1rem;
+}
+
+input, textarea {
+    width: 90%;
+    height: 2rem;
+    margin: 0.5rem 0;
+}
+
+textarea {
+    height: 150px;
+}
+
+@media screen and (min-width: 1025px) {
+
+    /* Contact form only for desktop*/
+    #contact-form {
+        font-size: 1.2rem;
+        display: -ms-grid;
+        display: grid;
+        -ms-grid-columns: 10% 80% 10%;
+        grid-template-columns: 10% 80% 10%;
+        -ms-grid-rows: auto;
+        grid-template-rows: auto;
+
+    }
+    #contact-form > *:nth-child(1) {
+        -ms-grid-row: 1;
+        -ms-grid-column: 1;
+
+    }
+    #contact-form > *:nth-child(2) {
+        -ms-grid-row: 1;
+        -ms-grid-column: 2;
+
+    }
+    #contact-form > *:nth-child(3) {
+        -ms-grid-row: 1;
+        -ms-grid-column: 3;
+
+    }
+
+    .contact-form-text {
+        padding-bottom: 2rem;
+        font-size: 1.5rem;
+        line-height: 1.6rem;
+        text-align: center;
+        -ms-grid-row: 1;
+        grid-row: 1;
+        grid-column: 1 / -1;
+    }
+
+    #contact-form-thank-you-visible {
+        display: initial;
+        text-align: center;
+    }
+
+    label {
+        -ms-grid-column: 2;
+        grid-column: 2;
+        -ms-grid-column-align: start;
+            justify-self: start;
+        -ms-grid-row-align: center;
+            align-self: center;
+        margin: 0;
+    }
+
+    input, textarea {
+        width: 100%;
+        height: 2rem;
+        -ms-grid-column: 2;
+        grid-column: 2;
+    }
+
+    textarea {
+        height: 150px;
+    }   
+
+    /* End contact form */
+
+}
