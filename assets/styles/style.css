@@ -929,6 +929,7 @@ img {
 
     #contact-form-thank-you-visible {
         display: initial;
+        text-align: center;
     }
 
     label {
