@@ -181,6 +181,14 @@ As a user I want to:
     - [https://www.emailjs.com](https://www.emailjs.com)
 
 ### Other tools
+- SCSS
+    - to organize CSS
+    - note that I did not use it while writing CSS, but afterwards just before submitting this project (really felt the need to reorganize code in modules). I thought installing and learning SCSS was difficult, but it was not. Next project I will use this from the start.
+    - [https://sass-lang.com](https://sass-lang.com)
+- npm
+    - to install SCSS
+    - [https://www.npmjs.com](https://www.npmjs.com)
+
 - Color blind filter
     - to check the used color palette
     - [https://www.toptal.com/designers/colorfilter](https://www.toptal.com/designers/colorfilter)
