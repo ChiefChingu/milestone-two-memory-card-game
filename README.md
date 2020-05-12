@@ -19,10 +19,10 @@ This is the second milestone project of the fullstack software development cours
 
 Also, there are two game modes: a mode where you play at your leisure. You can select the number of cards per game. And a challenge mode: you start with 4 cards and need to go through 3 levels. Every level adds 4 cards.
 
+Since this game depends heavily on the interpretation of images, I decided to warn users that rely on assistive technology (e.g. screen readers). An ```aria-label``` attribute is added explaining that this game is not suitable for use with assistive technology. Also, I warn them that there are no image alt tags specified for the game images.
+
 ## UX
 Although this project is a default/standard project, I decided to use the method of Jesse Garrett: the five planes of UX.
-
-Since this game depends heavily on the interpretation of images, I decided to warn users that rely on assistive technology (e.g. screen readers). An ```aria-label``` attribute is added explaining that this game is not suitable for use with assistive technology. Also, I warn them that there are no image alt tags specified for the game images.
 
 ### Strategy Plane
 The strategy plane defines the product objectives (goals of the developer and/or organization) and the user needs (goals that come from outside).
