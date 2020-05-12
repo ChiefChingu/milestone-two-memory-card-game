@@ -2,7 +2,7 @@
 - [UX](#ux)
   * [Strategy plane](#strategy-plane)
         [Product objectives](#product-objectives)
-         [Another indent?](#)
+         - [Another indent?](#)
 
 
 ## Introduction
