@@ -12,7 +12,7 @@
 
 [Credits](#credits)
 
-[Special note on JavaScript](#special-note-on-javascript)
+[Future updates of coding structure](#future-updates-of-coding-structure)
 
 ## Introduction
 This is the second milestone project of the fullstack software development course of Code Institute. I selected the memory card game assignment: flip cards and find the matching pairs. My take on this game is to create a game with matching pairs that are not identical, but related...
@@ -247,6 +247,8 @@ All media comes from James Fridman. Do visit his [site](https://www.jamesfridman
 - To detect Safari browsers I made use of this [article](https://www.geeksforgeeks.org/how-to-detect-the-user-browser-safari-chrome-ie-firefox-and-opera-using-javascript/).
 - The mobile menu is an adaptation of the menu I learned in this course by[Brad Schiff](https://www.udemy.com/course/git-a-web-developer-job-mastering-the-modern-workflow/).
 
-## Special note on JavaScript
-The game works as intended. However, while coding the JavaScript logic, I soon felt the need to organize the code better. In my opinion it would be better to have separate files for the various game functions and game elements. Unfortunately, I did not manage to do this in a bug free way. While using modules I kept running into errors about variables that were not accessible. Also, I understand that I use lots of global variables which is bad practice. I checked in the Slack channel if this is something that is required at current skill level/milestone project. The answer is that this is not expected.
+## Future updates of coding structure
+Not in scope for this project:
 
+- modularize JavaScript.
+- modularize HTML components like navigation.
