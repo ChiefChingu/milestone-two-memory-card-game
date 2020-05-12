@@ -2,8 +2,7 @@
 - [UX](#ux)
   * [Strategy plane](#strategy-plane)
         [Product objectives](#product-objectives)
-
-<small><i><a href='http://ecotrust-canada.github.io/markdown-toc/'>Table of contents generated with markdown-toc</a></i></small>
+         [Another indent?](#)
 
 
 ## Introduction
