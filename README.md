@@ -1,3 +1,11 @@
+- [Introduction](#introduction)
+- [UX](#ux)
+  * [Strategy plane](#strategy-plane)
+        [Product objectives](#product-objectives)
+
+<small><i><a href='http://ecotrust-canada.github.io/markdown-toc/'>Table of contents generated with markdown-toc</a></i></small>
+
+
 ## Introduction
 This is the second milestone project of the fullstack software development course of Code Institute. I selected the memory card game assignment: flip cards and find the matching pairs. My take on this game is to create a game with matching pairs that are not identical, but related...
 
