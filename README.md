@@ -2,27 +2,16 @@
 
 [UX](#ux)
 
-- [Strategy plane](#strategy-plane)
-- [Scope plane](#scope-plane)
-- [Structure plane](#structure-plane)
-- [Skeleton plane](#skeleton-plane)
-- [Surface plane](#surface-plane)
-- [User stories](#user-stories)
-- [Features](#features)
-  * [Existing features](#existing-features)
-  * [Features left to implement](#features-left-to-implement)
+[Features](#features)
+
 [Technologies used](#technologies-used)
-- [Languages](#languages)
-- [Libraries](#libraries)
-- [Other tools](#other-tools)
+
 [Testing](#testing)
+
 [Deployment](#deployment)
-- [Github](#github)
-- [Cloning a repository](#cloning-a-repository)
+
 [Credits](#credits)
-- [Content](#content)
-- [Media](#media)
-- [Acknowledgements](#acknowledgements)
+
 [Special note on JavaScript](#special-note-on-javascript)
 
 ## Introduction
