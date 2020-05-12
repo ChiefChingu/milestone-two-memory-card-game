@@ -224,6 +224,7 @@ All copy is own content.
 All media comes from James Fridman. Do visit his [site](https://www.jamesfridman.com) and [foundation](https://www.jamesfridmanfoundation.org)!
 
 ### Acknowledgements
+- For the flip card transform I read this [excellent piece of work](https://3dtransforms.desandro.com/card-flip).
 - For the three buttons in the Chill mode modal I used the functionality from [https://javascript.info/event-delegation](https://javascript.info/event-delegation).
 - The Chill mode modal is based on the modal from [W3Schools](https://www.w3schools.com/howto/howto_css_modals.asp).
 - The shuffle card function is based on this snippet at [JSFiddle](https://jsfiddle.net/C6LPY/2/).
